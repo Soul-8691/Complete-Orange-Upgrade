@@ -1,10 +1,10 @@
-	.include "asm/macros/asm.inc"
-	.include "asm/macros/function.inc"
-	.include "asm/macros/movement.inc"
-	.include "asm/macros/ec.inc"
-	.include "asm/macros/map.inc"
-	.include "asm/macros/m4a.inc"
-	.include "asm/macros/trainer_tower.inc"
+	.include "macros/asm.inc"
+	.include "macros/function.inc"
+	.include "macros/movement.inc"
+	.include "macros/ec.inc"
+	.include "macros/map.inc"
+	.include "macros/m4a.inc"
+	.include "macros/trainer_tower.inc"
 
 	.macro region_map_location x, y, width, height, name
 	.byte \x

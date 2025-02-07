@@ -16,7 +16,8 @@ struct PartyMenu
     s8 slotId2;
     u8 action;
     u16 bagItem;
-    s16 data[2];
+    s16 data1;           // used variously as a moveId, counter, moveSlotId, or cursorPos
+    s16 learnMoveState;
 };
 
 extern struct PartyMenu gPartyMenu;
@@ -55,9 +56,11 @@ void ItemUseCB_MedicineStep(u8 taskId, TaskFunc func);
 void ItemUseCB_TryRestorePP(u8 taskId, TaskFunc func);
 void ItemUseCB_PPUp(u8 taskId, TaskFunc func);
 u16 ItemIdToBattleMoveId(u16 item);
+u16 ItemIdToBattleMoveId_(u16 item);
 bool8 IsMoveHm(u16 move);
 bool8 MonKnowsMove(struct Pokemon *mon, u16 move);
 void ItemUseCB_TMHM(u8 taskId, TaskFunc func);
+void ItemUseCB_TMHM_(u8 taskId, TaskFunc func);
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc func);
 void ItemUseCB_SacredAsh(u8 taskId, TaskFunc func);
 void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc func);

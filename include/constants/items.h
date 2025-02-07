@@ -445,13 +445,89 @@
 #define ITEM_RUBY 373
 #define ITEM_SAPPHIRE 374
 
-#define ITEMS_COUNT 375
+#define ITEM_TM51 376
+#define ITEM_TM52 377
+#define ITEM_TM53 378
+#define ITEM_TM54 379
+#define ITEM_TM55 380
+#define ITEM_TM56 381
+#define ITEM_TM57 382
+#define ITEM_TM58 383
+#define ITEM_TM59 384
+#define ITEM_TM60 385
+#define ITEM_TM61 386
+#define ITEM_TM62 387
+#define ITEM_TM63 388
+#define ITEM_TM64 389
+#define ITEM_TM65 390
+#define ITEM_TM66 391
+#define ITEM_TM67 392
+#define ITEM_TM68 393
+#define ITEM_TM69 394
+#define ITEM_TM70 395
+#define ITEM_TM71 396
+#define ITEM_TM72 397
+#define ITEM_TM73 398
+#define ITEM_TM74 399
+#define ITEM_TM75 400
+#define ITEM_TM76 401
+#define ITEM_TM77 402
+#define ITEM_TM78 403
+#define ITEM_TM79 404
+#define ITEM_TM80 405
+#define ITEM_TM81 406
+#define ITEM_TM82 407
+#define ITEM_TM83 408
+#define ITEM_TM84 409
+#define ITEM_TM85 410
+#define ITEM_TM86 411
+#define ITEM_TM87 412
+#define ITEM_TM88 413
+#define ITEM_TM89 414
+#define ITEM_TM90 415
+#define ITEM_TM91 416
+#define ITEM_TM92 417
+#define ITEM_TM93 418
+#define ITEM_TM94 419
+#define ITEM_TM95 420
+#define ITEM_TM96 421
+#define ITEM_TM97 422
+#define ITEM_TM98 423
+#define ITEM_TM99 424
+#define ITEM_TM100 425
+#define ITEM_TM101 426
+#define ITEM_TM102 427
+#define ITEM_TM103 428
+#define ITEM_TM104 429
+#define ITEM_TM105 430
+#define ITEM_TM106 431
+#define ITEM_TM107 432
+#define ITEM_TM108 433
+#define ITEM_TM109 434
+#define ITEM_TM110 435
+#define ITEM_TM111 436
+#define ITEM_TM112 437
+#define ITEM_TM113 438
+#define ITEM_TM114 439
+#define ITEM_TM115 440
+#define ITEM_TM116 441
+#define ITEM_TM117 442
+#define ITEM_TM118 443
+#define ITEM_TM119 444
+#define ITEM_TM120 445
+
+#define ITEMS_COUNT 446
 
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 #define MAIL_NONE 0xFF
 
-#define NUM_TECHNICAL_MACHINES 50
+#define ITEM_FIRST_TM           ITEM_TM01
+#define ITEM_LAST_TM            ITEM_TM120
+#define ITEM_TMHM_END           ITEM_HM08
+#define NUM_TECHNICAL_MACHINES  120
 #define NUM_HIDDEN_MACHINES     8
+#define NUM_TMHMS               NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES
+// #define REUSABLE_TMS        //comment this line out to have tms be consumable
 
 // Secondary IDs for rods
 #define OLD_ROD   0

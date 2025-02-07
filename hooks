@@ -1,1 +1,23 @@
 #include "src/config.h"
+
+BuildEggMoveset 8045cd0 0
+DisplayPartyPokemonDataToTeachMove 811f4d0 1
+DisplayPartyPokemonDataForMoveTutorOrEvolutionItem 811f430 1
+ItemUseCB_TMHM_ 8125b40 2
+TryTutorSelectedMon 8126dc8 1
+ChooseMonForMoveTutor_ 812781c 0
+CB2_UseItem 08124e48 2
+CB2_UseTMHMAfterForgettingMove 08124efc 2
+ItemIdToBattleMoveId_ 08125a78 2
+Task_LearnedMove_ 08125c48 2
+GetTMNumberAndMoveString_ 08131d48 2
+##Task_SelectTMAction_FromFieldBag 08132414 2
+##CreateDiscSprite 0813368c 0
+SetTMSpriteAnim 08133714 2
+TMCase_ItemPrintFunc 08131e68 3
+SortPocketAndPlaceHMsFirst_ 0809a5e4 2
+BufferTMHMMoveName_ 080cc8cc 2
+SanitizeItemId_ 0809a8a4 1
+TMSlotsHack 08099E6C 0
+JPANSaveblock 080D9EDC 0
+##MainPocket 08099e50 0

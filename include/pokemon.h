@@ -424,5 +424,7 @@ bool8 CheckBattleTypeGhost(struct Pokemon *mon, u8 bank);
 struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 battlePosition, u8 mode);
 void DestroyMonSpritesGfxManager(void);
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 bufferId);
+extern const u16 *const gTeachableLearnsets[];
+u8 CanLearnTeachableMove(u16 species, u16 move);
 
 #endif // GUARD_POKEMON_H
