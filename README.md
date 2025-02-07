@@ -7,7 +7,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 ## Planned Features
 * 100 TMs (50 new)
-* 60 move tutor moves (45 new)
+* 64 move tutor moves (49 new)
 * Ability Capsule
 * Ability updates (only that exist in Gen 3)
 * Battle Points system
