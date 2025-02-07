@@ -35,3 +35,8 @@ Cover Art.png
 # Preproc files, might be wise to move these elsewhere.
 *.pc
 *.ps
+
+# gbagfx
+*.4bpp
+*.lz
+*.gbapal

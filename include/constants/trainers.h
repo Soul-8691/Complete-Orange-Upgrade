@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_TRAINERS_H
 #define GUARD_CONSTANTS_TRAINERS_H
 
-#include "constants/opponents.h"
+#include "opponents.h"
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

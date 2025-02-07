@@ -343,34 +343,28 @@ def ProcessString(stringFile: str) -> str:
 
 def ProcessImage(imageFile: str) -> str:
     """Compile image."""
-    if '.bmp' in imageFile:
-        assemblyFile = imageFile.split('.bmp')[0] + '.s'
-    else:
-        assemblyFile = imageFile.split('.png')[0] + '.s'
-
-    if sys.platform.startswith('win'):
-        nameList = imageFile.split('\\')  # Get path of grit flags
-        nameList.pop(len(nameList) - 1)
-        flagFile = ''.join(str(i) + '\\' for i in nameList)
-    else:  # Linux, OSX, etc.
-        nameList = imageFile.split('/')  # Get path of grit flags
-        nameList.pop(len(nameList) - 1)
-        flagFile = ''.join(str(i) + '//' for i in nameList)
-
-    flagFile += 'gritflags.txt'
-
-    try:
-        with open(flagFile, 'r') as file:
-            line = file.readline()  # Only needs the first line
-            flags = line.strip().split()
-            cmd = [GR, imageFile] + flags + ['-o', assemblyFile]
-
-    except FileNotFoundError:
-        print('Error: No gritflags.txt found in directory with ' + imageFile + '.')
-        sys.exit(1)
-
-    return DoMiddleManAssembly(imageFile, assemblyFile, flagFile, flags, cmd,
-                               MakeOutputImageFile, Master.printCompilingImages, False)
+    if '\\4bpp' in imageFile:
+        if '.png' in imageFile:
+            cmd = [GBAGFX, imageFile, imageFile.replace('.png', '.4bpp.lz')]
+            RunCommand(cmd)
+            cmd = [GBAGFX, imageFile.replace('.png', '.4bpp.lz'), imageFile.replace('.png', '.4bpp')]
+            RunCommand(cmd)
+            try:
+                cmd = [GBAGFX, imageFile, imageFile.replace('.png', '.gbapal')]
+                RunCommand(cmd)
+            except:
+                pass
+    elif '\\8bpp' in imageFile:
+        if '.png' in imageFile:
+            cmd = [GBAGFX, imageFile, imageFile.replace('.png', '.8bpp.lz')]
+            RunCommand(cmd)
+            cmd = [GBAGFX, imageFile.replace('.png', '.8bpp.lz'), imageFile.replace('.png', '.8bpp')]
+            RunCommand(cmd)
+            try:
+                cmd = [GBAGFX, imageFile, imageFile.replace('.png', '.gbapal')]
+                RunCommand(cmd)
+            except:
+                pass
 
 
 def ProcessAudio(audioFile: str) -> str:
@@ -416,7 +410,8 @@ def ProcessMusic(midiFile: str) -> str:
 def LinkObjects(objects: itertools.chain) -> str:
     """Link objects into one binary."""
     linked = 'build/linked.o'
-    cmd = [LD] + LDFLAGS + ['-o', linked] + list(objects)
+    objects_list = [x for x in list(objects) if x != None]
+    cmd = [LD] + LDFLAGS + ['-o', linked] + objects_list
     RunCommand(cmd)
     return linked
 
@@ -457,12 +452,11 @@ def main():
     Master.init()
     startTime = datetime.now()
     globs = {
+            '**/*.png': ProcessImage,
             '**/*.s': ProcessAssembly,
             '**/*.c': ProcessC,
             '**/*.json': ProcessSpecialFlagFile,
             '**/*.string': ProcessString,
-            '**/*.png': ProcessImage,
-            '**/*.bmp': ProcessImage,
             '**/*.wav': ProcessAudio,
             '**/*.mid': ProcessMusic,
     }

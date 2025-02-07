@@ -36,7 +36,7 @@
 #define __MINI_PRINTF__
 
 #include <stdarg.h>
-#include "gba/types.h"
+#include "types.h"
 
 #ifdef NDEBUG
 

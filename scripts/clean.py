@@ -81,10 +81,22 @@ if (len(sys.argv) > 1) and sys.argv[1].upper() == 'ALL':
 	except:
 		pass	
 
-	os.chdir("graphics")
+	os.chdir("assembly")
 	for root, dirs, files in os.walk(".", topdown = False):
 		for file in files:
-			if file.endswith('.h'):
+			if file.endswith('.ps'):
+				os.remove(os.path.join(root, file))
+	
+	os.chdir("../graphics")
+	for root, dirs, files in os.walk(".", topdown = False):
+		for file in files:
+			if file.endswith('.4bpp') or file.endswith('.lz') or file.endswith('.gbapal'):
+				os.remove(os.path.join(root, file))
+	
+	os.chdir("../src")
+	for root, dirs, files in os.walk(".", topdown = False):
+		for file in files:
+			if file.endswith('.pc'):
 				os.remove(os.path.join(root, file))
 
 elif (len(sys.argv) > 1) and sys.argv[1].upper() == 'GRAPHICS':

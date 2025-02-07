@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_FLAGS_H
 #define GUARD_CONSTANTS_FLAGS_H
 
-#include "constants/trainers.h"
+#include "trainers.h"
 
 // Temporary Flags
 // These temporary flags are are cleared every time a map is loaded. They are used
