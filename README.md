@@ -11,7 +11,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Ability Capsule
 * Ability updates (only that exist in Gen 3)
 * Battle Points system
-* Battle Tower
+* Battle Tower (includes Gen 4-9 related lines of Gen 1/2 mons, including regional formes)
 * Berry Trees
 * Bottle Caps
 * Competitive move tutor (badge-scaling)
