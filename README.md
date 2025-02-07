@@ -10,6 +10,8 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * 60 move tutor moves (45 new)
 * Ability Capsule
 * Ability updates (only that exist in Gen 3)
+* Battle Points system
+* Battle Tower
 * Berry Trees
 * Bottle Caps
 * Competitive move tutor (badge-scaling)
@@ -31,8 +33,8 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Fairy type
 * Fly obtained at start of game and can be used without any badges
 * Gen 1 Exp All
-* Gen 4-9 prevos/evos of Gen 1/2 mons
-* Gen 4-9 related lines of Gen 1/2 mons (including regional formes) available (need National Dex)
+* Gen 4-9 prevos/evos of Gen 1/2 mons (keep original Abilities)
+* Gen 4-9 related lines of Gen 1/2 mons (including regional formes) available to buy with Battle Points (need National Dex)
 * HMs usable without learning (still need to own)
 * Headbutt Trees
 * Learnset compatibility updates
@@ -40,7 +42,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * More balanced level-up learnsets
 * More move tutors
 * Move base power updates (not effects)
-* National Dex obtained near end of game
+* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/2 mons, including regional formes, and does not include unrelated Gen 3 mons)
 * Nature Mints
 * New music
 * New trainer classes
@@ -49,7 +51,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Physical/Special Split
 * Quest menu
 * Rebattleable trainers (step count-based)
-* Regional Formes
+* Regional Formes (keep original Abilities)
 * Regional Pokedex now goes includes second Generation
 * Safari Zone
 * Select Gen 4-9 items
