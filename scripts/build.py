@@ -430,7 +430,7 @@ def Objcopy(binary: str):
 
 def RunGlob(globString: str, fn) -> map:
     """Glob recursively and run the processor function on each file in result."""
-    if globString == '**/*.png' or globString == '**/*.bmp':  # Search the GRAPHICS location
+    if globString == '**/*.png' or globString == '**/*.pal':  # Search the GRAPHICS location
         directory = GRAPHICS
     elif globString == '**/*.s' or globString == '**/*.json':
         directory = ASSEMBLY
