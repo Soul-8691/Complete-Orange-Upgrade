@@ -6,7 +6,65 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 **Before doing anything it will be HIGHLY recommended the documentation be read thoroughly.**
 
 ## Planned Features
-* WIP
+* 100 TMs (50 new)
+* 60 move tutor moves (45 new)
+* Ability Capsule
+* Ability updates (only that exist in Gen 3)
+* Berry Trees
+* Bottle Caps
+* Competitive move tutor (badge-scaling)
+* Confusion-healing Berry update
+* Damage-reducing Berries
+* Day/Night system (and wild encounters)
+* Daycare
+* Deletable HMs
+* Distribution of TMs in TM mart (badge-scaling)
+* Distribution of new TMs in maps
+* Dynamic Overworld Palettes
+* EV/IV display in summary screen (L/R)
+* Edited trainer parties (Gen 1/2 mons)
+* Edited wild Pokemon (Gen 1/2 mons)
+* Egg move tutor
+* Evos per mon expanded to 8
+* Expanded (and rescripted) maps
+* Expanded Poke Balls (including apricorn Balls)
+* Fairy type
+* Fly obtained at start of game and can be used without any badges
+* Gen 1 Exp All
+* Gen 4-9 prevos/evos of Gen 1/2 mons
+* Gen 4-9 related lines of Gen 1/2 mons (including regional formes) available (need National Dex)
+* HMs usable without learning (still need to own)
+* Headbutt Trees
+* Learnset compatibility updates
+* Megas (keep original Ability)
+* More balanced level-up learnsets
+* More move tutors
+* Move base power updates (not effects)
+* National Dex obtained near end of game
+* Nature Mints
+* New music
+* New trainer classes
+* New trainers
+* Overworld sight encounters
+* Physical/Special Split
+* Quest menu
+* Rebattleable trainers (step count-based)
+* Regional Formes
+* Regional Pokedex now goes includes second Generation
+* Safari Zone
+* Select Gen 4-9 items
+* Select Gen 4-9 moves
+* Stat updates
+* SwSh egg move transferral update
+* Swarms (done differently)
+* TM case icons (denote learnable)
+* Terrains (in-battle, permanent)
+* Time-based events
+* Trade evolutions now evolve based on level
+* Trade move tutor
+* Trainer Pokemon can have EVs
+* Updated evolution methods
+* Z-Moves
 
 ## Features
 * Nothing yet
