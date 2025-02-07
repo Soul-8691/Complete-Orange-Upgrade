@@ -365,6 +365,12 @@ def ProcessImage(imageFile: str) -> str:
                 RunCommand(cmd)
             except:
                 pass
+    if '.pal' in imageFile:
+        try:
+            cmd = [GBAGFX, imageFile, imageFile.replace('.pal', '.gbapal')]
+            RunCommand(cmd)
+        except:
+            pass
 
 
 def ProcessAudio(audioFile: str) -> str:
@@ -453,6 +459,7 @@ def main():
     startTime = datetime.now()
     globs = {
             '**/*.png': ProcessImage,
+            '**/*.pal': ProcessImage,
             '**/*.s': ProcessAssembly,
             '**/*.c': ProcessC,
             '**/*.json': ProcessSpecialFlagFile,
