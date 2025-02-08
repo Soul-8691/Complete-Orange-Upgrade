@@ -42,7 +42,7 @@ enum
 void __attribute__((long_call)) BikeClearState(u32 directionHistory, u32 abStartSelectHistory);
 bool8 __attribute__((long_call)) IsBikingDisallowedByPlayer(void);
 void __attribute__((long_call)) GetOnOffBike(u8 flags);
-s16 GetPlayerSpeed(void);
+s16 __attribute__((long_call)) GetPlayerSpeed(void);
 bool8 __attribute__((long_call)) RS_IsRunningDisallowed(u8 r0);
 void __attribute__((long_call)) MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys);
 bool32 __attribute__((long_call)) IsRunningDisallowed(u8 metatileBehavior);

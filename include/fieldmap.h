@@ -31,7 +31,7 @@ void __attribute__((long_call)) MapGridSetMetatileEntryAt(s32, s32, u16);
 u8 __attribute__((long_call)) MapGridGetElevationAt(s32 x, s32 y);
 void __attribute__((long_call)) GetCameraCoords(u16 *, u16 *);
 bool8 __attribute__((long_call)) MapGridGetCollisionAt(s32, s32);
-s32 GetMapBorderIdAt(s32, s32);
+s32 __attribute__((long_call)) GetMapBorderIdAt(s32, s32);
 bool32 __attribute__((long_call)) CanCameraMoveInDirection(s32);
 const struct MapHeader * GetMapHeaderFromConnection(const struct MapConnection * connection);
 const struct MapConnection * GetMapConnectionAtPos(s16 x, s16 y);

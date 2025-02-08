@@ -123,6 +123,6 @@ u32 __attribute__((long_call)) GetBgType(u8 bg);
 bool32 __attribute__((long_call)) IsInvalidBg32(u8 bg);
 bool32 __attribute__((long_call)) IsTileMapOutsideWram(u8 bg);
 
-extern bool32 gWindowTileAutoAllocEnabled;
+extern bool32 __attribute__((long_call)) gWindowTileAutoAllocEnabled;
 
 #endif // GUARD_BG_H

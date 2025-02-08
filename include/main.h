@@ -45,8 +45,8 @@ struct Main
 };
 
 extern struct Main gMain;
-extern bool8 gSoftResetDisabled;
-extern bool8 gLinkVSyncDisabled;
+extern bool8 __attribute__((long_call)) gSoftResetDisabled;
+extern bool8 __attribute__((long_call)) gLinkVSyncDisabled;
 
 extern const u8 gGameVersion;
 extern const u8 gGameLanguage;
@@ -72,7 +72,7 @@ u16 __attribute__((long_call)) GetGeneratedTrainerIdLower(void);
 extern const char RomHeaderGameCode[GAME_CODE_LENGTH];
 extern const char RomHeaderSoftwareVersion;
 
-extern u8 gLinkTransferringData;
-extern u16 gKeyRepeatStartDelay;
+extern u8 __attribute__((long_call)) gLinkTransferringData;
+extern u16 __attribute__((long_call)) gKeyRepeatStartDelay;
 
 #endif // GUARD_MAIN_H

@@ -21,7 +21,7 @@ struct BagStruct
 
 extern struct BagStruct gBagMenuState;
 
-extern u16 gSpecialVar_ItemId;
+extern u16 __attribute__((long_call)) gSpecialVar_ItemId;
 
 // Exported ROM declarations
 void __attribute__((long_call)) CB2_SetUpReshowBattleScreenAfterMenu(void);

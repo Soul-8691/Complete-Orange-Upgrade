@@ -32,7 +32,7 @@ void __attribute__((long_call)) Menu_PrintFormatIntlPlayerName(u8 windowId, cons
 void __attribute__((long_call)) StartBlendTask(u8 eva_start, u8 evb_start, u8 eva_end, u8 evb_end, u8 ev_step, u8 priority);
 bool8 __attribute__((long_call)) IsBlendTaskActive(void);
 u8 __attribute__((long_call)) Menu2_GetMonSpriteAnchorCoord(u16 species, u32 personality, u8 a2);
-s8 Menu2_GetMonSpriteAnchorCoordMinusx20(u16 species, u32 personality, u8 a2);
+s8 __attribute__((long_call)) Menu2_GetMonSpriteAnchorCoordMinusx20(u16 species, u32 personality, u8 a2);
 
 // list_menu
 void __attribute__((long_call)) ListMenu_LoadMonIconPalette(u8 palOffset, u16 speciesId);
@@ -41,20 +41,20 @@ void __attribute__((long_call)) ListMenuLoadStdPalAt(u8 palOffset, u8 palId);
 void __attribute__((long_call)) BlitMenuInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y);
 
 // menu
-s8 Menu_ProcessInputGridLayout(void);
+s8 __attribute__((long_call)) Menu_ProcessInputGridLayout(void);
 u8 __attribute__((long_call)) MultichoiceGrid_InitCursor(u8 windowId, u8 fontId, u8 left, u8 top, u8 optionWidth, u8 cols, u8 rows, u8 cursorPos);
 void __attribute__((long_call)) MultichoiceGrid_PrintItems(u8 windowId, u8 fontId, u8 itemWidth, u8 itemHeight, u8 cols, u8 rows, const struct MenuAction *strs);
 void __attribute__((long_call)) DestroyYesNoMenu(void);
-s8 Menu_ProcessInputNoWrapClearOnChoose(void);
+s8 __attribute__((long_call)) Menu_ProcessInputNoWrapClearOnChoose(void);
 void __attribute__((long_call)) CreateYesNoMenu(const struct WindowTemplate *window, u8 fontId, u8 left, u8 top, u16 baseTileNum, u8 paletteNum, u8 initialCursorPos);
 void __attribute__((long_call)) AddItemMenuActionTextPrinters(u8 windowId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineHeight, u8 itemCount, const struct MenuAction *strs, const u8 *orderArray);
 void __attribute__((long_call)) PrintMenuTable(u8 windowId, u8 fontId, u8 lineHeight, u8 itemCount, const struct MenuAction *strs);
 void __attribute__((long_call)) MultichoiceList_PrintItems(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs, u8 letterSpacing, u8 lineSpacing);
 void __attribute__((long_call)) PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs);
-s8 Menu_ProcessInputNoWrapAround_other(void);
-s8 Menu_ProcessInput_other(void);
-s8 __attribute__((long_call)) Menu_ProcessInputNoWrapAround(void);
-s8 Menu_ProcessInput(void);
+s8 __attribute__((long_call)) Menu_ProcessInputNoWrapAround_other(void);
+s8 __attribute__((long_call)) Menu_ProcessInput_other(void);
+s8 __attribute__((long_call)) __attribute__((long_call)) Menu_ProcessInputNoWrapAround(void);
+s8 __attribute__((long_call)) Menu_ProcessInput(void);
 u8 __attribute__((long_call)) Menu_GetCursorPos(void);
 u8 __attribute__((long_call)) Menu_MoveCursorNoWrapAround(s8 cursorDelta);
 u8 __attribute__((long_call)) Menu_MoveCursor(s8 cursorDelta);

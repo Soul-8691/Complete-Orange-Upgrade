@@ -52,7 +52,7 @@ struct PokemonStorage
 u8 __attribute__((long_call)) *GetBoxNamePtr(u8 boxNumber);
 struct BoxPokemon *GetBoxedMonPtr(u8 boxId, u8 monPosition);
 void __attribute__((long_call)) SetBoxMonNickAt(u8 boxId, u8 monPosition, const u8 *newNick);
-s16 CompactPartySlots(void);
+s16 __attribute__((long_call)) CompactPartySlots(void);
 u32 __attribute__((long_call)) GetBoxMonDataAt(u8 boxId, u8 monPosition, s32 request);
 void __attribute__((long_call)) ZeroBoxMonAt(u8 boxId, u8 monPosition);
 void __attribute__((long_call)) CB2_ReturnToPokeStorage(void);

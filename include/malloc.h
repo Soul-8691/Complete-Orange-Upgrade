@@ -16,7 +16,7 @@
 
 #define TRY_FREE_AND_SET_NULL(ptr) if (ptr != NULL) FREE_AND_SET_NULL(ptr)
 
-extern u8 gHeap[];
+extern u8 __attribute__((long_call)) gHeap[];
 void __attribute__((long_call)) *Alloc(u32 size);
 void __attribute__((long_call)) *AllocZeroed(u32 size);
 void __attribute__((long_call)) Free(void *pointer);

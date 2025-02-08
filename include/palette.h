@@ -56,9 +56,9 @@ struct PaletteFadeControl
 };
 
 extern struct PaletteFadeControl gPaletteFade;
-extern u32 gPlttBufferTransferPending;
-extern u16 gPlttBufferUnfaded[PLTT_BUFFER_SIZE];
-extern u16 gPlttBufferFaded[PLTT_BUFFER_SIZE];
+extern u32 __attribute__((long_call)) __attribute__((long_call)) gPlttBufferTransferPending;
+extern u16 __attribute__((long_call)) gPlttBufferUnfaded[PLTT_BUFFER_SIZE];
+extern u16 __attribute__((long_call)) gPlttBufferFaded[PLTT_BUFFER_SIZE];
 
 void __attribute__((long_call)) LoadCompressedPalette(const u32 *src, u16 offset, u16 size);
 void __attribute__((long_call)) LoadPalette(const void *src, u16 offset, u16 size);

@@ -168,13 +168,13 @@ struct QuestLogEvent_StoryItem
     u8 mapSec;
 };
 
-extern u8 gQuestLogState;
-extern u8 gQuestLogPlaybackState;
+extern u8 __attribute__((long_call)) gQuestLogState;
+extern u8 __attribute__((long_call)) gQuestLogPlaybackState;
 extern struct FieldInput gQuestLogFieldInput;
 extern struct QuestLogRepeatEventTracker gQuestLogRepeatEventTracker;
-extern u16 *gQuestLogDefeatedWildMonRecord;
-extern u16 *gQuestLogRecordingPointer;
-extern u16 gQuestLogCurActionIdx;
+extern u16 __attribute__((long_call)) *gQuestLogDefeatedWildMonRecord;
+extern u16 __attribute__((long_call)) *gQuestLogRecordingPointer;
+extern u16 __attribute__((long_call)) gQuestLogCurActionIdx;
 
 void __attribute__((long_call)) QuestLogRecordPlayerAvatarGfxTransition(u8);
 void __attribute__((long_call)) SetQuestLogEvent(u16, const u16 *);

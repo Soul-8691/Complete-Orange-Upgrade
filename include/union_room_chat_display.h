@@ -29,6 +29,6 @@ void __attribute__((long_call)) UnionRoomChat_FreeGraphicsWork(void);
 void __attribute__((long_call)) UnionRoomChat_RunDisplaySubtasks(void);
 void __attribute__((long_call)) UnionRoomChat_StartDisplaySubtask(u16 a0, u8 a1);
 u8 __attribute__((long_call)) RunDisplaySubtask(u8 a0);
-s8 UnionRoomChat_ProcessInput(void);
+s8 __attribute__((long_call)) UnionRoomChat_ProcessInput(void);
 
 #endif //GUARD_UNION_ROOM_CHAT_DISPLAY_H

@@ -473,7 +473,7 @@ extern struct RfuSlotStatusNI *gRfuSlotStatusNI[RFU_CHILD_MAX];
 extern struct RfuSlotStatusUNI *gRfuSlotStatusUNI[RFU_CHILD_MAX];
 
 // librfu_sio32id
-s32 AgbRFU_checkID(u8 maxTries);
+s32 __attribute__((long_call)) AgbRFU_checkID(u8 maxTries);
 
 // Arguments with "bm..." specify slots of the form (0x01 << slot number) that are the object of a function operation. 
 

@@ -26,8 +26,8 @@ struct HelpSystemListMenu
 
 extern struct HelpSystemListMenu gHelpSystemListMenu;
 extern struct ListMenuItem gHelpSystemListMenuItems[];
-extern bool8 gHelpSystemEnabled;
-extern bool8 gHelpSystemToggleWithRButtonDisabled;
+extern bool8 __attribute__((long_call)) gHelpSystemEnabled;
+extern bool8 __attribute__((long_call)) gHelpSystemToggleWithRButtonDisabled;
 
 // help_system_812B1E0
 void __attribute__((long_call)) SetHelpContextDontCheckBattle(u8);
@@ -82,7 +82,7 @@ void __attribute__((long_call)) HelpSystem_FillPanel2(void);
 void __attribute__((long_call)) HelpSystem_FillPanel1(void);
 void __attribute__((long_call)) HelpSystem_InitListMenuController(struct HelpSystemListMenu *, u8, u8);
 void __attribute__((long_call)) HelpSystem_SetInputDelay(u8);
-s32 HelpSystem_GetMenuInput(void);
+s32 __attribute__((long_call)) HelpSystem_GetMenuInput(void);
 void __attribute__((long_call)) HS_UpdateMenuScrollArrows(void);
 
 void __attribute__((long_call)) DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, u8 x, u8 y, u8 width, u8 height);

@@ -147,8 +147,8 @@ struct UnionRoomTrade
 };
 
 extern struct RfuGameCompatibilityData gRfuPartnerCompatibilityData;
-extern u16 gUnionRoomOfferedSpecies;
-extern u8 gUnionRoomRequestedMonType;
+extern u16 __attribute__((long_call)) gUnionRoomOfferedSpecies;
+extern u8 __attribute__((long_call)) gUnionRoomRequestedMonType;
 
 void __attribute__((long_call)) StartUnionRoomBattle(u16 battleFlags);
 u8 __attribute__((long_call)) CreateTask_CreateTradeMenu(void);

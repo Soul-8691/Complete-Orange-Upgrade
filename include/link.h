@@ -229,22 +229,22 @@ struct BlockRequest
 extern const struct BlockRequest sBlockRequestLookupTable[5];
 
 extern struct Link gLink;
-extern u16 gRecvCmds[MAX_RFU_PLAYERS][CMD_LENGTH];
-extern u8 gBlockSendBuffer[BLOCK_BUFFER_SIZE];
-extern u16 gLinkType;
-extern u32 gLinkStatus;
-extern u16 gBlockRecvBuffer[MAX_RFU_PLAYERS][BLOCK_BUFFER_SIZE / 2];
-extern u16 gSendCmd[CMD_LENGTH];
-extern u8 gShouldAdvanceLinkState;
+extern u16 __attribute__((long_call)) gRecvCmds[MAX_RFU_PLAYERS][CMD_LENGTH];
+extern u8 __attribute__((long_call)) gBlockSendBuffer[BLOCK_BUFFER_SIZE];
+extern u16 __attribute__((long_call)) gLinkType;
+extern u32 __attribute__((long_call)) __attribute__((long_call)) gLinkStatus;
+extern u16 __attribute__((long_call)) gBlockRecvBuffer[MAX_RFU_PLAYERS][BLOCK_BUFFER_SIZE / 2];
+extern u16 __attribute__((long_call)) gSendCmd[CMD_LENGTH];
+extern u8 __attribute__((long_call)) gShouldAdvanceLinkState;
 extern struct LinkPlayer gLinkPlayers[MAX_RFU_PLAYERS];
-extern u16 word_3002910[];
-extern bool8 gReceivedRemoteLinkPlayers;
-extern bool8 gLinkVSyncDisabled;
-extern u8 gWirelessCommType;
+extern u16 __attribute__((long_call)) word_3002910[];
+extern bool8 __attribute__((long_call)) gReceivedRemoteLinkPlayers;
+extern bool8 __attribute__((long_call)) gLinkVSyncDisabled;
+extern u8 __attribute__((long_call)) gWirelessCommType;
 extern struct LinkPlayer gLocalLinkPlayer;
 
-extern u8 gShouldAdvanceLinkState;
-extern u16 gLinkPartnersHeldKeys[6];
+extern u8 __attribute__((long_call)) gShouldAdvanceLinkState;
+extern u16 __attribute__((long_call)) gLinkPartnersHeldKeys[6];
 
 void __attribute__((long_call)) Task_DestroySelf(u8);
 void __attribute__((long_call)) OpenLink(void);

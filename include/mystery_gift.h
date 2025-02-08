@@ -73,14 +73,14 @@ bool32 __attribute__((long_call)) MysteryGift_DoesQuestionnaireMatch(const struc
 u16 __attribute__((long_call)) MysteryGift_GetCardStatFromLinkData(const struct MysteryGiftLinkGameData * data, u32 stat);
 bool32 __attribute__((long_call)) WonderCard_Init(struct WonderCard * card, struct WonderCardMetadata * metadata);
 bool32 __attribute__((long_call)) WonderNews_Init(const struct WonderNews * news);
-s32 WonderCard_Enter(void);
-s32 WonderNews_Enter(void);
+s32 __attribute__((long_call)) WonderCard_Enter(void);
+s32 __attribute__((long_call)) WonderNews_Enter(void);
 void __attribute__((long_call)) ClearSavedWonderCardAndRelated(void);
 void __attribute__((long_call)) ClearSavedWonderNewsAndRelated(void);
 void __attribute__((long_call)) WonderCard_Destroy(void);
 void __attribute__((long_call)) WonderNews_Destroy(void);
-s32 WonderCard_Exit(bool32 flag);
-s32 WonderNews_Exit(bool32 flag);
+s32 __attribute__((long_call)) WonderCard_Exit(bool32 flag);
+s32 __attribute__((long_call)) WonderNews_Exit(bool32 flag);
 bool32 __attribute__((long_call)) IsSavedWonderCardGiftNotReceived(void);
 void __attribute__((long_call)) WonderNews_AddScrollIndicatorArrowPair(void);
 void __attribute__((long_call)) WonderNews_RemoveScrollIndicatorArrowPair(void);

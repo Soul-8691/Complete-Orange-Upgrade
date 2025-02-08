@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-extern void (*gCB2_AfterEvolution)(void);
+extern void __attribute__((long_call)) (*gCB2_AfterEvolution)(void);
 
 void __attribute__((long_call)) BeginEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);
 void __attribute__((long_call)) EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);

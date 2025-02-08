@@ -120,7 +120,7 @@ u16 __attribute__((long_call)) GetNationalPokedexCount(u8);
 u16 __attribute__((long_call)) GetKantoPokedexCount(u8);
 bool16 __attribute__((long_call)) HasAllMons(void);
 u8 __attribute__((long_call)) CreateDexDisplayMonDataTask(u16 dexNum, u32 trainerId, u32 personality);
-s8 GetSetPokedexFlag(u16 nationalNum, u8 caseId);
+s8 __attribute__((long_call)) GetSetPokedexFlag(u16 nationalNum, u8 caseId);
 u16 __attribute__((long_call)) GetNationalPokedexCount(u8);
 u16 __attribute__((long_call)) GetKantoPokedexCount(u8);
 bool16 __attribute__((long_call)) HasAllHoennMons(void);

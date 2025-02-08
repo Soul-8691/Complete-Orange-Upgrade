@@ -230,7 +230,7 @@ struct RfuManager
 }; // size: 0x9AC
 
 extern struct RfuGameData gHostRfuGameData;
-extern u8 gHostRfuUsername[];
+extern u8 __attribute__((long_call)) gHostRfuUsername[];
 extern struct RfuManager gRfu;
 
 void __attribute__((long_call)) LinkRfu_FatalError(void);

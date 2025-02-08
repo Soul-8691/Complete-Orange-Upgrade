@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-extern bool32 gFlashMemoryPresent;
+extern bool32 __attribute__((long_call)) gFlashMemoryPresent;
 extern struct SaveBlock1 gSaveBlock1;
 extern struct SaveBlock2 gSaveBlock2;
 extern struct PokemonStorage gPokemonStorage;

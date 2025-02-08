@@ -282,9 +282,9 @@ struct Evolution
 #define GET_SHINY_VALUE(otId, personality) (HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality))
 
 extern const struct BattleMove gBattleMoves[];
-extern u8 gPlayerPartyCount;
+extern u8 __attribute__((long_call)) gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
-extern u8 gEnemyPartyCount;
+extern u8 __attribute__((long_call)) gEnemyPartyCount;
 extern struct Pokemon gEnemyParty[PARTY_SIZE];
 extern const struct SpeciesInfo gSpeciesInfo[];
 extern const u8 *const gItemEffectTable[];
@@ -320,7 +320,7 @@ void __attribute__((long_call)) SetMonMoveSlot(struct Pokemon *mon, u16 move, u8
 void __attribute__((long_call)) SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot);
 u16 __attribute__((long_call)) MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove);
 void __attribute__((long_call)) DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move);
-s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef);
+s32 __attribute__((long_call)) CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef);
 
 #define BATTLE_ALIVE_EXCEPT_ACTIVE  0
 #define BATTLE_ALIVE_ATK_SIDE       1
@@ -369,7 +369,7 @@ void __attribute__((long_call)) DrawSpindaSpots(u16 species, u32 personality, u8
 void __attribute__((long_call)) EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);
 bool8 __attribute__((long_call)) GetPlayerFlankId(void);
 bool16 __attribute__((long_call)) GetLinkTrainerFlankId(u8 linkPlayerId);
-s32 GetBattlerMultiplayerId(u16 a1);
+s32 __attribute__((long_call)) GetBattlerMultiplayerId(u16 a1);
 u8 __attribute__((long_call)) GetTrainerEncounterMusicId(u16 trainer);
 void __attribute__((long_call)) AdjustFriendship(struct Pokemon *mon, u8 event);
 void __attribute__((long_call)) MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies);
@@ -393,7 +393,7 @@ const struct CompressedSpritePalette *GetMonSpritePalStruct(struct Pokemon *mon)
 const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u16 species, u32 otId , u32 personality);
 bool32 __attribute__((long_call)) IsHMMove2(u16 move);
 bool8 __attribute__((long_call)) IsMonSpriteNotFlipped(u16 species);
-s8 GetFlavorRelationByPersonality(u32 personality, u8 flavor);
+s8 __attribute__((long_call)) GetFlavorRelationByPersonality(u32 personality, u8 flavor);
 bool8 __attribute__((long_call)) IsTradedMon(struct Pokemon *mon);
 bool8 __attribute__((long_call)) IsOtherTrainer(u32 otId, u8 *otName);
 void __attribute__((long_call)) MonRestorePP(struct Pokemon *mon);

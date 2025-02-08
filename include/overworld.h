@@ -54,9 +54,9 @@ extern MainCallback gFieldCallback;
 
 extern struct WarpData gLastUsedWarp;
 
-extern u8 gExitStairsMovementDisabled;
-extern u8 gFieldLinkPlayerCount;
-extern u8 gLocalLinkPlayerId;
+extern u8 __attribute__((long_call)) gExitStairsMovementDisabled;
+extern u8 __attribute__((long_call)) gFieldLinkPlayerCount;
+extern u8 __attribute__((long_call)) gLocalLinkPlayerId;
 
 void __attribute__((long_call)) IncrementGameStat(u8 index);
 
@@ -115,10 +115,10 @@ void __attribute__((long_call)) ResetInitialPlayerAvatarState(void);
 void __attribute__((long_call)) CleanupOverworldWindowsAndTilemaps(void);
 u32 __attribute__((long_call)) ComputeWhiteOutMoneyLoss(void);
 
-extern u8 gDisableMapMusicChangeOnMapLoad;
-extern u8 gGlobalFieldTintMode;
+extern u8 __attribute__((long_call)) gDisableMapMusicChangeOnMapLoad;
+extern u8 __attribute__((long_call)) gGlobalFieldTintMode;
 
-extern bool8 (* gFieldCallback2)(void);
+extern bool8 __attribute__((long_call)) (* gFieldCallback2)(void);
 
 void __attribute__((long_call)) SetLastHealLocationWarp(u8 healLocaionId);
 void __attribute__((long_call)) LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum);
@@ -180,9 +180,9 @@ void __attribute__((long_call)) UpdateEscapeWarp(s16 x, s16 y);
 bool8 __attribute__((long_call)) SetDiveWarpEmerge(u16 x, u16 y);
 bool8 __attribute__((long_call)) SetDiveWarpDive(u16 x, u16 y);
 
-extern u16 *gBGTilemapBuffers1;
-extern u16 *gBGTilemapBuffers2;
-extern u16 *gBGTilemapBuffers3;
-extern u16 gHeldKeyCodeToSend;
+extern u16 __attribute__((long_call)) *gBGTilemapBuffers1;
+extern u16 __attribute__((long_call)) *gBGTilemapBuffers2;
+extern u16 __attribute__((long_call)) *gBGTilemapBuffers3;
+extern u16 __attribute__((long_call)) gHeldKeyCodeToSend;
 
 #endif //GUARD_OVERWORLD_H

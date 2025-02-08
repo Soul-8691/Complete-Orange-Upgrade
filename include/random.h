@@ -3,8 +3,8 @@
 
 #include "global.h"
 
-extern u32 gRngValue;
-extern u32 gRng2Value;
+extern u32 __attribute__((long_call)) __attribute__((long_call)) gRngValue;
+extern u32 __attribute__((long_call)) __attribute__((long_call)) gRng2Value;
 
 //Returns a 16-bit pseudorandom number
 u16 __attribute__((long_call)) Random(void);

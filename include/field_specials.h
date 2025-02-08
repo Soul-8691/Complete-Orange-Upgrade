@@ -4,7 +4,7 @@
 #include "global.h"
 
 u8 __attribute__((long_call)) GetLeadMonIndex(void);
-s32 CountDigits(s32 number);
+s32 __attribute__((long_call)) CountDigits(s32 number);
 void __attribute__((long_call)) TV_PrintIntToStringVar(u8 varidx, s32 number);
 u16 __attribute__((long_call)) GetStarterSpecies(void);
 void __attribute__((long_call)) StopPokemonLeagueLightingEffectTask(void);

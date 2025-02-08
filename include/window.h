@@ -86,7 +86,7 @@ void __attribute__((long_call)) FillWindowPixelBuffer8Bit(u8 windowId, u8 fillVa
 void __attribute__((long_call)) FillWindowPixelRect8Bit(u8 windowId, u8 fillValue, u16 x, u16 y, u16 width, u16 height);
 void __attribute__((long_call)) BlitBitmapRectToWindow4BitTo8Bit(u8 windowId, const u8 *pixels, u16 srcX, u16 srcY, u16 srcWidth, int srcHeight, u16 destX, u16 destY, u16 rectWidth, u16 rectHeight, u8 paletteNum);
 
-extern void *gWindowBgTilemapBuffers[];
+extern void __attribute__((long_call)) *gWindowBgTilemapBuffers[];
 extern struct Window gWindows[];
 
 #endif // GUARD_WINDOW_H

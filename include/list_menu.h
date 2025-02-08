@@ -97,7 +97,7 @@ extern struct ListMenuTemplate gMultiuseListMenuTemplate;
 u32 __attribute__((long_call)) DoMysteryGiftListMenu(const struct WindowTemplate *windowTemplate, const struct ListMenuTemplate *listMenuTemplate, u8 arg2, u16 tileNum, u16 palNum);
 u8 __attribute__((long_call)) ListMenuInit(const struct ListMenuTemplate *listMenuTemplate, u16 cursorPos, u16 itemsAbove);
 u8 __attribute__((long_call)) ListMenuInitInRect(const struct ListMenuTemplate *listMenuTemplate, const struct ListMenuWindowRect *rect, u16 cursorPos, u16 itemsAbove);
-s32 ListMenu_ProcessInput(u8 listTaskId);
+s32 __attribute__((long_call)) ListMenu_ProcessInput(u8 listTaskId);
 void __attribute__((long_call)) DestroyListMenuTask(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);
 void __attribute__((long_call)) RedrawListMenu(u8 listTaskId);
 void __attribute__((long_call)) ListMenuGetScrollAndRow(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);

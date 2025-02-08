@@ -26,6 +26,6 @@
 extern const struct PokedexEntry gPokedexEntries[];
 
 void __attribute__((long_call)) CB2_OpenPokedexFromStartMenu(void);
-s8 DexScreen_GetSetPokedexFlag(u16 nationalDexNo, u8 caseId, bool8 indexIsSpecies);
+s8 __attribute__((long_call)) DexScreen_GetSetPokedexFlag(u16 nationalDexNo, u8 caseId, bool8 indexIsSpecies);
 
 #endif //GUARD_POKEDEX_SCREEN_H

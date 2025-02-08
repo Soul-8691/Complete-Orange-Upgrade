@@ -365,7 +365,7 @@ extern const struct Song gSongTable[];
 
 
 
-extern u8 gMPlayMemAccArea[];
+extern u8 __attribute__((long_call)) gMPlayMemAccArea[];
 
 //u8 gPokemonCrySong[52];
 //u8 gPokemonCrySongs[52 * MAX_POKEMON_CRIES];

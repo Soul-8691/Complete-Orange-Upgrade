@@ -9,6 +9,6 @@ enum {
     FLDPSN_FNT
 };
 
-s32 DoPoisonFieldEffect(void);
+s32 __attribute__((long_call)) DoPoisonFieldEffect(void);
 
 #endif //GUARD_FIELD_POISON_H

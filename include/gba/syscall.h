@@ -45,6 +45,6 @@ void __attribute__((long_call)) RLUnCompVram(const void *src, void *dest);
 
 int MultiBoot(struct MultiBootParam *mp);
 
-s32 Div(s32 num, s32 denom);
+s32 __attribute__((long_call)) Div(s32 num, s32 denom);
 
 #endif // GUARD_GBA_SYSCALL_H

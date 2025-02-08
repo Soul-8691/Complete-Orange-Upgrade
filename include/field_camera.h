@@ -18,9 +18,9 @@ struct CameraObject
 // Exported RAM declarations
 
 extern struct CameraObject gFieldCamera;
-extern u16 gTotalCameraPixelOffsetX;
-extern u16 gTotalCameraPixelOffsetY;
-extern bool8 gBikeCameraAheadPanback;
+extern u16 __attribute__((long_call)) gTotalCameraPixelOffsetX;
+extern u16 __attribute__((long_call)) gTotalCameraPixelOffsetY;
+extern bool8 __attribute__((long_call)) gBikeCameraAheadPanback;
 
 // Exported ROM declarations
 

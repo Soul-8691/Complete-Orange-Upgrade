@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-extern bool8 gDifferentSaveFile;
+extern bool8 __attribute__((long_call)) gDifferentSaveFile;
 
 void __attribute__((long_call)) SetTrainerId(u32 trainerId, u8 *dst);
 void __attribute__((long_call)) CopyTrainerId(u8 *dst, u8 *src);

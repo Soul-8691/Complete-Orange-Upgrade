@@ -85,6 +85,6 @@ u8 __attribute__((long_call)) GetScaledHPFraction(s16 hp, s16 maxhp, u8 scale);
 u8 __attribute__((long_call)) GetHPBarLevel(s16 hp, s16 maxhp);
 void __attribute__((long_call)) UpdateNickInHealthbox(u8 spriteId, struct Pokemon *mon);
 void __attribute__((long_call)) TryAddPokeballIconToHealthbox(u8 spriteId, u8);
-s32 MoveBattleBar(u8 battler, u8 healthboxSpriteId, u8 whichBar, u8 arg3);
+s32 __attribute__((long_call)) MoveBattleBar(u8 battler, u8 healthboxSpriteId, u8 whichBar, u8 arg3);
 
 #endif // GUARD_BATTLE_INTERFACE_H

@@ -37,7 +37,7 @@ struct ScanlineEffect
 
 extern struct ScanlineEffect gScanlineEffect;
 
-extern u16 gScanlineEffectRegBuffers[2][0x3C0];
+extern u16 __attribute__((long_call)) gScanlineEffectRegBuffers[2][0x3C0];
 
 void __attribute__((long_call)) ScanlineEffect_Stop(void);
 void __attribute__((long_call)) ScanlineEffect_Clear(void);

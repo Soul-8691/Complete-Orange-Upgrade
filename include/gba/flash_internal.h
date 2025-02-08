@@ -43,18 +43,18 @@ struct FlashSetupInfo
     struct FlashType type;
 };
 
-extern u16 gFlashNumRemainingBytes;
+extern u16 __attribute__((long_call)) gFlashNumRemainingBytes;
 
-extern u16 (*ProgramFlashByte)(u16, u32, u8);
-extern u16 (*ProgramFlashSector)(u16, void *);
-extern u16 (*EraseFlashChip)(void);
-extern u16 (*EraseFlashSector)(u16);
-extern u16 (*WaitForFlashWrite)(u8, u8 *, u8);
+extern u16 __attribute__((long_call)) (*ProgramFlashByte)(u16, u32, u8);
+extern u16 __attribute__((long_call)) (*ProgramFlashSector)(u16, void *);
+extern u16 __attribute__((long_call)) (*EraseFlashChip)(void);
+extern u16 __attribute__((long_call)) (*EraseFlashSector)(u16);
+extern u16 __attribute__((long_call)) (*WaitForFlashWrite)(u8, u8 *, u8);
 extern const u16 *gFlashMaxTime;
 extern const struct FlashType *gFlash;
 
-extern u8 (*PollFlashStatus)(u8 *);
-extern u8 gFlashTimeoutFlag;
+extern u8 __attribute__((long_call)) (*PollFlashStatus)(u8 *);
+extern u8 __attribute__((long_call)) gFlashTimeoutFlag;
 
 extern const struct FlashSetupInfo MX29L010;
 extern const struct FlashSetupInfo LE26FV10N1TS;

@@ -252,13 +252,13 @@ struct OamMatrix
 extern const struct OamData gDummyOamData;
 extern const union AnimCmd *const gDummySpriteAnimTable[];
 extern const union AffineAnimCmd *const gDummySpriteAffineAnimTable[];
-extern s16 gSpriteCoordOffsetX;
-extern s16 gSpriteCoordOffsetY;
+extern s16 __attribute__((long_call)) gSpriteCoordOffsetX;
+extern s16 __attribute__((long_call)) gSpriteCoordOffsetY;
 extern const struct SpriteTemplate gDummySpriteTemplate;
 extern struct Sprite gSprites[];
 extern struct OamMatrix gOamMatrices[];
-extern bool8 gAffineAnimsDisabled;
-extern u16 gReservedSpriteTileCount;
+extern bool8 __attribute__((long_call)) gAffineAnimsDisabled;
+extern u16 __attribute__((long_call)) gReservedSpriteTileCount;
 
 void __attribute__((long_call)) ResetSpriteData(void);
 void __attribute__((long_call)) AnimateSprites(void);
@@ -318,7 +318,7 @@ u8 __attribute__((long_call)) SpriteTileAllocBitmapOp(u16 bit, u8 op);
 void __attribute__((long_call)) ClearSpriteCopyRequests(void);
 void __attribute__((long_call)) ResetAffineAnimData(void);
 void __attribute__((long_call)) FreeSpriteTilesIfNotUsingSheet(struct Sprite *sprite);
-s16 AllocSpriteTiles(u16 tileCount);
+s16 __attribute__((long_call)) AllocSpriteTiles(u16 tileCount);
 void __attribute__((long_call)) SetSpriteMatrixAnchor(struct Sprite* sprite, s16 xmod, s16 ymod);
 
 #endif //GUARD_SPRITE_H

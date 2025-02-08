@@ -12,7 +12,7 @@ enum {
 };
 
 extern struct ListMenuTemplate gFameChecker_ListMenuTemplate;
-extern u8 gIconDescriptionBoxIsOpen;
+extern u8 __attribute__((long_call)) gIconDescriptionBoxIsOpen;
 
 void __attribute__((long_call)) ResetFameChecker(void);
 void __attribute__((long_call)) FullyUnlockFameChecker(void);

@@ -118,10 +118,10 @@
 #define JOY_HELD_RAW(button) TEST_BUTTON(gMain.heldKeysRaw, button)
 #define JOY_REPT(button)     TEST_BUTTON(gMain.newAndRepeatedKeys, button)
 
-extern u8 gStringVar1[];
-extern u8 gStringVar2[];
-extern u8 gStringVar3[];
-extern u8 gStringVar4[];
+extern u8 __attribute__((long_call)) gStringVar1[];
+extern u8 __attribute__((long_call)) gStringVar2[];
+extern u8 __attribute__((long_call)) gStringVar3[];
+extern u8 __attribute__((long_call)) gStringVar4[];
 
 #define DIV_ROUND_UP(val, roundBy)(((val) / (roundBy)) + (((val) % (roundBy)) ? 1 : 0))
 
@@ -818,7 +818,7 @@ struct MapPosition
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
-extern u8 gReservedSpritePaletteCount;
+extern u8 __attribute__((long_call)) gReservedSpritePaletteCount;
 
 #define _(x)        (x)
 #define __(x)       (x)

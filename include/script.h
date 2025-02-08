@@ -73,6 +73,6 @@ void __attribute__((long_call)) SetWalkingIntoSignVars(void);
 bool8 __attribute__((long_call)) IsMsgBoxWalkawayDisabled(void);
 
 extern const u8 *gRamScriptRetAddr;
-extern u8 gWalkAwayFromSignInhibitTimer;
+extern u8 __attribute__((long_call)) gWalkAwayFromSignInhibitTimer;
 
 #endif // GUARD_SCRIPT_H

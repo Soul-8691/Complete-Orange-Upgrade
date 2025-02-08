@@ -1,7 +1,7 @@
 #ifndef GUARD_CREDITS_H
 #define GUARD_CREDITS_H
 
-extern bool8 gHasHallOfFameRecords;
+extern bool8 __attribute__((long_call)) gHasHallOfFameRecords;
 
 #define CREDITSOVWLDCMD_FB 0xFB
 #define CREDITSOVWLDCMD_FC 0xFC
