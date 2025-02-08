@@ -21,3 +21,14 @@ SanitizeItemId_ 0809a8a4 1
 TMSlotsHack 08099E6C 0
 ##JPANSaveblock 080D9EDC 0
 ##ItemExpansion 08099e50 0
+
+## Save Expansion Hooks
+WriteSaveSectorOrSlot_ 80D97D0 2
+HandleWriteSector_ 80D9870 2
+CopySaveSlotData_ 80D9E54 2
+GetSaveValidStatus_ 80D9F0C 1
+TryLoadSaveSector_ 80DA120 3
+HandleSavingData_ 80DA248 1
+LinkTradeSaveHook 805415E 0
+LinkBattleSaveHook 806FC84 0
+NewGameSaveClearHook 8054A60 0

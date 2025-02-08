@@ -55,4 +55,6 @@ bool32 __attribute__((long_call)) IsNationalPokedexEnabled(void);
 void __attribute__((long_call)) EnableNationalPokedex_RSE(void);
 void __attribute__((long_call)) ClearTempFieldEventData(void);
 
+#define var8000 (*((u16*) 0x20370B8))
+
 #endif // GUARD_EVENT_DATA_H

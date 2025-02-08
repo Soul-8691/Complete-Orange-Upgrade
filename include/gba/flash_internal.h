@@ -80,4 +80,6 @@ u16 __attribute__((long_call)) ProgramFlashSector_MX(u16 sectorNum, void *src);
 // agb_flash_1m
 u16 __attribute__((long_call)) IdentifyFlash(void);
 
+extern u16 (*EraseFlashSector)(u16);
+
 #endif // GUARD_GBA_FLASH_INTERNAL_H

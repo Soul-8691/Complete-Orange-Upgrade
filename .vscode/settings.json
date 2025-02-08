@@ -4,6 +4,7 @@
         "moves.h": "c",
         "trainers.h": "c",
         "hold_effects.h": "c",
-        "items.h": "c"
+        "items.h": "c",
+        "vars.h": "c"
     }
 }

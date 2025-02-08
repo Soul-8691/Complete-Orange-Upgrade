@@ -60,6 +60,12 @@ struct SaveSectorLocation
     u16 size;
 };
 
+struct SaveSectionOffsets
+{
+    u16 toAdd;
+    u16 size;
+};
+
 struct SaveSector
 {
     u8 data[SECTOR_DATA_SIZE];
@@ -91,7 +97,7 @@ extern struct SaveSector gSaveDataBuffer;
 
 void __attribute__((long_call)) ClearSaveData(void);
 void __attribute__((long_call)) Save_ResetSaveCounters(void);
-u8 __attribute__((long_call)) HandleSavingData(u8 saveType);
+u8 HandleSavingData_(u8 saveType);
 u8 __attribute__((long_call)) TrySavingData(u8 saveType);
 bool8 __attribute__((long_call)) LinkFullSave_Init(void);
 bool8 __attribute__((long_call)) LinkFullSave_WriteSector(void);
@@ -103,5 +109,14 @@ u8 __attribute__((long_call)) LoadGameSave(u8 saveType);
 u32 __attribute__((long_call)) TryReadSpecialSaveSector(u8 sector, u8 *dst);
 u32 __attribute__((long_call)) TryWriteSpecialSaveSector(u8 sector, u8 *src);
 void __attribute__((long_call)) Task_LinkFullSave(u8 taskId);
+
+extern __attribute__((long_call)) u16 gLastWrittenSector;
+extern __attribute__((long_call)) u32 gLastSaveCounter;
+extern __attribute__((long_call)) u16 gLastKnownGoodSector;
+extern __attribute__((long_call)) u32 gSaveCounter;
+extern __attribute__((long_call)) u16 gUnknown_3005398;
+extern __attribute__((long_call)) u16 gSaveUnusedVar;
+extern struct SaveSectorLocation gRamSaveSectorLocations[0xE];
+extern __attribute__((long_call)) u16 gSaveSucceeded;
 
 #endif // GUARD_SAVE_H
