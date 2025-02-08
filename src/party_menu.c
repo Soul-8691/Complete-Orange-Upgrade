@@ -233,7 +233,7 @@ void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
         // Task_DoUseItemAnim(taskId);
-        gItemUseCB = ItemUseCB_LearnedMove;
+        gTasks[taskId].func = Task_LearnedMove_;
     }
     else
     {
