@@ -8,10 +8,10 @@
 .equ NumMainPocketItems, 100
 .equ NumKeyItems, 100
 .equ NumPokeballs, 50
-.equ NumTMs, 100
+.equ NumTMs, 120
 .equ NumBerries, 100
 
-MainPocket:
+ItemExpansion:
     ldr r0, .MainPocketRAM        @start of expanded item data
     str r0, [r1]        @store new RAM pocket data address into DMA memory
     mov r0, #0x4B            @75 main pocket items

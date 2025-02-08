@@ -340,13 +340,8 @@ void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosit
 // u32 GetMonData(struct Pokemon *mon, s32 field, u8 *data);
 // u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data);
 
-#ifdef IS_POKEMON_C
 u32 GetMonData(struct Pokemon *, s32, u8 *);
 u32 GetBoxMonData(struct BoxPokemon *, s32, u8 *);
-#else
-u32 GetMonData();
-u32 GetBoxMonData();
-#endif // IS_POKEMON_C
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg);
 void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg);

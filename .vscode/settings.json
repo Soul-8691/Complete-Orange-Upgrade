@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "hooks": "cpp"
+        "hooks": "cpp",
+        "moves.h": "c"
     }
 }

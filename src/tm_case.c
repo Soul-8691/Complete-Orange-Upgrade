@@ -29,6 +29,8 @@
 #include "../include/constants/items.h"
 #include "../include/constants/songs.h"
 
+#include "../include/event_data.h"
+
 extern void RemoveContextMenu(u8 * windowId);
 extern void PrintError_ThereIsNoPokemon(u8 taskId);
 extern void Task_BeginFadeOutFromTMCase(u8 taskId);
@@ -272,7 +274,7 @@ void GetTMNumberAndMoveString_(u8 * dest, u16 itemId)
     
     StringAppend(gStringVar4, sText_SingleSpace);
     StringAppend(gStringVar4, gText_FontNormal);
-    StringAppend(gStringVar4, gMoveNames[ItemIdToBattleMoveId_(itemId)]);
+    StringAppend(gStringVar4, gMoveNames_[ItemIdToBattleMoveId_(itemId)]);
     StringCopy(dest, gStringVar4);
 }
 
@@ -387,7 +389,7 @@ enum {
 
 // When a TM/HM in the list is selected in the field, create a context
 // menu with a list of actions that can be taken.
-void Task_SelectTMAction_FromFieldBag(u8 taskId)
+void Task_SelectTMAction_FromFieldBag_(u8 taskId)
 {
     u8 * strbuf;
     TMCase_SetWindowBorder2(2);
@@ -473,7 +475,7 @@ static const struct SpriteTemplate sSpriteTemplate_Disc = {
 
 extern void TintDiscpriteByType(u8 type);
 
-u8 CreateDiscSprite(u16 itemId)
+u8 CreateDiscSprite_(u16 itemId)
 {
     u8 spriteId = CreateSprite(&sSpriteTemplate_Disc, DISC_BASE_X, DISC_BASE_Y, 0);
     u8 tmIdx;

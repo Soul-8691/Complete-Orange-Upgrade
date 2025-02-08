@@ -47,7 +47,7 @@ bool8 BufferTMHMMoveName_(void)
     // 8004 = item ID
     if ((gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM08) || gSpecialVar_0x8004 >= ITEM_TM51)
     {
-        StringCopy(gStringVar1, gMoveNames[ItemIdToBattleMoveId_(gSpecialVar_0x8004)]);
+        StringCopy(gStringVar1, gMoveNames_[ItemIdToBattleMoveId_(gSpecialVar_0x8004)]);
         return TRUE;
     }
     else
