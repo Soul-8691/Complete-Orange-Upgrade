@@ -60,12 +60,12 @@ struct Window
 typedef void (*WindowFunc)(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum);
 
 bool16 InitWindows(const struct WindowTemplate *templates);
-u16 AddWindow(const struct WindowTemplate *template);
+u16 __attribute__((long_call)) AddWindow(const struct WindowTemplate *template);
 int AddWindowWithoutTileMap(const struct WindowTemplate *template);
 void RemoveWindow(u8 windowId);
 void FreeAllWindowBuffers(void);
 
-void CopyWindowToVram(u8 windowId, u8 mode);
+void __attribute__((long_call)) CopyWindowToVram(u8 windowId, u8 mode);
 void CopyWindowToVram8Bit(u8 windowId, u8 mode);
 
 void PutWindowTilemap(u8 windowId);

@@ -133,7 +133,6 @@ struct PartyMenuBox
     u8 statusSpriteId;
 };
 
-extern void __attribute__((long_call)) ItemUseCB_LearnedMove(u8 taskId, TaskFunc func);
 extern void __attribute__((long_call)) Task_ReplaceMoveYesNo(u8 taskId);
 extern void __attribute__((long_call)) DisplayPartyPokemonDescriptionData(u8 slot, u8 stringId);
 extern void __attribute__((long_call)) DisplayLearnMoveMessageAndClose(u8 taskId, const u8 *str);
@@ -204,6 +203,11 @@ static u8 CanTeachMove(struct Pokemon *mon, u16 move)
         return CAN_LEARN_MOVE;
 }
 
+static void ItemUseCB_LearnedMove(u8 taskId, TaskFunc func)
+{
+    Task_LearnedMove_(taskId);
+}
+
 void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
 {
     struct Pokemon *mon;
@@ -229,7 +233,7 @@ void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
         // Task_DoUseItemAnim(taskId);
-        gTasks[taskId].func = Task_LearnedMove_;
+        gItemUseCB = ItemUseCB_LearnedMove;
     }
     else
     {

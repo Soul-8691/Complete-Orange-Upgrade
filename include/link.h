@@ -279,7 +279,7 @@ void RfuVSync(void);
 void Timer3Intr(void);
 void SerialCB(void);
 u8 GetLinkPlayerCount(void);
-bool32 InUnionRoom(void);
+bool32 __attribute__((long_call)) InUnionRoom(void);
 
 void SetLinkStandbyCallback(void);
 void SetWirelessCommType1(void);
