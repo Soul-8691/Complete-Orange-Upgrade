@@ -47,7 +47,7 @@ void __attribute__((long_call)) CopyItemNameHandlePlural(u16 itemId, u8 *string,
 bool8 __attribute__((long_call)) IsBagPocketNonEmpty(u8 pocket);
 bool8 __attribute__((long_call)) CheckBagHasItem(u16 itemId, u16 count);
 bool8 __attribute__((long_call)) CheckBagHasSpace(u16 itemId, u16 count);
-bool8 __attribute__((long_call)) __attribute__((long_call)) RemoveBagItem(u16 itemId, u16 count);
+bool8 __attribute__((long_call)) RemoveBagItem(u16 itemId, u16 count);
 u8 __attribute__((long_call)) GetPocketByItemId(u16 itemId);
 void __attribute__((long_call)) ClearItemSlots(struct ItemSlot *itemSlots, u8 b);
 u8 __attribute__((long_call)) CountUsedPCItemSlots(void);

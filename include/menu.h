@@ -53,7 +53,7 @@ void __attribute__((long_call)) MultichoiceList_PrintItems(u8 windowId, u8 fontI
 void __attribute__((long_call)) PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs);
 s8 __attribute__((long_call)) Menu_ProcessInputNoWrapAround_other(void);
 s8 __attribute__((long_call)) Menu_ProcessInput_other(void);
-s8 __attribute__((long_call)) __attribute__((long_call)) Menu_ProcessInputNoWrapAround(void);
+s8 __attribute__((long_call)) Menu_ProcessInputNoWrapAround(void);
 s8 __attribute__((long_call)) Menu_ProcessInput(void);
 u8 __attribute__((long_call)) Menu_GetCursorPos(void);
 u8 __attribute__((long_call)) Menu_MoveCursorNoWrapAround(s8 cursorDelta);

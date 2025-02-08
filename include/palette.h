@@ -56,7 +56,7 @@ struct PaletteFadeControl
 };
 
 extern struct PaletteFadeControl gPaletteFade;
-extern u32 __attribute__((long_call)) __attribute__((long_call)) gPlttBufferTransferPending;
+extern u32 __attribute__((long_call)) gPlttBufferTransferPending;
 extern u16 __attribute__((long_call)) gPlttBufferUnfaded[PLTT_BUFFER_SIZE];
 extern u16 __attribute__((long_call)) gPlttBufferFaded[PLTT_BUFFER_SIZE];
 

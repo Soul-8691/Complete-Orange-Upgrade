@@ -17,8 +17,8 @@ u8* __attribute__((long_call)) StringAppend(u8 *dest, const u8 *src);
 u16 __attribute__((long_call)) StringLength(const u8 *str);
 u8* __attribute__((long_call)) ConvertIntToDecimalStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 n);
 u8* __attribute__((long_call)) StringExpandPlaceholders(u8 *dest, const u8 *src);
-s32 __attribute__((long_call)) __attribute__((long_call)) StringCompare(const u8 *str1, const u8 *str2);
-s32 __attribute__((long_call)) __attribute__((long_call)) StringCompareN(const u8 *str1, const u8 *str2, u32 n);
+s32 __attribute__((long_call)) StringCompare(const u8 *str1, const u8 *str2);
+s32 __attribute__((long_call)) StringCompareN(const u8 *str1, const u8 *str2, u32 n);
 u8* __attribute__((long_call)) StringAppendN(u8 *dest, const u8 *src, u8 n);
 u8* __attribute__((long_call)) StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n);
 

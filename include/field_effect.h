@@ -4,7 +4,7 @@
 #include "global.h"
 #include "constants/field_effects.h"
 
-extern u32 __attribute__((long_call)) __attribute__((long_call)) gFieldEffectArguments[8];
+extern u32 __attribute__((long_call)) gFieldEffectArguments[8];
 extern void __attribute__((long_call)) (*gPostMenuFieldCallback)(void);
 extern bool8 __attribute__((long_call)) (*gFieldCallback2)(void);
 

@@ -15,9 +15,9 @@ struct YesNoFuncTable
 };
 
 bool16 __attribute__((long_call)) RunTextPrinters_CheckActive(u8 textPrinterId);
-bool8 __attribute__((long_call)) __attribute__((long_call)) IsActiveOverworldLinkBusy(void);
+bool8 __attribute__((long_call)) IsActiveOverworldLinkBusy(void);
 bool8 __attribute__((long_call)) MenuHelpers_ShouldWaitForLinkRecv(void);
-bool8 __attribute__((long_call)) __attribute__((long_call)) MenuHelpers_IsLinkActive(void);
+bool8 __attribute__((long_call)) MenuHelpers_IsLinkActive(void);
 void __attribute__((long_call)) SetVBlankHBlankCallbacksToNull(void);
 void __attribute__((long_call)) ResetAllBgsCoordinatesAndBgCntRegs(void);
 u8 __attribute__((long_call)) GetDialogBoxFontId(void);

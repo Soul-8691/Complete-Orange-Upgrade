@@ -64,7 +64,7 @@ static const struct OamData sTMSpriteOamData = {
 };
 
 // The "dynamic" resources will be reset any time the TM case is exited, even temporarily.
-extern EWRAM_DATA struct {
+extern struct {
     void (* nextScreenCallback)(void);
     u8 discSpriteId;
     u8 maxTMsShown;
@@ -76,9 +76,7 @@ extern EWRAM_DATA struct {
     u8 numMenuActions;
     s16 seqId;
     u8 unused[8];
-} * sTMCaseDynamicResources = NULL;
-
-extern EWRAM_DATA u16 * sTMSpritePaletteBuffer = NULL;
+} * sTMCaseDynamicResources;
 
 // IDs for the actions in the context menu
 enum {
@@ -116,75 +114,13 @@ enum {
 #define tListTaskId       data[0]
 #define tSelection        data[1]
 
-static void Action_Use(u8 taskId)
-{
-    RemoveContextMenu(&sTMCaseDynamicResources->contextMenuWindowId);
-    ClearStdWindowAndFrameToTransparent(WIN_SELECTED_MSG, FALSE);
-    ClearWindowTilemap(WIN_SELECTED_MSG);
-    PutWindowTilemap(WIN_LIST);
-    ScheduleBgCopyTilemapToVram(0);
-    ScheduleBgCopyTilemapToVram(1);
-    if (CalculatePlayerPartyCount() == 0)
-    {
-        PrintError_ThereIsNoPokemon(taskId);
-    }
-    else
-    {
-        // Chose a TM/HM to use, exit TM case for party menu
-        gItemUseCB = ItemUseCB_TMHM_;
-        sTMCaseDynamicResources->nextScreenCallback = CB2_ShowPartyMenuForItemUse;
-        Task_BeginFadeOutFromTMCase(taskId);
-    }
-}
+extern void __attribute__((long_call)) Action_Use(u8 taskId);
 
-#define IS_HM(itemId) (ItemId_GetImportance(itemId) != 0)
+#define IS_HM(itemId) (gSpecialVar_ItemId >= ITEM_HM01 && gSpecialVar_ItemId <= ITEM_HM08)
 
-static void Action_Give(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-    u16 itemId = BagGetItemIdByPocketPosition(POCKET_TM_CASE, tSelection);
-    RemoveContextMenu(&sTMCaseDynamicResources->contextMenuWindowId);
-    ClearStdWindowAndFrameToTransparent(WIN_SELECTED_MSG, FALSE);
-    ClearWindowTilemap(WIN_SELECTED_MSG);
-    PutWindowTilemap(WIN_DESCRIPTION);
-    PutWindowTilemap(WIN_MOVE_INFO_LABELS);
-    PutWindowTilemap(WIN_MOVE_INFO);
-    ScheduleBgCopyTilemapToVram(0);
-    ScheduleBgCopyTilemapToVram(1);
-    if (!IS_HM(itemId))
-    {
-        if (CalculatePlayerPartyCount() == 0)
-        {
-            PrintError_ThereIsNoPokemon(taskId);
-        }
-        else
-        {
-            sTMCaseDynamicResources->nextScreenCallback = CB2_ChooseMonToGiveItem;
-            Task_BeginFadeOutFromTMCase(taskId);
-        }
-    }
-    else
-    {
-        PrintError_ItemCantBeHeld(taskId);
-    }
-}
+extern void __attribute__((long_call)) Action_Give(u8 taskId);
 
-static void Action_Exit(u8 taskId)
-{
-    s16 * data = gTasks[taskId].data;
-
-    RemoveContextMenu(&sTMCaseDynamicResources->contextMenuWindowId);
-    ClearStdWindowAndFrameToTransparent(WIN_SELECTED_MSG, FALSE);
-    ClearWindowTilemap(WIN_SELECTED_MSG);
-    PutWindowTilemap(WIN_LIST);
-    PrintListCursor(tListTaskId, COLOR_DARK);
-    PutWindowTilemap(WIN_DESCRIPTION);
-    PutWindowTilemap(WIN_MOVE_INFO_LABELS);
-    PutWindowTilemap(WIN_MOVE_INFO);
-    ScheduleBgCopyTilemapToVram(0);
-    ScheduleBgCopyTilemapToVram(1);
-    ReturnToList(taskId);
-}
+extern void __attribute__((long_call)) Action_Exit(u8 taskId);
 
 static const struct MenuAction sMenuActions_UseGiveExit[] = {
     [ACTION_USE]  = {gOtherText_Use,  Action_Use },
@@ -192,29 +128,7 @@ static const struct MenuAction sMenuActions_UseGiveExit[] = {
     [ACTION_EXIT] = {gOtherText_Exit, Action_Exit},
 };
 
-static void Task_TMContextMenu_HandleInput(u8 taskId)
-{
-    s8 input;
-
-    if (IsActiveOverworldLinkBusy() != TRUE)
-    {
-        input = Menu_ProcessInputNoWrapAround();
-        switch (input)
-        {
-        case MENU_B_PRESSED:
-            // Run last action in list (Exit)
-            PlaySE(SE_SELECT);
-            sMenuActions_UseGiveExit[sTMCaseDynamicResources->menuActionIndices[sTMCaseDynamicResources->numMenuActions - 1]].func.void_u8(taskId);
-            break;
-        case MENU_NOTHING_CHOSEN:
-            break;
-        default:
-            PlaySE(SE_SELECT);
-            sMenuActions_UseGiveExit[sTMCaseDynamicResources->menuActionIndices[input]].func.void_u8(taskId);
-            break;
-        }
-    }
-}
+extern void __attribute__((long_call)) Task_ContextMenu_HandleInput(u8 taskId);
 
 enum {
     ANIM_TM,
@@ -234,16 +148,6 @@ static const union AnimCmd sAnim_HM[] = {
 static const union AnimCmd *const sAnims_Disc[] = {
     [ANIM_TM] = sAnim_TM,
     [ANIM_HM] = sAnim_HM
-};
-
-static const struct SpriteTemplate sTMSpriteTemplate = {
-    .tileTag = TAG_DISC,
-    .paletteTag = TAG_DISC,
-    .oam = &sTMSpriteOamData,
-    .anims = sAnims_Disc,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCallbackDummy
 };
 
 void GetTMNumberAndMoveString_(u8 * dest, u16 itemId)
@@ -278,10 +182,7 @@ void GetTMNumberAndMoveString_(u8 * dest, u16 itemId)
     StringCopy(dest, gStringVar4);
 }
 
-static void AddTextPrinterParameterized_ColorByIndex(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx)
-{
-    AddTextPrinterParameterized4(windowId, fontId, x, y, letterSpacing, lineSpacing, sTextColors[colorIdx], speed, str);
-}
+extern void __attribute__((long_call)) TMCase_Print(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIdx);
 
 void TMCase_ItemPrintFunc(u8 windowId, s32 itemId, u8 y)
 {
@@ -292,13 +193,9 @@ void TMCase_ItemPrintFunc(u8 windowId, s32 itemId, u8 y)
     {
         if (BagGetItemIdByPocketPosition(POCKET_TM_CASE, itemId) >= ITEM_HM01 && BagGetItemIdByPocketPosition(POCKET_TM_CASE, itemId) <= ITEM_HM08)
             isHm = TRUE;
-        else
-            isHm = FALSE;
         
 		#ifdef REUSABLE_TMS
             showQuantity = FALSE;
-		#else
-            showQuantity = TRUE;
 		#endif
         
         if (!isHm)
@@ -307,7 +204,7 @@ void TMCase_ItemPrintFunc(u8 windowId, s32 itemId, u8 y)
             {
                 ConvertIntToDecimalStringN(gStringVar1, BagGetQuantityByPocketPosition(POCKET_TM_CASE, itemId), STR_CONV_MODE_RIGHT_ALIGN, 3);
                 StringExpandPlaceholders(gStringVar4, gText_TimesStrVar1);
-                AddTextPrinterParameterized_ColorByIndex(windowId, 0, gStringVar4, 0x7E, y, 0, 0, 0xFF, 1);
+                TMCase_Print(windowId, 0, gStringVar4, 0x7E, y, 0, 0, 0xFF, 1);
             }
         }
         else
@@ -322,16 +219,7 @@ static const struct WindowTemplate sTMContextWindowTemplates[] = {
     {0x01, 0x16, 0x0f, 0x07, 0x04, 0x0f, 0x01cf}
 };
 
-static u8 AddTMContextMenu(u8 * a0, u8 a1)
-{
-    if (*a0 == 0xFF)
-    {
-        *a0 = AddWindow(&sTMContextWindowTemplates[a1]);
-        TMCase_SetWindowBorder1(*a0);
-        ScheduleBgCopyTilemapToVram(0);
-    }
-    return *a0;
-}
+extern u8 __attribute__((long_call)) AddContextMenu(u8 * a0, u8 a1);
 
 #define TM_CASE_TM_TAG 400
 
@@ -355,32 +243,6 @@ static const u16 sTMSpritePaletteOffsetByType[] = {
     [TYPE_DRAGON]   = 0x100
 };
 
-static EWRAM_DATA struct {
-    void (* savedCallback)(void);
-    u8 tmCaseMenuType;
-    u8 unk_05;
-    u8 unk_06;
-    u16 selectedRow;
-    u16 scrollOffset;
-} sTMCaseStaticResources = {};
-
-static void TintTMSpriteByType(u8 type)
-{
-    u8 palIndex = IndexOfSpritePaletteTag(TM_CASE_TM_TAG) << 4;
-    
-    /*  if you have fairy-type tm/hms
-    if (type == TYPE_FAIRY)
-        LoadPalette(sFairyTmPalette, 0x100 | palIndex, 0x20);        
-    else
-    */
-
-    LoadPalette(sTMSpritePaletteBuffer + sTMSpritePaletteOffsetByType[type], 0x100 | palIndex, 0x20);
-    if (sTMCaseStaticResources.tmCaseMenuType == 4)
-    {
-        BlendPalettes(1 << (0x10 + palIndex), 4, RGB_BLACK);
-    }
-}
-
 // Window IDs for the context menu that opens when a TM/HM is selected
 enum {
     WIN_USE_GIVE_EXIT,
@@ -395,13 +257,13 @@ void Task_SelectTMAction_FromFieldBag_(u8 taskId)
     TMCase_SetWindowBorder2(2);
     if (!MenuHelpers_IsLinkActive() && InUnionRoom() != TRUE)
     {
-        AddTMContextMenu(&sTMCaseDynamicResources->contextMenuWindowId, 0);
+        AddContextMenu(&sTMCaseDynamicResources->contextMenuWindowId, 0);
         sTMCaseDynamicResources->menuActionIndices = sMenuActionIndices_Field;
         sTMCaseDynamicResources->numMenuActions = NELEMS(sMenuActionIndices_Field);
     }
     else
     {
-        AddTMContextMenu(&sTMCaseDynamicResources->contextMenuWindowId, 1);
+        AddContextMenu(&sTMCaseDynamicResources->contextMenuWindowId, 1);
         sTMCaseDynamicResources->menuActionIndices = sMenuActionIndices_UnionRoom;
         sTMCaseDynamicResources->numMenuActions = NELEMS(sMenuActionIndices_UnionRoom);
     }
@@ -410,7 +272,7 @@ void Task_SelectTMAction_FromFieldBag_(u8 taskId)
     strbuf = Alloc(256);
     GetTMNumberAndMoveString_(strbuf, gSpecialVar_ItemId);
     StringAppend(strbuf, gText_Var1IsSelected + 2); // +2 skips over the stringvar
-    AddTextPrinterParameterized_ColorByIndex(2, 2, strbuf, 0, 2, 1, 0, 0, 1);
+    TMCase_Print(2, 2, strbuf, 0, 2, 1, 0, 0, 1);
     Free(strbuf);
     
     if (gSpecialVar_ItemId >= ITEM_HM01 && gSpecialVar_ItemId <= ITEM_HM08)
@@ -421,7 +283,7 @@ void Task_SelectTMAction_FromFieldBag_(u8 taskId)
     
     ScheduleBgCopyTilemapToVram(0);
     ScheduleBgCopyTilemapToVram(1);
-    gTasks[taskId].func = Task_TMContextMenu_HandleInput;
+    gTasks[taskId].func = Task_ContextMenu_HandleInput;
 }
 
 void SetTMSpriteAnim(struct Sprite * sprite, u8 idx)

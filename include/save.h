@@ -81,7 +81,7 @@ enum
     CHECK // unused
 };
 
-extern u32 __attribute__((long_call)) __attribute__((long_call)) gDamagedSaveSectors;
+extern u32 __attribute__((long_call)) gDamagedSaveSectors;
 extern struct SaveSector *gSaveDataBufferPtr; // the pointer is in fast IWRAM but points to the slower EWRAM.
 extern u16 __attribute__((long_call)) gSaveFileStatus;
 extern void __attribute__((long_call)) (*gGameContinueCallback)(void);

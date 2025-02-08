@@ -232,7 +232,7 @@ extern struct Link gLink;
 extern u16 __attribute__((long_call)) gRecvCmds[MAX_RFU_PLAYERS][CMD_LENGTH];
 extern u8 __attribute__((long_call)) gBlockSendBuffer[BLOCK_BUFFER_SIZE];
 extern u16 __attribute__((long_call)) gLinkType;
-extern u32 __attribute__((long_call)) __attribute__((long_call)) gLinkStatus;
+extern u32 __attribute__((long_call)) gLinkStatus;
 extern u16 __attribute__((long_call)) gBlockRecvBuffer[MAX_RFU_PLAYERS][BLOCK_BUFFER_SIZE / 2];
 extern u16 __attribute__((long_call)) gSendCmd[CMD_LENGTH];
 extern u8 __attribute__((long_call)) gShouldAdvanceLinkState;
@@ -279,7 +279,7 @@ void __attribute__((long_call)) RfuVSync(void);
 void __attribute__((long_call)) Timer3Intr(void);
 void __attribute__((long_call)) SerialCB(void);
 u8 __attribute__((long_call)) GetLinkPlayerCount(void);
-bool32 __attribute__((long_call)) __attribute__((long_call)) InUnionRoom(void);
+bool32 __attribute__((long_call)) InUnionRoom(void);
 
 void __attribute__((long_call)) SetLinkStandbyCallback(void);
 void __attribute__((long_call)) SetWirelessCommType1(void);

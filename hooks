@@ -18,6 +18,6 @@ TMCase_ItemPrintFunc 08131e68 3
 SortPocketAndPlaceHMsFirst_ 0809a5e4 2
 BufferTMHMMoveName_ 080cc8cc 1
 SanitizeItemId_ 0809a8a4 1
-TMSlotsHack 08099E6C 0
-##JPANSaveblock 080D9EDC 0
-##ItemExpansion 08099e50 0
+##TMSlotsHack 08099E6C 0
+JPANSaveblock 080D9EDC 0
+ItemExpansion 08099e50 0

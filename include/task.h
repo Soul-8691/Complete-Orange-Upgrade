@@ -33,7 +33,7 @@ u8 __attribute__((long_call)) FindFirstActiveTask(void);
 void __attribute__((long_call)) TaskDummy(u8 taskId);
 void __attribute__((long_call)) SetTaskFuncWithFollowupFunc(u8 taskId, TaskFunc func, TaskFunc followupFunc);
 void __attribute__((long_call)) SwitchTaskToFollowupFunc(u8 taskId);
-bool8 __attribute__((long_call)) __attribute__((long_call)) FuncIsActiveTask(TaskFunc func);
+bool8 __attribute__((long_call)) FuncIsActiveTask(TaskFunc func);
 u8 __attribute__((long_call)) FindTaskIdByFunc(TaskFunc func);
 u8 __attribute__((long_call)) GetTaskCount(void);
 
