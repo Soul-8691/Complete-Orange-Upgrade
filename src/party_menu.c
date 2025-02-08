@@ -71,8 +71,8 @@
 
 #include "data/party_menu.c"
 
-extern void Task_SetSacredAshCB(u8 taskId);
-extern void Task_DoLearnedMoveFanfareAfterText(u8 taskId);
+extern void __attribute__((long_call)) Task_SetSacredAshCB(u8 taskId);
+extern void __attribute__((long_call)) Task_DoLearnedMoveFanfareAfterText(u8 taskId);
 
 #define PARTY_PAL_SELECTED     (1 << 0)
 #define PARTY_PAL_FAINTED      (1 << 1)
@@ -133,37 +133,14 @@ struct PartyMenuBox
     u8 statusSpriteId;
 };
 
-extern void ItemUseCB_LearnedMove(u8 taskId, TaskFunc func);
-extern void Task_ReplaceMoveYesNo(u8 taskId);
-extern void DisplayPartyPokemonDescriptionData(u8 slot, u8 stringId);
-extern void Task_DoUseItemAnim(u8 taskId);
+extern void __attribute__((long_call)) ItemUseCB_LearnedMove(u8 taskId, TaskFunc func);
+extern void __attribute__((long_call)) Task_ReplaceMoveYesNo(u8 taskId);
+extern void __attribute__((long_call)) DisplayPartyPokemonDescriptionData(u8 slot, u8 stringId);
+extern void __attribute__((long_call)) DisplayLearnMoveMessageAndClose(u8 taskId, const u8 *str);
+extern void __attribute__((long_call)) DisplayLearnMoveMessage(const u8 *str);
+// void __attribute__((long_call)) Task_DoUseItemAnim(u8 taskId);
 void Task_LearnedMove_(u8 taskId);
 static u8 CanTeachMove(struct Pokemon *mon, u16 move);
-
-static void DisplayLearnMoveMessage(const u8 *str)
-{
-    StringExpandPlaceholders(gStringVar4, str);
-    DisplayPartyMenuMessage(gStringVar4, TRUE);
-    ScheduleBgCopyTilemapToVram(2);
-}
-
-extern EWRAM_DATA struct PartyMenuInternal *sPartyMenuInternal = NULL;
-
-static void Task_ClosePartyMenuAfterText(u8 taskId)
-{
-    if (IsPartyMenuTextPrinterActive() != TRUE)
-    {
-        if (gPartyMenuUseExitCallback == FALSE)
-            sPartyMenuInternal->exitCallback = NULL;
-        Task_ClosePartyMenu(taskId);
-    }
-}
-
-static void DisplayLearnMoveMessageAndClose(u8 taskId, const u8 *str)
-{
-    DisplayLearnMoveMessage(str);
-    gTasks[taskId].func = Task_ClosePartyMenuAfterText;
-}
 
 void DisplayPartyPokemonDataToTeachMove_(u8 slot, u16 move)
 {
@@ -250,7 +227,7 @@ void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
     if (GiveMoveToMon(mon, move) != MON_HAS_MAX_MOVES)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
-        Task_DoUseItemAnim(taskId);
+        // Task_DoUseItemAnim(taskId);
         gItemUseCB = ItemUseCB_LearnedMove;
     }
     else

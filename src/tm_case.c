@@ -31,15 +31,15 @@
 
 #include "../include/event_data.h"
 
-extern void RemoveContextMenu(u8 * windowId);
-extern void PrintError_ThereIsNoPokemon(u8 taskId);
-extern void Task_BeginFadeOutFromTMCase(u8 taskId);
-extern void PrintError_ItemCantBeHeld(u8 taskId);
-extern void PrintListCursor(u8 listTaskId, u8 colorIdx);
-extern void ReturnToList(u8 taskId);
-extern void PlaceHMTileInWindow(u8 windowId, u8 x, u8 y);
-extern void TMCase_SetWindowBorder1(u8 windowId);
-extern void TMCase_SetWindowBorder2(u8 windowId);
+extern void __attribute__((long_call)) RemoveContextMenu(u8 * windowId);
+extern void __attribute__((long_call)) PrintError_ThereIsNoPokemon(u8 taskId);
+extern void __attribute__((long_call)) Task_BeginFadeOutFromTMCase(u8 taskId);
+extern void __attribute__((long_call)) PrintError_ItemCantBeHeld(u8 taskId);
+extern void __attribute__((long_call)) PrintListCursor(u8 listTaskId, u8 colorIdx);
+extern void __attribute__((long_call)) ReturnToList(u8 taskId);
+extern void __attribute__((long_call)) PlaceHMTileInWindow(u8 windowId, u8 x, u8 y);
+extern void __attribute__((long_call)) TMCase_SetWindowBorder1(u8 windowId);
+extern void __attribute__((long_call)) TMCase_SetWindowBorder2(u8 windowId);
 extern const u8 sText_ClearTo18[];
 extern const u8 sText_SingleSpace[];
 
@@ -473,7 +473,7 @@ static const struct SpriteTemplate sSpriteTemplate_Disc = {
     .callback = SpriteCallbackDummy
 };
 
-extern void TintDiscpriteByType(u8 type);
+extern void __attribute__((long_call)) TintDiscpriteByType(u8 type);
 
 u8 CreateDiscSprite_(u16 itemId)
 {

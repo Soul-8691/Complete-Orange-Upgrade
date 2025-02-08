@@ -58,7 +58,7 @@ void ItemUseCB_PPUp(u8 taskId, TaskFunc func);
 u16 ItemIdToBattleMoveId(u16 item);
 u16 ItemIdToBattleMoveId_(u16 item);
 bool8 IsMoveHm(u16 move);
-bool8 MonKnowsMove(struct Pokemon *mon, u16 move);
+bool8 __attribute__((long_call)) MonKnowsMove(struct Pokemon *mon, u16 move);
 void ItemUseCB_TMHM(u8 taskId, TaskFunc func);
 void ItemUseCB_TMHM_(u8 taskId, TaskFunc func);
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc func);

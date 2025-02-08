@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "hooks": "cpp",
-        "moves.h": "c"
+        "moves.h": "c",
+        "trainers.h": "c"
     }
 }

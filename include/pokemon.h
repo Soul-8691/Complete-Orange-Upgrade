@@ -314,12 +314,12 @@ void ConvertPokemonToBattleTowerPokemon(struct Pokemon *mon, struct BattleTowerP
 void CalculateMonStats(struct Pokemon *mon);
 void BoxMonToMon(struct BoxPokemon *src, struct Pokemon *dest);
 u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon);
-u16 GiveMoveToMon(struct Pokemon *mon, u16 move);
+u16 __attribute__((long_call)) GiveMoveToMon(struct Pokemon *mon, u16 move);
 u16 GiveMoveToBattleMon(struct BattlePokemon *mon, u16 move);
 void SetMonMoveSlot(struct Pokemon *mon, u16 move, u8 slot);
 void SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot);
 u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove);
-void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move);
+void __attribute__((long_call)) DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move);
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef);
 
 #define BATTLE_ALIVE_EXCEPT_ACTIVE  0
@@ -335,13 +335,8 @@ u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality);
 void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition);
 void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosition);
 
-// These are full type signatures for GetMonData() and GetBoxMonData(),
-// but they are not used since some code erroneously omits the third arg.
-// u32 GetMonData(struct Pokemon *mon, s32 field, u8 *data);
-// u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data);
-
-u32 GetMonData(struct Pokemon *, s32, u8 *);
-u32 GetBoxMonData(struct BoxPokemon *, s32, u8 *);
+u32 __attribute__((long_call)) GetMonData(struct Pokemon *mon, s32 field, u8 *data);
+u32 __attribute__((long_call)) GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data);
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg);
 void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg);
