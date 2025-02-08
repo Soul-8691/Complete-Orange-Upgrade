@@ -23,13 +23,13 @@ struct MonMarkingsMenu
     /*0x10B4*/ u8 tileLoadState;
 }; // 10b8
 
-void InitMonMarkingsMenu(struct MonMarkingsMenu *ptr);
-void BufferMonMarkingsMenuTiles(void);
-void OpenMonMarkingsMenu(u8 markings, s16 x, s16 y);
-void FreeMonMarkingsMenu(void);
-bool8 HandleMonMarkingsMenuInput(void);
+void __attribute__((long_call)) InitMonMarkingsMenu(struct MonMarkingsMenu *ptr);
+void __attribute__((long_call)) BufferMonMarkingsMenuTiles(void);
+void __attribute__((long_call)) OpenMonMarkingsMenu(u8 markings, s16 x, s16 y);
+void __attribute__((long_call)) FreeMonMarkingsMenu(void);
+bool8 __attribute__((long_call)) HandleMonMarkingsMenuInput(void);
 struct Sprite *CreateMonMarkingAllCombosSprite(u16 tileTag, u16 paletteTag, const u16 *palette);
 struct Sprite *CreateMonMarkingComboSprite(u16 tileTag, u16 paletteTag, const u16 *palette);
-void UpdateMonMarkingTiles(u8 markings, void *dest);
+void __attribute__((long_call)) UpdateMonMarkingTiles(u8 markings, void *dest);
 
 #endif //GUARD_MON_MARKINGS_H

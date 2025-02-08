@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-void ReshowBattleScreenDummy(void);
-void ReshowBattleScreenAfterMenu(void);
+void __attribute__((long_call)) ReshowBattleScreenDummy(void);
+void __attribute__((long_call)) ReshowBattleScreenAfterMenu(void);
 
 #endif // GUARD_RESHOW_BATTLE_SCREEN_H

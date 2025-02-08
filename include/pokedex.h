@@ -113,20 +113,20 @@ struct PokedexEntry
     /*0x20*/ u16 trainerOffset;
 };  /*size = 0x24*/
 
-void ResetPokedex(void);
-void CopyMonCategoryText(u16 species, u8 *dst);
-u16 GetPokedexHeightWeight(u16 dexNum, u8 data);
-u16 GetNationalPokedexCount(u8);
-u16 GetKantoPokedexCount(u8);
-bool16 HasAllMons(void);
-u8 CreateDexDisplayMonDataTask(u16 dexNum, u32 trainerId, u32 personality);
+void __attribute__((long_call)) ResetPokedex(void);
+void __attribute__((long_call)) CopyMonCategoryText(u16 species, u8 *dst);
+u16 __attribute__((long_call)) GetPokedexHeightWeight(u16 dexNum, u8 data);
+u16 __attribute__((long_call)) GetNationalPokedexCount(u8);
+u16 __attribute__((long_call)) GetKantoPokedexCount(u8);
+bool16 __attribute__((long_call)) HasAllMons(void);
+u8 __attribute__((long_call)) CreateDexDisplayMonDataTask(u16 dexNum, u32 trainerId, u32 personality);
 s8 GetSetPokedexFlag(u16 nationalNum, u8 caseId);
-u16 GetNationalPokedexCount(u8);
-u16 GetKantoPokedexCount(u8);
-bool16 HasAllHoennMons(void);
-bool16 HasAllKantoMons(void);
-bool16 HasAllMons(void);
+u16 __attribute__((long_call)) GetNationalPokedexCount(u8);
+u16 __attribute__((long_call)) GetKantoPokedexCount(u8);
+bool16 __attribute__((long_call)) HasAllHoennMons(void);
+bool16 __attribute__((long_call)) HasAllKantoMons(void);
+bool16 __attribute__((long_call)) HasAllMons(void);
 
-u8 DexScreen_RegisterMonToPokedex(u16 species);
+u8 __attribute__((long_call)) DexScreen_RegisterMonToPokedex(u16 species);
 
 #endif // GUARD_POKEDEX_H

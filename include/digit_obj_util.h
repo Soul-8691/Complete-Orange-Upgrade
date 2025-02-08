@@ -22,11 +22,11 @@ struct DigitObjUtilTemplate
 extern const u16 gMinigameDigits_Pal[];
 extern const u32 gMinigameDigits_Gfx[];
 
-bool32 DigitObjUtil_Init(u32 count);
-void DigitObjUtil_Free(void);
-bool32 DigitObjUtil_CreatePrinter(u32 id, s32 num, const struct DigitObjUtilTemplate *template);
-void DigitObjUtil_PrintNumOn(u32 id, s32 num);
-void DigitObjUtil_DeletePrinter(u32 id);
-void DigitObjUtil_HideOrShow(u32 id, bool32 hide);
+bool32 __attribute__((long_call)) DigitObjUtil_Init(u32 count);
+void __attribute__((long_call)) DigitObjUtil_Free(void);
+bool32 __attribute__((long_call)) DigitObjUtil_CreatePrinter(u32 id, s32 num, const struct DigitObjUtilTemplate *template);
+void __attribute__((long_call)) DigitObjUtil_PrintNumOn(u32 id, s32 num);
+void __attribute__((long_call)) DigitObjUtil_DeletePrinter(u32 id);
+void __attribute__((long_call)) DigitObjUtil_HideOrShow(u32 id, bool32 hide);
 
 #endif //GUARD_DIGIT_OBJ_UTIL_H

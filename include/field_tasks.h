@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-void ActivatePerStepCallback(u8);
-void SetUpFieldTasks(void);
+void __attribute__((long_call)) ActivatePerStepCallback(u8);
+void __attribute__((long_call)) SetUpFieldTasks(void);
 
 #endif // GUARD_FIELD_TASKS_H

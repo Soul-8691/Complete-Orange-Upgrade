@@ -39,15 +39,15 @@ enum
     ACRO_STATE_TURN_JUMP,
 };
 
-void BikeClearState(u32 directionHistory, u32 abStartSelectHistory);
-bool8 IsBikingDisallowedByPlayer(void);
-void GetOnOffBike(u8 flags);
+void __attribute__((long_call)) BikeClearState(u32 directionHistory, u32 abStartSelectHistory);
+bool8 __attribute__((long_call)) IsBikingDisallowedByPlayer(void);
+void __attribute__((long_call)) GetOnOffBike(u8 flags);
 s16 GetPlayerSpeed(void);
-bool8 RS_IsRunningDisallowed(u8 r0);
-void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys);
-bool32 IsRunningDisallowed(u8 metatileBehavior);
-void Bike_HandleBumpySlopeJump(void);
-void Bike_UpdateBikeCounterSpeed(u8 counter);
-bool8 IsPlayerNotUsingAcroBikeOnBumpySlope(void);
+bool8 __attribute__((long_call)) RS_IsRunningDisallowed(u8 r0);
+void __attribute__((long_call)) MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys);
+bool32 __attribute__((long_call)) IsRunningDisallowed(u8 metatileBehavior);
+void __attribute__((long_call)) Bike_HandleBumpySlopeJump(void);
+void __attribute__((long_call)) Bike_UpdateBikeCounterSpeed(u8 counter);
+bool8 __attribute__((long_call)) IsPlayerNotUsingAcroBikeOnBumpySlope(void);
 
 #endif //GUARD_BIKE_H

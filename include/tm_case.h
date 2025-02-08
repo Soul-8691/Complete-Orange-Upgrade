@@ -15,8 +15,8 @@ enum {
 // Indicates that the previous value should be preserved
 #define TMCASE_KEEP_PREV 0xFF
 
-void InitTMCase(u8 type, void (* exitCallback)(void), bool8 allowSelectClose);
-void ResetTMCaseCursorPos(void);
-void Pokedude_InitTMCase(void);
+void __attribute__((long_call)) InitTMCase(u8 type, void (* exitCallback)(void), bool8 allowSelectClose);
+void __attribute__((long_call)) ResetTMCaseCursorPos(void);
+void __attribute__((long_call)) Pokedude_InitTMCase(void);
 
 #endif //GUARD_TM_CASE_H

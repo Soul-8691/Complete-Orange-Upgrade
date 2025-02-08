@@ -3,6 +3,6 @@
 
 #include "global.h"
 
-void PlaySlotMachine(u16, void (*)(void));
+void __attribute__((long_call)) PlaySlotMachine(u16, void (*)(void));
 
 #endif // GUARD_SLOT_MACHINE_H

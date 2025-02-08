@@ -25,12 +25,12 @@ enum
 
 #define NUM_BERRIES 44
 
-void ClearEnigmaBerries(void);
-void SetEnigmaBerry(u8 *src);
-bool32 IsEnigmaBerryValid(void);
+void __attribute__((long_call)) ClearEnigmaBerries(void);
+void __attribute__((long_call)) SetEnigmaBerry(u8 *src);
+bool32 __attribute__((long_call)) IsEnigmaBerryValid(void);
 const struct Berry *GetBerryInfo(u8 berry);
-u8 ItemIdToBerryType(u16 item);
-void GetBerryNameByBerryType(u8 berry, u8 *string);
+u8 __attribute__((long_call)) ItemIdToBerryType(u16 item);
+void __attribute__((long_call)) GetBerryNameByBerryType(u8 berry, u8 *string);
 
 extern const struct Berry gBerries[];
 

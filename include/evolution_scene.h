@@ -5,9 +5,9 @@
 
 extern void (*gCB2_AfterEvolution)(void);
 
-void BeginEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);
-void EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);
-void TradeEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8 preEvoSpriteId, u8 partyId);
-void IsMovingBackgroundTaskRunning(void);
+void __attribute__((long_call)) BeginEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);
+void __attribute__((long_call)) EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8, u8 partyId);
+void __attribute__((long_call)) TradeEvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, u8 preEvoSpriteId, u8 partyId);
+void __attribute__((long_call)) IsMovingBackgroundTaskRunning(void);
 
 #endif // GUARD_EVOLUTION_SCENE_H

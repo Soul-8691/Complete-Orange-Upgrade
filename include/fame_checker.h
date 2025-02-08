@@ -14,10 +14,10 @@ enum {
 extern struct ListMenuTemplate gFameChecker_ListMenuTemplate;
 extern u8 gIconDescriptionBoxIsOpen;
 
-void ResetFameChecker(void);
-void FullyUnlockFameChecker(void);
-void UseFameChecker(MainCallback savedCallback);
-void SetFlavorTextFlagFromSpecialVars(void);
-void UpdatePickStateFromSpecialVar8005(void);
+void __attribute__((long_call)) ResetFameChecker(void);
+void __attribute__((long_call)) FullyUnlockFameChecker(void);
+void __attribute__((long_call)) UseFameChecker(MainCallback savedCallback);
+void __attribute__((long_call)) SetFlavorTextFlagFromSpecialVars(void);
+void __attribute__((long_call)) UpdatePickStateFromSpecialVar8005(void);
 
 #endif //GUARD_FAME_CHECKER_H

@@ -125,41 +125,41 @@ struct Weather
 
 extern struct Weather *const gWeatherPtr;
 
-void FadeScreen(u8 mode, s8 delay);
+void __attribute__((long_call)) FadeScreen(u8 mode, s8 delay);
 
-void SetSavedWeather(u32);
-u8 GetSav1Weather(void);
+void __attribute__((long_call)) SetSavedWeather(u32);
+u8 __attribute__((long_call)) GetSav1Weather(void);
 
-void DoCurrentWeather(void);
-void SetSavedWeatherFromCurrMapHeader(void);
-void SlightlyDarkenPalsInWeather(u16 *, u16 *, u32);
-void PlayRainStoppingSoundEffect(void);
-bool8 IsWeatherNotFadingIn(void);
-void SetWeatherScreenFadeOut(void);
-void WeatherProcessingIdle(void);
-u8 GetCurrentWeather(void);
-void delay(u8, u8, u32);
-void UpdateSpritePaletteWithWeather(u8 palIdx);
-void ResetPreservedPalettesInWeather(void);
-void PreservePaletteInWeather(u8 palIdx);
+void __attribute__((long_call)) DoCurrentWeather(void);
+void __attribute__((long_call)) SetSavedWeatherFromCurrMapHeader(void);
+void __attribute__((long_call)) SlightlyDarkenPalsInWeather(u16 *, u16 *, u32);
+void __attribute__((long_call)) PlayRainStoppingSoundEffect(void);
+bool8 __attribute__((long_call)) IsWeatherNotFadingIn(void);
+void __attribute__((long_call)) SetWeatherScreenFadeOut(void);
+void __attribute__((long_call)) WeatherProcessingIdle(void);
+u8 __attribute__((long_call)) GetCurrentWeather(void);
+void __attribute__((long_call)) delay(u8, u8, u32);
+void __attribute__((long_call)) UpdateSpritePaletteWithWeather(u8 palIdx);
+void __attribute__((long_call)) ResetPreservedPalettesInWeather(void);
+void __attribute__((long_call)) PreservePaletteInWeather(u8 palIdx);
 
-void SetNextWeather(u8 weather);
-void SetCurrentAndNextWeather(u8 weather);
-void Weather_SetBlendCoeffs(u8 eva, u8 evb);
-void Weather_SetTargetBlendCoeffs(u8 eva, u8 evb, int delay);
-bool8 Weather_UpdateBlend(void);
-void LoadCustomWeatherSpritePalette(const u16 *palette);
-void ResetDroughtWeatherPaletteLoading(void);
-bool8 LoadDroughtWeatherPalettes(void);
-void DroughtStateInit(void);
-void DroughtStateRun(void);
-void SetRainStrengthFromSoundEffect(u16 soundEffect);
-void WeatherShiftGammaIfPalStateIdle(s8 gammaIndex);
-void WeatherBeginGammaFade(u8 gammaIndex, u8 gammaTargetIndex, u8 gammaStepDelay);
-void ApplyWeatherGammaShiftToPal(u8 paletteIndex);
-void StartWeather(void);
-void ResumePausedWeather(void);
-void FadeSelectedPals(u8 mode, s8 delay, u32 selectedPalettes);
+void __attribute__((long_call)) SetNextWeather(u8 weather);
+void __attribute__((long_call)) SetCurrentAndNextWeather(u8 weather);
+void __attribute__((long_call)) Weather_SetBlendCoeffs(u8 eva, u8 evb);
+void __attribute__((long_call)) Weather_SetTargetBlendCoeffs(u8 eva, u8 evb, int delay);
+bool8 __attribute__((long_call)) Weather_UpdateBlend(void);
+void __attribute__((long_call)) LoadCustomWeatherSpritePalette(const u16 *palette);
+void __attribute__((long_call)) ResetDroughtWeatherPaletteLoading(void);
+bool8 __attribute__((long_call)) LoadDroughtWeatherPalettes(void);
+void __attribute__((long_call)) DroughtStateInit(void);
+void __attribute__((long_call)) DroughtStateRun(void);
+void __attribute__((long_call)) SetRainStrengthFromSoundEffect(u16 soundEffect);
+void __attribute__((long_call)) WeatherShiftGammaIfPalStateIdle(s8 gammaIndex);
+void __attribute__((long_call)) WeatherBeginGammaFade(u8 gammaIndex, u8 gammaTargetIndex, u8 gammaStepDelay);
+void __attribute__((long_call)) ApplyWeatherGammaShiftToPal(u8 paletteIndex);
+void __attribute__((long_call)) StartWeather(void);
+void __attribute__((long_call)) ResumePausedWeather(void);
+void __attribute__((long_call)) FadeSelectedPals(u8 mode, s8 delay, u32 selectedPalettes);
 
 extern const u16 gCloudsWeatherPalette[];
 extern const u16 gSandstormWeatherPalette[];

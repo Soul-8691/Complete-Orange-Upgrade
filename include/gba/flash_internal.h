@@ -60,24 +60,24 @@ extern const struct FlashSetupInfo MX29L010;
 extern const struct FlashSetupInfo LE26FV10N1TS;
 extern const struct FlashSetupInfo DefaultFlash;
 
-void SwitchFlashBank(u8 bankNum);
-u16 ReadFlashId(void);
-void StartFlashTimer(u8 phase);
-void SetReadFlash1(u16 *dest);
-void StopFlashTimer(void);
-u16 SetFlashTimerIntr(u8 timerNum, void (**intrFunc)(void));
-u32 ProgramFlashSectorAndVerify(u16 sectorNum, u8 *src);
-void ReadFlash(u16 sectorNum, u32 offset, void *dest, u32 size);
-u32 ProgramFlashSectorAndVerifyNBytes(u16 sectorNum, void *dataSrc, u32 n);
+void __attribute__((long_call)) SwitchFlashBank(u8 bankNum);
+u16 __attribute__((long_call)) ReadFlashId(void);
+void __attribute__((long_call)) StartFlashTimer(u8 phase);
+void __attribute__((long_call)) SetReadFlash1(u16 *dest);
+void __attribute__((long_call)) StopFlashTimer(void);
+u16 __attribute__((long_call)) SetFlashTimerIntr(u8 timerNum, void (**intrFunc)(void));
+u32 __attribute__((long_call)) ProgramFlashSectorAndVerify(u16 sectorNum, u8 *src);
+void __attribute__((long_call)) ReadFlash(u16 sectorNum, u32 offset, void *dest, u32 size);
+u32 __attribute__((long_call)) ProgramFlashSectorAndVerifyNBytes(u16 sectorNum, void *dataSrc, u32 n);
 
-u16 WaitForFlashWrite_Common(u8 phase, u8 *addr, u8 lastData);
+u16 __attribute__((long_call)) WaitForFlashWrite_Common(u8 phase, u8 *addr, u8 lastData);
 
-u16 EraseFlashChip_MX(void);
-u16 EraseFlashSector_MX(u16 sectorNum);
-u16 ProgramFlashByte_MX(u16 sectorNum, u32 offset, u8 data);
-u16 ProgramFlashSector_MX(u16 sectorNum, void *src);
+u16 __attribute__((long_call)) EraseFlashChip_MX(void);
+u16 __attribute__((long_call)) EraseFlashSector_MX(u16 sectorNum);
+u16 __attribute__((long_call)) ProgramFlashByte_MX(u16 sectorNum, u32 offset, u8 data);
+u16 __attribute__((long_call)) ProgramFlashSector_MX(u16 sectorNum, void *src);
 
 // agb_flash_1m
-u16 IdentifyFlash(void);
+u16 __attribute__((long_call)) IdentifyFlash(void);
 
 #endif // GUARD_GBA_FLASH_INTERNAL_H

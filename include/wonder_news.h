@@ -10,8 +10,8 @@ enum {
     WONDER_NEWS_SENT,
 };
 
-void WonderNews_SetReward(u32 newsType);
-void WonderNews_Reset(void);
-void WonderNews_IncrementStepCounter(void);
+void __attribute__((long_call)) WonderNews_SetReward(u32 newsType);
+void __attribute__((long_call)) WonderNews_Reset(void);
+void __attribute__((long_call)) WonderNews_IncrementStepCounter(void);
 
 #endif //GUARD_WONDER_NEWS_H

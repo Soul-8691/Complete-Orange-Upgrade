@@ -7,28 +7,28 @@
 
 extern u8 gDecompressionBuffer[0x4000];
 
-void LZDecompressWram(const void *src, void *dest);
-void LZDecompressVram(const void *src, void *dest);
+void __attribute__((long_call)) LZDecompressWram(const void *src, void *dest);
+void __attribute__((long_call)) LZDecompressVram(const void *src, void *dest);
 
-u16 LoadCompressedSpriteSheet(const struct CompressedSpriteSheet *src);
-void LoadCompressedSpriteSheetOverrideBuffer(const struct CompressedSpriteSheet *src, void *buffer);
-bool8 LoadCompressedSpriteSheetUsingHeap(const struct CompressedSpriteSheet* src);
+u16 __attribute__((long_call)) LoadCompressedSpriteSheet(const struct CompressedSpriteSheet *src);
+void __attribute__((long_call)) LoadCompressedSpriteSheetOverrideBuffer(const struct CompressedSpriteSheet *src, void *buffer);
+bool8 __attribute__((long_call)) LoadCompressedSpriteSheetUsingHeap(const struct CompressedSpriteSheet* src);
 
-void LoadCompressedSpritePalette(const struct CompressedSpritePalette *src);
-void LoadCompressedSpritePaletteOverrideBuffer(const struct CompressedSpritePalette *a, void *buffer);
-bool8 LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette *src);
+void __attribute__((long_call)) LoadCompressedSpritePalette(const struct CompressedSpritePalette *src);
+void __attribute__((long_call)) LoadCompressedSpritePaletteOverrideBuffer(const struct CompressedSpritePalette *a, void *buffer);
+bool8 __attribute__((long_call)) LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette *src);
 
-void DecompressPicFromTable(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
-void DecompressPicFromTable_2(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
-void DecompressPicFromTable_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
+void __attribute__((long_call)) DecompressPicFromTable(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
+void __attribute__((long_call)) DecompressPicFromTable_2(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
+void __attribute__((long_call)) DecompressPicFromTable_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *buffer, s32 species);
 
-void HandleLoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality);
-void HandleLoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality);
+void __attribute__((long_call)) HandleLoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality);
+void __attribute__((long_call)) HandleLoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality);
 
-void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
-void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
-void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
+void __attribute__((long_call)) LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
+void __attribute__((long_call)) LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
+void __attribute__((long_call)) LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic);
 
-u32 GetDecompressedDataSize(const u8 *ptr);
+u32 __attribute__((long_call)) GetDecompressedDataSize(const u8 *ptr);
 
 #endif // GUARD_DECOMPRESS_H

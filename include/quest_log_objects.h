@@ -3,8 +3,8 @@
 
 #include "global.h"
 
-void QL_RecordObjects(struct QuestLogScene *);
-void QL_LoadObjects(struct QuestLogScene *, struct ObjectEventTemplate *);
-void QL_TryStopSurfing(void);
+void __attribute__((long_call)) QL_RecordObjects(struct QuestLogScene *);
+void __attribute__((long_call)) QL_LoadObjects(struct QuestLogScene *, struct ObjectEventTemplate *);
+void __attribute__((long_call)) QL_TryStopSurfing(void);
 
 #endif //GUARD_QUEST_LOG_OBJECTS_H

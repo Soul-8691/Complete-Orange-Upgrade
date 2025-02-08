@@ -18,15 +18,15 @@
 #define DebugAssert(pFile, nLine, pExpression, nStopProgram)
 #else
 
-bool32 MgbaOpen(void);
-void MgbaClose(void);
-void MgbaPrintf(s32 level, const char *pBuf, ...);
-void MgbaAssert(const char *pFile, s32 nLine, const char *pExpression, bool32 nStopProgram);
-void NoCashGBAPrintf(const char *pBuf, ...);
-void NoCashGBAAssert(const char *pFile, s32 nLine, const char *pExpression, bool32 nStopProgram);
-void AGBPrintf(const char *pBuf, ...);
-void AGBAssert(const char *pFile, int nLine, const char *pExpression, int nStopProgram);
-void AGBPrintInit(void);
+bool32 __attribute__((long_call)) MgbaOpen(void);
+void __attribute__((long_call)) MgbaClose(void);
+void __attribute__((long_call)) MgbaPrintf(s32 level, const char *pBuf, ...);
+void __attribute__((long_call)) MgbaAssert(const char *pFile, s32 nLine, const char *pExpression, bool32 nStopProgram);
+void __attribute__((long_call)) NoCashGBAPrintf(const char *pBuf, ...);
+void __attribute__((long_call)) NoCashGBAAssert(const char *pFile, s32 nLine, const char *pExpression, bool32 nStopProgram);
+void __attribute__((long_call)) AGBPrintf(const char *pBuf, ...);
+void __attribute__((long_call)) AGBAssert(const char *pFile, int nLine, const char *pExpression, int nStopProgram);
+void __attribute__((long_call)) AGBPrintInit(void);
 
 #if (LOG_HANDLER == LOG_HANDLER_MGBA_PRINT)
 

@@ -3,8 +3,8 @@
 
 #include "main.h"
 
-void ResetPokemonJumpRecords(void);
-bool32 IsSpeciesAllowedInPokemonJump(u16 species);
-void StartPokemonJump(u16 species, MainCallback callback);
+void __attribute__((long_call)) ResetPokemonJumpRecords(void);
+bool32 __attribute__((long_call)) IsSpeciesAllowedInPokemonJump(u16 species);
+void __attribute__((long_call)) StartPokemonJump(u16 species, MainCallback callback);
 
 #endif // GUARD_POKEMON_JUMP_H

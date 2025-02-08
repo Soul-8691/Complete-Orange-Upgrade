@@ -201,84 +201,84 @@ enum
 extern struct UnusedControllerStruct gUnusedControllerStruct;
 
 // general functions
-void HandleLinkBattleSetup(void);
-void SetUpBattleVars(void);
-void InitBattleControllers(void);
-void TryReceiveLinkBattleData(void);
-void PrepareBufferDataTransferLink(u8 bufferId, u16 size, u8 *data);
+void __attribute__((long_call)) HandleLinkBattleSetup(void);
+void __attribute__((long_call)) SetUpBattleVars(void);
+void __attribute__((long_call)) InitBattleControllers(void);
+void __attribute__((long_call)) TryReceiveLinkBattleData(void);
+void __attribute__((long_call)) PrepareBufferDataTransferLink(u8 bufferId, u16 size, u8 *data);
 
 // emitters
-void BtlController_EmitGetMonData(u8 bufferId, u8 requestId, u8 monToCheck);
-void BtlController_EmitSetMonData(u8 bufferId, u8 requestId, u8 monToCheck, u8 bytes, void *data);
-void BtlController_EmitLoadMonSprite(u8 bufferId);
-void BtlController_EmitSwitchInAnim(u8 bufferId, u8 partyId, bool8 dontClearSubstituteBit);
-void BtlController_EmitReturnMonToBall(u8 bufferId, bool8 skipAnim);
-void BtlController_EmitDrawTrainerPic(u8 bufferId);
-void BtlController_EmitTrainerSlide(u8 bufferId);
-void BtlController_EmitTrainerSlideBack(u8 bufferId);
-void BtlController_EmitFaintAnimation(u8 bufferId);
-void BtlController_EmitBallThrowAnim(u8 bufferId, u8 caseId);
-void BtlController_EmitMoveAnimation(u8 bufferId, u16 move, u8 turnOfMove, u16 movePower, s32 dmg, u8 friendship, struct DisableStruct *disableStructPtr);
-void BtlController_EmitPrintString(u8 bufferId, u16 stringId);
-void BtlController_EmitPrintSelectionString(u8 bufferId, u16 stringId);
-void BtlController_EmitChooseAction(u8 bufferId, u8 action, u16 itemId);
-void BtlController_EmitChooseMove(u8 bufferId, bool8 isDoubleBattle, bool8 NoPpNumber, struct ChooseMoveStruct *movePpData);
-void BtlController_EmitChooseItem(u8 bufferId, u8 *arg1);
-void BtlController_EmitChoosePokemon(u8 bufferId, u8 caseId, u8 arg2, u8 abilityId, u8 *arg4);
-void BtlController_EmitHealthBarUpdate(u8 bufferId, u16 hpValue);
-void BtlController_EmitExpUpdate(u8 bufferId, u8 partyId, u16 expPoints);
-void BtlController_EmitStatusIconUpdate(u8 bufferId, u32 status1, u32 status2);
-void BtlController_EmitStatusAnimation(u8 bufferId, bool8 status2, u32 status);
-void BtlController_EmitDataTransfer(u8 bufferId, u16 size, void *data);
-void BtlController_EmitTwoReturnValues(u8 bufferId, u8 arg1, u16 arg2);
-void BtlController_EmitChosenMonReturnValue(u8 bufferId, u8 b, u8 *c);
-void BtlController_EmitOneReturnValue(u8 bufferId, u16 arg1);
-void BtlController_EmitOneReturnValue_Duplicate(u8 bufferId, u16 b);
-void BtlController_EmitHitAnimation(u8 bufferId);
-void BtlController_EmitCantSwitch(u8 bufferId);
-void BtlController_EmitPlaySE(u8 bufferId, u16 songId);
-void BtlController_EmitPlayFanfare(u8 bufferId, u16 songId);
-void BtlController_EmitFaintingCry(u8 bufferId);
-void BtlController_EmitIntroSlide(u8 bufferId, u8 terrainId);
-void BtlController_EmitIntroTrainerBallThrow(u8 bufferId);
-void BtlController_EmitDrawPartyStatusSummary(u8 bufferId, struct HpAndStatus *hpAndStatus, u8 param);
-void BtlController_EmitHidePartyStatusSummary(u8 bufferId);
-void BtlController_EmitEndBounceEffect(u8 bufferId);
-void BtlController_EmitSpriteInvisibility(u8 bufferId, bool8 isInvisible);
-void BtlController_EmitBattleAnimation(u8 bufferId, u8 animationId, u16 argument);
-void BtlController_EmitLinkStandbyMsg(u8 bufferId, u8 mode);
-void BtlController_EmitResetActionMoveSelection(u8 bufferId, u8 caseId);
-void BtlController_EmitEndLinkBattle(u8 bufferId, u8 battleOutcome);
+void __attribute__((long_call)) BtlController_EmitGetMonData(u8 bufferId, u8 requestId, u8 monToCheck);
+void __attribute__((long_call)) BtlController_EmitSetMonData(u8 bufferId, u8 requestId, u8 monToCheck, u8 bytes, void *data);
+void __attribute__((long_call)) BtlController_EmitLoadMonSprite(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitSwitchInAnim(u8 bufferId, u8 partyId, bool8 dontClearSubstituteBit);
+void __attribute__((long_call)) BtlController_EmitReturnMonToBall(u8 bufferId, bool8 skipAnim);
+void __attribute__((long_call)) BtlController_EmitDrawTrainerPic(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitTrainerSlide(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitTrainerSlideBack(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitFaintAnimation(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitBallThrowAnim(u8 bufferId, u8 caseId);
+void __attribute__((long_call)) BtlController_EmitMoveAnimation(u8 bufferId, u16 move, u8 turnOfMove, u16 movePower, s32 dmg, u8 friendship, struct DisableStruct *disableStructPtr);
+void __attribute__((long_call)) BtlController_EmitPrintString(u8 bufferId, u16 stringId);
+void __attribute__((long_call)) BtlController_EmitPrintSelectionString(u8 bufferId, u16 stringId);
+void __attribute__((long_call)) BtlController_EmitChooseAction(u8 bufferId, u8 action, u16 itemId);
+void __attribute__((long_call)) BtlController_EmitChooseMove(u8 bufferId, bool8 isDoubleBattle, bool8 NoPpNumber, struct ChooseMoveStruct *movePpData);
+void __attribute__((long_call)) BtlController_EmitChooseItem(u8 bufferId, u8 *arg1);
+void __attribute__((long_call)) BtlController_EmitChoosePokemon(u8 bufferId, u8 caseId, u8 arg2, u8 abilityId, u8 *arg4);
+void __attribute__((long_call)) BtlController_EmitHealthBarUpdate(u8 bufferId, u16 hpValue);
+void __attribute__((long_call)) BtlController_EmitExpUpdate(u8 bufferId, u8 partyId, u16 expPoints);
+void __attribute__((long_call)) BtlController_EmitStatusIconUpdate(u8 bufferId, u32 status1, u32 status2);
+void __attribute__((long_call)) BtlController_EmitStatusAnimation(u8 bufferId, bool8 status2, u32 status);
+void __attribute__((long_call)) BtlController_EmitDataTransfer(u8 bufferId, u16 size, void *data);
+void __attribute__((long_call)) BtlController_EmitTwoReturnValues(u8 bufferId, u8 arg1, u16 arg2);
+void __attribute__((long_call)) BtlController_EmitChosenMonReturnValue(u8 bufferId, u8 b, u8 *c);
+void __attribute__((long_call)) BtlController_EmitOneReturnValue(u8 bufferId, u16 arg1);
+void __attribute__((long_call)) BtlController_EmitOneReturnValue_Duplicate(u8 bufferId, u16 b);
+void __attribute__((long_call)) BtlController_EmitHitAnimation(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitCantSwitch(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitPlaySE(u8 bufferId, u16 songId);
+void __attribute__((long_call)) BtlController_EmitPlayFanfare(u8 bufferId, u16 songId);
+void __attribute__((long_call)) BtlController_EmitFaintingCry(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitIntroSlide(u8 bufferId, u8 terrainId);
+void __attribute__((long_call)) BtlController_EmitIntroTrainerBallThrow(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitDrawPartyStatusSummary(u8 bufferId, struct HpAndStatus *hpAndStatus, u8 param);
+void __attribute__((long_call)) BtlController_EmitHidePartyStatusSummary(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitEndBounceEffect(u8 bufferId);
+void __attribute__((long_call)) BtlController_EmitSpriteInvisibility(u8 bufferId, bool8 isInvisible);
+void __attribute__((long_call)) BtlController_EmitBattleAnimation(u8 bufferId, u8 animationId, u16 argument);
+void __attribute__((long_call)) BtlController_EmitLinkStandbyMsg(u8 bufferId, u8 mode);
+void __attribute__((long_call)) BtlController_EmitResetActionMoveSelection(u8 bufferId, u8 caseId);
+void __attribute__((long_call)) BtlController_EmitEndLinkBattle(u8 bufferId, u8 battleOutcome);
 
 // player controller
-void BattleControllerDummy(void);
-void SetControllerToPlayer(void);
-void PlayerHandleGetRawMonData(void);
-void SpriteCB_FreePlayerSpriteLoadMonSprite(struct Sprite *sprite);
-void SetCB2ToReshowScreenAfterMenu(void);
-void SetCB2ToReshowScreenAfterMenu2(void);
-void Task_PlayerController_RestoreBgmAfterCry(u8 taskId);
-void ActionSelectionCreateCursorAt(u8 cursorPos, u8 unused);
-void ActionSelectionDestroyCursorAt(u8 cursorPos);
-void InitMoveSelectionsVarsAndStrings(void);
-void SetBattleEndCallbacks(void);
-void MoveSelectionCreateCursorAt(u8 cursorPos, u8 arg1);
-void MoveSelectionDestroyCursorAt(u8 cursorPos);
-void HandleInputChooseMove(void);
+void __attribute__((long_call)) BattleControllerDummy(void);
+void __attribute__((long_call)) SetControllerToPlayer(void);
+void __attribute__((long_call)) PlayerHandleGetRawMonData(void);
+void __attribute__((long_call)) SpriteCB_FreePlayerSpriteLoadMonSprite(struct Sprite *sprite);
+void __attribute__((long_call)) SetCB2ToReshowScreenAfterMenu(void);
+void __attribute__((long_call)) SetCB2ToReshowScreenAfterMenu2(void);
+void __attribute__((long_call)) Task_PlayerController_RestoreBgmAfterCry(u8 taskId);
+void __attribute__((long_call)) ActionSelectionCreateCursorAt(u8 cursorPos, u8 unused);
+void __attribute__((long_call)) ActionSelectionDestroyCursorAt(u8 cursorPos);
+void __attribute__((long_call)) InitMoveSelectionsVarsAndStrings(void);
+void __attribute__((long_call)) SetBattleEndCallbacks(void);
+void __attribute__((long_call)) MoveSelectionCreateCursorAt(u8 cursorPos, u8 arg1);
+void __attribute__((long_call)) MoveSelectionDestroyCursorAt(u8 cursorPos);
+void __attribute__((long_call)) HandleInputChooseMove(void);
 
 // opponent controller
-void SetControllerToOpponent(void);
-void OpponentBufferExecCompleted(void);
+void __attribute__((long_call)) SetControllerToOpponent(void);
+void __attribute__((long_call)) OpponentBufferExecCompleted(void);
 
 // safari controller
-void SetControllerToSafari(void);
+void __attribute__((long_call)) SetControllerToSafari(void);
 
 // pokedude controller
-void SetControllerToPokedude(void);
-void InitPokedudePartyAndOpponent(void);
+void __attribute__((long_call)) SetControllerToPokedude(void);
+void __attribute__((long_call)) InitPokedudePartyAndOpponent(void);
 
 // oak and old man controller
-void SetControllerToOakOrOldMan(void);
+void __attribute__((long_call)) SetControllerToOakOrOldMan(void);
 
 // These flags are set to signal that the indicated message
 // was already emitted
@@ -292,19 +292,19 @@ void SetControllerToOakOrOldMan(void);
 //
 #define FIRST_BATTLE_MSG_FLAG_PARTY_MENU     0x8
 
-bool8 BtlCtrl_OakOldMan_TestState2Flag(u8 mask);
-void BtlCtrl_OakOldMan_SetState2Flag(u8 mask);
-void PrintOakText_InflictingDamageIsKey(void);
-void PrintOakText_HowDisappointing(void);
-void PrintOakText_OakNoRunningFromATrainer(void);
-void OakOldManHandleInputChooseMove(void);
-void BtlCtrl_DrawVoiceoverMessageFrame(void);
-void BtlCtrl_RemoveVoiceoverMessageFrame(void);
+bool8 __attribute__((long_call)) BtlCtrl_OakOldMan_TestState2Flag(u8 mask);
+void __attribute__((long_call)) BtlCtrl_OakOldMan_SetState2Flag(u8 mask);
+void __attribute__((long_call)) PrintOakText_InflictingDamageIsKey(void);
+void __attribute__((long_call)) PrintOakText_HowDisappointing(void);
+void __attribute__((long_call)) PrintOakText_OakNoRunningFromATrainer(void);
+void __attribute__((long_call)) OakOldManHandleInputChooseMove(void);
+void __attribute__((long_call)) BtlCtrl_DrawVoiceoverMessageFrame(void);
+void __attribute__((long_call)) BtlCtrl_RemoveVoiceoverMessageFrame(void);
 
 // link opponent controller
-void SetControllerToLinkOpponent(void);
+void __attribute__((long_call)) SetControllerToLinkOpponent(void);
 
 // link partner controller
-void SetControllerToLinkPartner(void);
+void __attribute__((long_call)) SetControllerToLinkPartner(void);
 
 #endif // GUARD_BATTLE_CONTROLLERS_H

@@ -177,19 +177,19 @@ typedef struct linkManagerTag
 
 extern struct linkManagerTag lman;
 
-u32 rfu_LMAN_REQBN_softReset_and_checkID(void);
-void rfu_LMAN_requestChangeAgbClockMaster(void);
-void rfu_LMAN_initializeRFU(INIT_PARAM *init_params);
-u8 rfu_LMAN_establishConnection(u8 parent_child, u16 connect_period, u16 name_accept_period, u16 *acceptable_serialNo_list);
-void rfu_LMAN_stopManager(bool8 forced_stop_and_RFU_reset_flag);
-void rfu_LMAN_setMSCCallback(void (*MSC_callback_p)(u16));
-void rfu_LMAN_REQ_sendData(bool8 clockChangeFlag);
-void rfu_LMAN_powerDownRFU(void);
-u8 rfu_LMAN_CHILD_connectParent(u16 parentId, u16 connect_period);
-u8 rfu_LMAN_setLinkRecovery(u8 enable_flag, u16 recovery_period);
-void rfu_LMAN_manager_entity(u32 rand);
-void rfu_LMAN_syncVBlank(void);
-u8 rfu_LMAN_initializeManager(void (*LMAN_callback_p)(u8, u8), void (*MSC_callback_p)(u16));
-void rfu_LMAN_forceChangeSP(void);
+u32 __attribute__((long_call)) rfu_LMAN_REQBN_softReset_and_checkID(void);
+void __attribute__((long_call)) rfu_LMAN_requestChangeAgbClockMaster(void);
+void __attribute__((long_call)) rfu_LMAN_initializeRFU(INIT_PARAM *init_params);
+u8 __attribute__((long_call)) rfu_LMAN_establishConnection(u8 parent_child, u16 connect_period, u16 name_accept_period, u16 *acceptable_serialNo_list);
+void __attribute__((long_call)) rfu_LMAN_stopManager(bool8 forced_stop_and_RFU_reset_flag);
+void __attribute__((long_call)) rfu_LMAN_setMSCCallback(void (*MSC_callback_p)(u16));
+void __attribute__((long_call)) rfu_LMAN_REQ_sendData(bool8 clockChangeFlag);
+void __attribute__((long_call)) rfu_LMAN_powerDownRFU(void);
+u8 __attribute__((long_call)) rfu_LMAN_CHILD_connectParent(u16 parentId, u16 connect_period);
+u8 __attribute__((long_call)) rfu_LMAN_setLinkRecovery(u8 enable_flag, u16 recovery_period);
+void __attribute__((long_call)) rfu_LMAN_manager_entity(u32 rand);
+void __attribute__((long_call)) rfu_LMAN_syncVBlank(void);
+u8 __attribute__((long_call)) rfu_LMAN_initializeManager(void (*LMAN_callback_p)(u8, u8), void (*MSC_callback_p)(u16));
+void __attribute__((long_call)) rfu_LMAN_forceChangeSP(void);
 
 #endif //GUARD_LINKMANAGER_H

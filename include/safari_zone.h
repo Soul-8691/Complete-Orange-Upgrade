@@ -6,16 +6,16 @@
 extern u8 gNumSafariBalls;
 extern u16 gSafariZoneStepCounter;
 
-bool32 GetSafariZoneFlag(void);
-void SetSafariZoneFlag(void);
-void ResetSafariZoneFlag(void);
+bool32 __attribute__((long_call)) GetSafariZoneFlag(void);
+void __attribute__((long_call)) SetSafariZoneFlag(void);
+void __attribute__((long_call)) ResetSafariZoneFlag(void);
 
-void EnterSafariMode(void);
-void ExitSafariMode(void);
+void __attribute__((long_call)) EnterSafariMode(void);
+void __attribute__((long_call)) ExitSafariMode(void);
 
-bool8 SafariZoneTakeStep(void);
-void SafariZoneRetirePrompt(void);
+bool8 __attribute__((long_call)) SafariZoneTakeStep(void);
+void __attribute__((long_call)) SafariZoneRetirePrompt(void);
 
-void CB2_EndSafariBattle(void);
+void __attribute__((long_call)) CB2_EndSafariBattle(void);
 
 #endif // GUARD_SAFARI_ZONE_H

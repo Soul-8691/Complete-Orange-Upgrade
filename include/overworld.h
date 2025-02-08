@@ -58,127 +58,127 @@ extern u8 gExitStairsMovementDisabled;
 extern u8 gFieldLinkPlayerCount;
 extern u8 gLocalLinkPlayerId;
 
-void IncrementGameStat(u8 index);
+void __attribute__((long_call)) IncrementGameStat(u8 index);
 
-void SetObjEventTemplateCoords(u8, s16, s16);
-void SetObjEventTemplateMovementType(u8, u8);
+void __attribute__((long_call)) SetObjEventTemplateCoords(u8, s16, s16);
+void __attribute__((long_call)) SetObjEventTemplateMovementType(u8, u8);
 
-void SetWarpDestination(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+void __attribute__((long_call)) SetWarpDestination(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
 
-void SetDynamicWarp(s32 unused, s8 mapGroup, s8 mapNum, s8 warpId);
-void SetDynamicWarpWithCoords(s32 unused, s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
-void SetFixedDiveWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
-void SetFixedHoleWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
-void SetEscapeWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
-void Overworld_SetHealLocationWarp(u8);
-void SetWarpDestinationToEscapeWarp(void);
-void SetWarpDestinationToLastHealLocation(void);
-u8 IsMapTypeOutdoors(u8 mapType);
-void Overworld_ClearSavedMusic(void);
-bool32 Overworld_MusicCanOverrideMapMusic(u16 song);
+void __attribute__((long_call)) SetDynamicWarp(s32 unused, s8 mapGroup, s8 mapNum, s8 warpId);
+void __attribute__((long_call)) SetDynamicWarpWithCoords(s32 unused, s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+void __attribute__((long_call)) SetFixedDiveWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+void __attribute__((long_call)) SetFixedHoleWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+void __attribute__((long_call)) SetEscapeWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
+void __attribute__((long_call)) Overworld_SetHealLocationWarp(u8);
+void __attribute__((long_call)) SetWarpDestinationToEscapeWarp(void);
+void __attribute__((long_call)) SetWarpDestinationToLastHealLocation(void);
+u8 __attribute__((long_call)) IsMapTypeOutdoors(u8 mapType);
+void __attribute__((long_call)) Overworld_ClearSavedMusic(void);
+bool32 __attribute__((long_call)) Overworld_MusicCanOverrideMapMusic(u16 song);
 
-void SetFlashLevel(s32 a1);
-u8 Overworld_GetFlashLevel(void);
+void __attribute__((long_call)) SetFlashLevel(s32 a1);
+u8 __attribute__((long_call)) Overworld_GetFlashLevel(void);
 
-void Overworld_SetSavedMusic(u16);
-void Overworld_ChangeMusicToDefault(void);
-void Overworld_ChangeMusicTo(u16);
+void __attribute__((long_call)) Overworld_SetSavedMusic(u16);
+void __attribute__((long_call)) Overworld_ChangeMusicToDefault(void);
+void __attribute__((long_call)) Overworld_ChangeMusicTo(u16);
 
-bool32 IsUpdateLinkStateCBActive(void);
+bool32 __attribute__((long_call)) IsUpdateLinkStateCBActive(void);
 
-void ClearLinkPlayerObjectEvents(void);
+void __attribute__((long_call)) ClearLinkPlayerObjectEvents(void);
 const struct MapHeader *const Overworld_GetMapHeaderByGroupAndId(u16, u16);
-void ObjectEventMoveDestCoords(struct ObjectEvent *, u32, s16 *, s16 *);
-void CB2_ReturnToField(void);
-void CB2_ReturnToFieldContinueScriptPlayMapMusic(void);
-void WarpIntoMap(void);
-u8 GetMapTypeByGroupAndId(s8 mapGroup, s8 mapNum);
-void SetWarpDestinationToMapWarp(s8 mapGroup, s8 mapNum, s8 warpNum);
-void SetWarpDestinationToDynamicWarp(u8 unused);
+void __attribute__((long_call)) ObjectEventMoveDestCoords(struct ObjectEvent *, u32, s16 *, s16 *);
+void __attribute__((long_call)) CB2_ReturnToField(void);
+void __attribute__((long_call)) CB2_ReturnToFieldContinueScriptPlayMapMusic(void);
+void __attribute__((long_call)) WarpIntoMap(void);
+u8 __attribute__((long_call)) GetMapTypeByGroupAndId(s8 mapGroup, s8 mapNum);
+void __attribute__((long_call)) SetWarpDestinationToMapWarp(s8 mapGroup, s8 mapNum, s8 warpNum);
+void __attribute__((long_call)) SetWarpDestinationToDynamicWarp(u8 unused);
 
-u32 GetGameStat(u8 statId);
-void SetGameStat(u8 statId, u32 value);
+u32 __attribute__((long_call)) GetGameStat(u8 statId);
+void __attribute__((long_call)) SetGameStat(u8 statId, u32 value);
 
-void CB2_ContinueSavedGame(void);
-void Overworld_SetWarpDestinationFromWarp(struct WarpData *);
-void CB2_SetUpOverworldForQLPlayback(void);
-void CB2_SetUpOverworldForQLPlaybackWithWarpExit(void);
-void CB2_EnterFieldFromQuestLog(void);
-void Overworld_PlaySpecialMapMusic(void);
+void __attribute__((long_call)) CB2_ContinueSavedGame(void);
+void __attribute__((long_call)) Overworld_SetWarpDestinationFromWarp(struct WarpData *);
+void __attribute__((long_call)) CB2_SetUpOverworldForQLPlayback(void);
+void __attribute__((long_call)) CB2_SetUpOverworldForQLPlaybackWithWarpExit(void);
+void __attribute__((long_call)) CB2_EnterFieldFromQuestLog(void);
+void __attribute__((long_call)) Overworld_PlaySpecialMapMusic(void);
 
-u8 GetCurrentRegionMapSectionId(void);
+u8 __attribute__((long_call)) GetCurrentRegionMapSectionId(void);
 
-void SetCurrentMapLayout(u16 mapLayoutId);
-void SetWarpDestinationToFixedHoleWarp(s16 x, s16 y);
+void __attribute__((long_call)) SetCurrentMapLayout(u16 mapLayoutId);
+void __attribute__((long_call)) SetWarpDestinationToFixedHoleWarp(s16 x, s16 y);
 
-void ResetInitialPlayerAvatarState(void);
-void CleanupOverworldWindowsAndTilemaps(void);
-u32 ComputeWhiteOutMoneyLoss(void);
+void __attribute__((long_call)) ResetInitialPlayerAvatarState(void);
+void __attribute__((long_call)) CleanupOverworldWindowsAndTilemaps(void);
+u32 __attribute__((long_call)) ComputeWhiteOutMoneyLoss(void);
 
 extern u8 gDisableMapMusicChangeOnMapLoad;
 extern u8 gGlobalFieldTintMode;
 
 extern bool8 (* gFieldCallback2)(void);
 
-void SetLastHealLocationWarp(u8 healLocaionId);
-void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum);
-void CB2_ReturnToFieldFromDiploma(void);
-void CB2_OverworldBasic(void);
-void CB2_NewGame(void);
-bool8 IsMapTypeOutdoors(u8 mapType);
-bool8 Overworld_MapTypeAllowsTeleportAndFly(u8 mapType);
-void Overworld_ResetStateAfterTeleport(void);
+void __attribute__((long_call)) SetLastHealLocationWarp(u8 healLocaionId);
+void __attribute__((long_call)) LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum);
+void __attribute__((long_call)) CB2_ReturnToFieldFromDiploma(void);
+void __attribute__((long_call)) CB2_OverworldBasic(void);
+void __attribute__((long_call)) CB2_NewGame(void);
+bool8 __attribute__((long_call)) IsMapTypeOutdoors(u8 mapType);
+bool8 __attribute__((long_call)) Overworld_MapTypeAllowsTeleportAndFly(u8 mapType);
+void __attribute__((long_call)) Overworld_ResetStateAfterTeleport(void);
 
-void Overworld_FadeOutMapMusic(void);
-void CB2_LoadMap(void);
-bool8 BGMusicStopped(void);
-bool8 IsMapTypeIndoors(u8 mapType);
-bool32 Overworld_IsBikingAllowed(void);
-void Overworld_ResetStateAfterDigEscRope(void);
-bool32 Overworld_LinkRecvQueueLengthMoreThan2(void);
-u8 GetCurrentMapType(void);
+void __attribute__((long_call)) Overworld_FadeOutMapMusic(void);
+void __attribute__((long_call)) CB2_LoadMap(void);
+bool8 __attribute__((long_call)) BGMusicStopped(void);
+bool8 __attribute__((long_call)) IsMapTypeIndoors(u8 mapType);
+bool32 __attribute__((long_call)) Overworld_IsBikingAllowed(void);
+void __attribute__((long_call)) Overworld_ResetStateAfterDigEscRope(void);
+bool32 __attribute__((long_call)) Overworld_LinkRecvQueueLengthMoreThan2(void);
+u8 __attribute__((long_call)) GetCurrentMapType(void);
 
-u8 GetLastUsedWarpMapType(void);
+u8 __attribute__((long_call)) GetLastUsedWarpMapType(void);
 const struct MapHeader *const GetDestinationWarpMapHeader(void);
-void TryFadeOutOldMapMusic(void);
-void CB2_ReturnToFieldCableClub(void);
-void ResetGameStats(void);
+void __attribute__((long_call)) TryFadeOutOldMapMusic(void);
+void __attribute__((long_call)) CB2_ReturnToFieldCableClub(void);
+void __attribute__((long_call)) ResetGameStats(void);
 
-void Overworld_CreditsMainCB(void);
-bool32 Overworld_DoScrollSceneForCredits(u8 *, const struct CreditsOverworldCmd *, u8);
+void __attribute__((long_call)) Overworld_CreditsMainCB(void);
+bool32 __attribute__((long_call)) Overworld_DoScrollSceneForCredits(u8 *, const struct CreditsOverworldCmd *, u8);
 
-bool32 IsSendingKeysOverCable(void);
+bool32 __attribute__((long_call)) IsSendingKeysOverCable(void);
 
-void CB2_ReturnToFieldWithOpenMenu(void);
-void CB2_WhiteOut(void);
-void CB2_ReturnToFieldFromMultiplayer(void);
-void ApplyNewEncryptionKeyToGameStats(u32 newKey);
-void SetContinueGameWarpToDynamicWarp(int);
+void __attribute__((long_call)) CB2_ReturnToFieldWithOpenMenu(void);
+void __attribute__((long_call)) CB2_WhiteOut(void);
+void __attribute__((long_call)) CB2_ReturnToFieldFromMultiplayer(void);
+void __attribute__((long_call)) ApplyNewEncryptionKeyToGameStats(u32 newKey);
+void __attribute__((long_call)) SetContinueGameWarpToDynamicWarp(int);
 
-void SetContinueGameWarpToHealLocation(u8 loc);
+void __attribute__((long_call)) SetContinueGameWarpToHealLocation(u8 loc);
 
-void UpdateAmbientCry(s16 *state, u16 *delayCounter);
-void SetWarpDestinationToHealLocation(u8 a0);
-bool32 Overworld_SendKeysToLinkIsRunning(void);
-bool32 Overworld_RecvKeysFromLinkIsRunning(void);
-void OverworldWhiteOutGetMoneyLoss(void);
-u8 GetCurrentMapBattleScene(void);
-void Overworld_ResetStateAfterFly(void);
-bool8 MetatileBehavior_IsSurfableInSeafoamIslands(u16 metatileBehavior);
-void Overworld_ResetMapMusic(void);
-u16 QueueExitLinkRoomKey(void);
-u16 SetInCableClubSeat(void);
-u32 GetCableClubPartnersReady(void);
-u16 SetStartedCableClubActivity(void);
-u16 SetLinkWaitingForScript(void);
-void SetMainCallback1(MainCallback cb);
-void CB1_Overworld(void);
-void CB2_ReturnToFieldContinueScript(void);
-u8 GetLastUsedWarpMapSectionId(void);
-void StoreInitialPlayerAvatarState(void);
-void UpdateEscapeWarp(s16 x, s16 y);
-bool8 SetDiveWarpEmerge(u16 x, u16 y);
-bool8 SetDiveWarpDive(u16 x, u16 y);
+void __attribute__((long_call)) UpdateAmbientCry(s16 *state, u16 *delayCounter);
+void __attribute__((long_call)) SetWarpDestinationToHealLocation(u8 a0);
+bool32 __attribute__((long_call)) Overworld_SendKeysToLinkIsRunning(void);
+bool32 __attribute__((long_call)) Overworld_RecvKeysFromLinkIsRunning(void);
+void __attribute__((long_call)) OverworldWhiteOutGetMoneyLoss(void);
+u8 __attribute__((long_call)) GetCurrentMapBattleScene(void);
+void __attribute__((long_call)) Overworld_ResetStateAfterFly(void);
+bool8 __attribute__((long_call)) MetatileBehavior_IsSurfableInSeafoamIslands(u16 metatileBehavior);
+void __attribute__((long_call)) Overworld_ResetMapMusic(void);
+u16 __attribute__((long_call)) QueueExitLinkRoomKey(void);
+u16 __attribute__((long_call)) SetInCableClubSeat(void);
+u32 __attribute__((long_call)) GetCableClubPartnersReady(void);
+u16 __attribute__((long_call)) SetStartedCableClubActivity(void);
+u16 __attribute__((long_call)) SetLinkWaitingForScript(void);
+void __attribute__((long_call)) SetMainCallback1(MainCallback cb);
+void __attribute__((long_call)) CB1_Overworld(void);
+void __attribute__((long_call)) CB2_ReturnToFieldContinueScript(void);
+u8 __attribute__((long_call)) GetLastUsedWarpMapSectionId(void);
+void __attribute__((long_call)) StoreInitialPlayerAvatarState(void);
+void __attribute__((long_call)) UpdateEscapeWarp(s16 x, s16 y);
+bool8 __attribute__((long_call)) SetDiveWarpEmerge(u16 x, u16 y);
+bool8 __attribute__((long_call)) SetDiveWarpDive(u16 x, u16 y);
 
 extern u16 *gBGTilemapBuffers1;
 extern u16 *gBGTilemapBuffers2;

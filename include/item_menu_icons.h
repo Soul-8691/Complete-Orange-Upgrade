@@ -16,19 +16,19 @@ extern const struct CompressedSpritePalette gSpritePalette_Bag;
 extern const struct CompressedSpriteSheet gBagSwapSpriteSheet;
 extern const struct CompressedSpritePalette gBagSwapSpritePalette;
 
-void ResetItemMenuIconState(void);
-void CreateSwapLine(void);
-void DestroyItemMenuIcon(bool8 a0);
-void CreateItemMenuIcon(u16 itemId, bool8 a0);
-void CopyItemIconPicTo4x4Buffer(const void *src, void *dest);
-u8 AddItemIconObject(u16 tilesTag, u16 paletteTag, u16 itemId);
-u8 AddItemIconObjectWithCustomObjectTemplate(const struct SpriteTemplate * origTemplate, u16 tilesTag, u16 paletteTag, u16 itemId);
-void CreateBerryPouchItemIcon(u16 itemId, u8 idx);
-void UpdateSwapLinePos(s16 x, u16 y);
-void SetSwapLineInvisibility(bool8 invisible);
-void SetBagVisualPocketId(u8);
-void ShakeBagSprite(void);
+void __attribute__((long_call)) ResetItemMenuIconState(void);
+void __attribute__((long_call)) CreateSwapLine(void);
+void __attribute__((long_call)) DestroyItemMenuIcon(bool8 a0);
+void __attribute__((long_call)) CreateItemMenuIcon(u16 itemId, bool8 a0);
+void __attribute__((long_call)) CopyItemIconPicTo4x4Buffer(const void *src, void *dest);
+u8 __attribute__((long_call)) AddItemIconObject(u16 tilesTag, u16 paletteTag, u16 itemId);
+u8 __attribute__((long_call)) AddItemIconObjectWithCustomObjectTemplate(const struct SpriteTemplate * origTemplate, u16 tilesTag, u16 paletteTag, u16 itemId);
+void __attribute__((long_call)) CreateBerryPouchItemIcon(u16 itemId, u8 idx);
+void __attribute__((long_call)) UpdateSwapLinePos(s16 x, u16 y);
+void __attribute__((long_call)) SetSwapLineInvisibility(bool8 invisible);
+void __attribute__((long_call)) SetBagVisualPocketId(u8);
+void __attribute__((long_call)) ShakeBagSprite(void);
 const u32 *GetItemIconGfxPtr(u16 itemId, u8 ptrId);
-void CreateBagSprite(u8 animNum);
+void __attribute__((long_call)) CreateBagSprite(u8 animNum);
 
 #endif // GUARD_ITEM_MENU_ICONS

@@ -89,19 +89,19 @@ extern u16 gSaveAttemptStatus;
 
 extern struct SaveSector gSaveDataBuffer;
 
-void ClearSaveData(void);
-void Save_ResetSaveCounters(void);
-u8 HandleSavingData(u8 saveType);
-u8 TrySavingData(u8 saveType);
-bool8 LinkFullSave_Init(void);
-bool8 LinkFullSave_WriteSector(void);
-bool8 LinkFullSave_ReplaceLastSector(void);
-bool8 LinkFullSave_SetLastSectorSignature(void);
-bool8 WriteSaveBlock2(void);
-bool8 WriteSaveBlock1Sector(void);
-u8 LoadGameSave(u8 saveType);
-u32 TryReadSpecialSaveSector(u8 sector, u8 *dst);
-u32 TryWriteSpecialSaveSector(u8 sector, u8 *src);
-void Task_LinkFullSave(u8 taskId);
+void __attribute__((long_call)) ClearSaveData(void);
+void __attribute__((long_call)) Save_ResetSaveCounters(void);
+u8 __attribute__((long_call)) HandleSavingData(u8 saveType);
+u8 __attribute__((long_call)) TrySavingData(u8 saveType);
+bool8 __attribute__((long_call)) LinkFullSave_Init(void);
+bool8 __attribute__((long_call)) LinkFullSave_WriteSector(void);
+bool8 __attribute__((long_call)) LinkFullSave_ReplaceLastSector(void);
+bool8 __attribute__((long_call)) LinkFullSave_SetLastSectorSignature(void);
+bool8 __attribute__((long_call)) WriteSaveBlock2(void);
+bool8 __attribute__((long_call)) WriteSaveBlock1Sector(void);
+u8 __attribute__((long_call)) LoadGameSave(u8 saveType);
+u32 __attribute__((long_call)) TryReadSpecialSaveSector(u8 sector, u8 *dst);
+u32 __attribute__((long_call)) TryWriteSpecialSaveSector(u8 sector, u8 *src);
+void __attribute__((long_call)) Task_LinkFullSave(u8 taskId);
 
 #endif // GUARD_SAVE_H

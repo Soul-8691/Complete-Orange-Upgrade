@@ -3,8 +3,8 @@
 
 #include "global.h"
 
-void ScriptHatchMon(void);
-void EggHatch(void);
-u8 GetEggStepsToSubtract(void);
+void __attribute__((long_call)) ScriptHatchMon(void);
+void __attribute__((long_call)) EggHatch(void);
+u8 __attribute__((long_call)) GetEggStepsToSubtract(void);
 
 #endif // GUARD_EGG_HATCH_H

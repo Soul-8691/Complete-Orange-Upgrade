@@ -30,14 +30,14 @@ struct DodrioGame_Player
 }; // size = 0x3C
 
 // dodrio_berry_picking.c
-void StartDodrioBerryPicking(u16 partyId, MainCallback exitCallback);
-void ShowDodrioBerryPickingRecords(void);
-void IsDodrioInParty(void);
+void __attribute__((long_call)) StartDodrioBerryPicking(u16 partyId, MainCallback exitCallback);
+void __attribute__((long_call)) ShowDodrioBerryPickingRecords(void);
+void __attribute__((long_call)) IsDodrioInParty(void);
 
 // dodrio_berry_picking_comm.c
-void SendPacket_ReadyToStart(bool32 ready);
-bool8 RecvPacket_ReadyToStart(s32 playerId);
-void SendPacket_GameState(struct DodrioGame_Player *player,
+void __attribute__((long_call)) SendPacket_ReadyToStart(bool32 ready);
+bool8 __attribute__((long_call)) RecvPacket_ReadyToStart(s32 playerId);
+void __attribute__((long_call)) SendPacket_GameState(struct DodrioGame_Player *player,
                           struct DodrioGame_PlayerCommData *player1,
                           struct DodrioGame_PlayerCommData *player2,
                           struct DodrioGame_PlayerCommData *player3,
@@ -46,7 +46,7 @@ void SendPacket_GameState(struct DodrioGame_Player *player,
                           u8 numGraySquares,
                           bool32 berriesFalling,
                           bool32 allReadyToEnd);
-bool32 RecvPacket_GameState(u32 playerId,
+bool32 __attribute__((long_call)) RecvPacket_GameState(u32 playerId,
                             struct DodrioGame_Player *player,
                             struct DodrioGame_PlayerCommData *player1,
                             struct DodrioGame_PlayerCommData *player2,
@@ -56,9 +56,9 @@ bool32 RecvPacket_GameState(u32 playerId,
                             u8 *numGraySquares,
                             bool32 *berriesFalling,
                             bool32 *allReadyToEnd);
-void SendPacket_PickState(u8 pickState);
-bool32 RecvPacket_PickState(u32 playerId, u8 *pickState);
-void SendPacket_ReadyToEnd(bool32 readyToEnd);
-bool32 RecvPacket_ReadyToEnd(u32 playerId);
+void __attribute__((long_call)) SendPacket_PickState(u8 pickState);
+bool32 __attribute__((long_call)) RecvPacket_PickState(u32 playerId, u8 *pickState);
+void __attribute__((long_call)) SendPacket_ReadyToEnd(bool32 readyToEnd);
+bool32 __attribute__((long_call)) RecvPacket_ReadyToEnd(u32 playerId);
 
 #endif //GUARD_DODRIO_BERRY_PICKING_H

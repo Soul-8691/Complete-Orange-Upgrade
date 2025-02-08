@@ -3,6 +3,6 @@
 
 #include "global.h"
 
-void CB2_ShowDiploma(void);
+void __attribute__((long_call)) CB2_ShowDiploma(void);
 
 #endif // GUARD_DIPLOMA_H

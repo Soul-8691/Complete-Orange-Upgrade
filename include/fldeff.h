@@ -9,48 +9,48 @@ gTasks[taskId].data[9] = (u32)func;
 
 extern struct MapPosition gPlayerFacingPosition;
 
-bool8 CheckObjectGraphicsInFrontOfPlayer(u8 graphicsId);
-u8 CreateFieldEffectShowMon(void);
+bool8 __attribute__((long_call)) CheckObjectGraphicsInFrontOfPlayer(u8 graphicsId);
+u8 __attribute__((long_call)) CreateFieldEffectShowMon(void);
 
 // flash
-u8 MapTransitionIsExit(u8 lightLevel, u8 mapType);
-u8 MapTransitionIsEnter(u8 mapType1, u8 mapType2);
-bool8 SetUpFieldMove_Flash(void);
-void CB2_DoChangeMap(void);
+u8 __attribute__((long_call)) MapTransitionIsExit(u8 lightLevel, u8 mapType);
+u8 __attribute__((long_call)) MapTransitionIsEnter(u8 mapType1, u8 mapType2);
+bool8 __attribute__((long_call)) SetUpFieldMove_Flash(void);
+void __attribute__((long_call)) CB2_DoChangeMap(void);
 
 // cut
-bool8 SetUpFieldMove_Cut(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_Cut(void);
 
 // dig
-bool8 SetUpFieldMove_Dig(void);
-bool8 FldEff_UseDig(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_Dig(void);
+bool8 __attribute__((long_call)) FldEff_UseDig(void);
 
 // rocksmash
-bool8 SetUpFieldMove_RockSmash(void);
-bool8 FldEff_UseRockSmash(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_RockSmash(void);
+bool8 __attribute__((long_call)) FldEff_UseRockSmash(void);
 
 // berrytree
-void nullsub_56(void);
+void __attribute__((long_call)) nullsub_56(void);
 
 // poison
-void FldEffPoison_Start(void);
-bool32 FldEffPoison_IsActive(void);
+void __attribute__((long_call)) FldEffPoison_Start(void);
+bool32 __attribute__((long_call)) FldEffPoison_IsActive(void);
 
 // strength
-bool8 SetUpFieldMove_Strength(void);
-bool8 FldEff_UseStrength(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_Strength(void);
+bool8 __attribute__((long_call)) FldEff_UseStrength(void);
 
 // teleport
-bool8 SetUpFieldMove_Teleport(void);
-bool8 FldEff_UseTeleport(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_Teleport(void);
+bool8 __attribute__((long_call)) FldEff_UseTeleport(void);
 
 // softboiled
-bool8 SetUpFieldMove_SoftBoiled(void);
-void ChooseMonForSoftboiled(u8 taskId);
-void Task_TryUseSoftboiledOnPartyMon(u8 taskId);
+bool8 __attribute__((long_call)) SetUpFieldMove_SoftBoiled(void);
+void __attribute__((long_call)) ChooseMonForSoftboiled(u8 taskId);
+void __attribute__((long_call)) Task_TryUseSoftboiledOnPartyMon(u8 taskId);
 
 // sweetscent
-bool8 SetUpFieldMove_SweetScent(void);
-bool8 FldEff_SweetScent(void);
+bool8 __attribute__((long_call)) SetUpFieldMove_SweetScent(void);
+bool8 __attribute__((long_call)) FldEff_SweetScent(void);
 
 #endif // GUARD_FLDEFF_H

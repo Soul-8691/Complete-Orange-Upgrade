@@ -3,29 +3,29 @@
 
 #include "global.h"
 
-u8 GetLeadMonIndex(void);
+u8 __attribute__((long_call)) GetLeadMonIndex(void);
 s32 CountDigits(s32 number);
-void TV_PrintIntToStringVar(u8 varidx, s32 number);
-u16 GetStarterSpecies(void);
-void StopPokemonLeagueLightingEffectTask(void);
-void FieldCB_ShowPortholeView(void);
-u8 ContextNpcGetTextColor(void);
-void SetPCBoxToSendMon(u8);
-u16 GetPCBoxToSendMon(void);
-bool8 IsDestinationBoxFull(void);
-bool8 ShouldShowBoxWasFullMessage(void);
-u16 GetHiddenItemAttr(u32 hiddenItem, u8 attr);
-u8 GetUnlockedSeviiAreas(void);
-u32 GetPlayerTrainerId(void);
-bool8 CutMoveRuinValleyCheck(void);
-void CutMoveOpenDottedHoleDoor(void);
-void RunMassageCooldownStepCounter(void);
-void IncrementResortGorgeousStepCounter(void);
-void IncrementBirthIslandRockStepCount(void);
-void ResetCyclingRoadChallengeData(void);
-void ResetFieldTasksArgs(void);
-bool8 UsedPokemonCenterWarp(void);
-void QuestLog_CheckDepartingIndoorsMap(void);
-void QuestLog_TryRecordDepartedLocation(void);
+void __attribute__((long_call)) TV_PrintIntToStringVar(u8 varidx, s32 number);
+u16 __attribute__((long_call)) GetStarterSpecies(void);
+void __attribute__((long_call)) StopPokemonLeagueLightingEffectTask(void);
+void __attribute__((long_call)) FieldCB_ShowPortholeView(void);
+u8 __attribute__((long_call)) ContextNpcGetTextColor(void);
+void __attribute__((long_call)) SetPCBoxToSendMon(u8);
+u16 __attribute__((long_call)) GetPCBoxToSendMon(void);
+bool8 __attribute__((long_call)) IsDestinationBoxFull(void);
+bool8 __attribute__((long_call)) ShouldShowBoxWasFullMessage(void);
+u16 __attribute__((long_call)) GetHiddenItemAttr(u32 hiddenItem, u8 attr);
+u8 __attribute__((long_call)) GetUnlockedSeviiAreas(void);
+u32 __attribute__((long_call)) GetPlayerTrainerId(void);
+bool8 __attribute__((long_call)) CutMoveRuinValleyCheck(void);
+void __attribute__((long_call)) CutMoveOpenDottedHoleDoor(void);
+void __attribute__((long_call)) RunMassageCooldownStepCounter(void);
+void __attribute__((long_call)) IncrementResortGorgeousStepCounter(void);
+void __attribute__((long_call)) IncrementBirthIslandRockStepCount(void);
+void __attribute__((long_call)) ResetCyclingRoadChallengeData(void);
+void __attribute__((long_call)) ResetFieldTasksArgs(void);
+bool8 __attribute__((long_call)) UsedPokemonCenterWarp(void);
+void __attribute__((long_call)) QuestLog_CheckDepartingIndoorsMap(void);
+void __attribute__((long_call)) QuestLog_TryRecordDepartedLocation(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

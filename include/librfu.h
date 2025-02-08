@@ -480,158 +480,158 @@ s32 AgbRFU_checkID(u8 maxTries);
 // librfu_rfu
 // API Initialization and Initial Settings
     // API Initialization
-u16 rfu_initializeAPI(u32 *APIBuffer, u16 buffByteSize, IntrFunc *sioIntrTable_p, bool8 copyInterruptToRam);
+u16 __attribute__((long_call)) rfu_initializeAPI(u32 *APIBuffer, u16 buffByteSize, IntrFunc *sioIntrTable_p, bool8 copyInterruptToRam);
     // Set Timer Interrupt
-void rfu_setTimerInterrupt(u8 timerNo, IntrFunc *timerIntrTable_p);
+void __attribute__((long_call)) rfu_setTimerInterrupt(u8 timerNo, IntrFunc *timerIntrTable_p);
     // Resident Function called from within a V-Blank Interrupt
-u16 rfu_syncVBlank(void);
+u16 __attribute__((long_call)) rfu_syncVBlank(void);
     // Specify REQ Callback function
-void rfu_setREQCallback(void (*callback)(u16 reqCommandId, u16 reqResult));
+void __attribute__((long_call)) rfu_setREQCallback(void (*callback)(u16 reqCommandId, u16 reqResult));
     // REQ-API Execution Completion Wait
-u16 rfu_waitREQComplete(void);
+u16 __attribute__((long_call)) rfu_waitREQComplete(void);
 
 // RFU Initialization and Initial Settings
     // RFU Startup and ID Check (Forced RFU reset occurs simultaneously)
-u32 rfu_REQBN_softReset_and_checkID(void);
+u32 __attribute__((long_call)) rfu_REQBN_softReset_and_checkID(void);
     // RFU Reset
-void rfu_REQ_reset(void);
+void __attribute__((long_call)) rfu_REQ_reset(void);
     // Set RFU to Stop Mode (Power Down)
-void rfu_REQ_stopMode(void);
+void __attribute__((long_call)) rfu_REQ_stopMode(void);
     // RFU Hardware Settings
-void rfu_REQ_configSystem(u16 availSlotFlag, u8 maxMFrame, u8 mcTimer);
+void __attribute__((long_call)) rfu_REQ_configSystem(u16 availSlotFlag, u8 maxMFrame, u8 mcTimer);
     // Game Identification Information Configuration
-void rfu_REQ_configGameData(u8 mbootFlag, u16 serialNo, const u8 *gname, const u8 *uname);
+void __attribute__((long_call)) rfu_REQ_configGameData(u8 mbootFlag, u16 serialNo, const u8 *gname, const u8 *uname);
 
 // RFU Connection Process
     // Operate as parent device; search for and connect to child device
-void rfu_REQ_startSearchChild(void);
-void rfu_REQ_pollSearchChild(void);
-void rfu_REQ_endSearchChild(void);
+void __attribute__((long_call)) rfu_REQ_startSearchChild(void);
+void __attribute__((long_call)) rfu_REQ_pollSearchChild(void);
+void __attribute__((long_call)) rfu_REQ_endSearchChild(void);
     // Operate as child device; search for parent device
-void rfu_REQ_startSearchParent(void);
-void rfu_REQ_pollSearchParent(void);
-void rfu_REQ_endSearchParent(void);
+void __attribute__((long_call)) rfu_REQ_startSearchParent(void);
+void __attribute__((long_call)) rfu_REQ_pollSearchParent(void);
+void __attribute__((long_call)) rfu_REQ_endSearchParent(void);
     // Operate as child device; connect to specified parent device
-void rfu_REQ_startConnectParent(u16 pid);
-void rfu_REQ_pollConnectParent(void);
-void rfu_REQ_endConnectParent(void);
-u16 rfu_getConnectParentStatus(u8 *status,u8 *connectSlotNo);
+void __attribute__((long_call)) rfu_REQ_startConnectParent(u16 pid);
+void __attribute__((long_call)) rfu_REQ_pollConnectParent(void);
+void __attribute__((long_call)) rfu_REQ_endConnectParent(void);
+u16 __attribute__((long_call)) rfu_getConnectParentStatus(u8 *status,u8 *connectSlotNo);
     // Restore link from child device
-void rfu_REQ_CHILD_startConnectRecovery(u8 bmRecoverySlot);
-void rfu_REQ_CHILD_pollConnectRecovery(void);
-void rfu_REQ_CHILD_endConnectRecovery(void);
-u16 rfu_CHILD_getConnectRecoveryStatus(u8 *status);
+void __attribute__((long_call)) rfu_REQ_CHILD_startConnectRecovery(u8 bmRecoverySlot);
+void __attribute__((long_call)) rfu_REQ_CHILD_pollConnectRecovery(void);
+void __attribute__((long_call)) rfu_REQ_CHILD_endConnectRecovery(void);
+u16 __attribute__((long_call)) rfu_CHILD_getConnectRecoveryStatus(u8 *status);
 
 // RFU Link Management
     // Link Monitoring
-u16 rfu_REQBN_watchLink(u16 reqCommandId, u8 *bmLinkLossSlot, u8 *linkLossReason, u8 *parentBmLinkRecoverySlot);
+u16 __attribute__((long_call)) rfu_REQBN_watchLink(u16 reqCommandId, u8 *bmLinkLossSlot, u8 *linkLossReason, u8 *parentBmLinkRecoverySlot);
     // Link Disconnect
-void rfu_REQ_disconnect(u8 bmDisconnectSlot);
+void __attribute__((long_call)) rfu_REQ_disconnect(u8 bmDisconnectSlot);
 
 // Relation of clock between AGB and RFU
     // Switch to AGB clock slave
-void rfu_REQ_changeMasterSlave(void);
+void __attribute__((long_call)) rfu_REQ_changeMasterSlave(void);
     // Acquire either the master or slave clock from the current AGB-RFU
-bool8 rfu_getMasterSlave(void);
+bool8 __attribute__((long_call)) rfu_getMasterSlave(void);
 
 // Communication Configuration
     // MSC Callback Configuration
-void rfu_setMSCCallback(void (*callback)(u16 reqCommandId));
+void __attribute__((long_call)) rfu_setMSCCallback(void (*callback)(u16 reqCommandId));
     // Shared by NI- and UNI-type communications
         // Clear Communication Status
-void rfu_clearAllSlot(void);
-u16 rfu_clearSlot(u8 connTypeFlag, u8 slotStatusIndex);
+void __attribute__((long_call)) rfu_clearAllSlot(void);
+u16 __attribute__((long_call)) rfu_clearSlot(u8 connTypeFlag, u8 slotStatusIndex);
         // Set Receive Buffer
-u16 rfu_setRecvBuffer(u8 connType, u8 slotNo, void *buffer, u32 buffSize);
+u16 __attribute__((long_call)) rfu_setRecvBuffer(u8 connType, u8 slotNo, void *buffer, u32 buffSize);
 
 // Receive/Send Data
     // UNI-type communication
         // Set transmission data
-u16 rfu_UNI_setSendData(u8 bmSendSlot, const void *src, u8 size);
+u16 __attribute__((long_call)) rfu_UNI_setSendData(u8 bmSendSlot, const void *src, u8 size);
         // Enable transmission data
-void rfu_UNI_readySendData(u8 slotStatusIndex);
+void __attribute__((long_call)) rfu_UNI_readySendData(u8 slotStatusIndex);
         // Change address or size of transmission data and enable transmission data
-u16 rfu_UNI_changeAndReadySendData(u8 slotStatusIndex, const void *src, u8 size);
+u16 __attribute__((long_call)) rfu_UNI_changeAndReadySendData(u8 slotStatusIndex, const void *src, u8 size);
         // Used only by parent device. At the beginning of a MSC Callback that received notification that the data transmission completed, an ACK flag is obtained.
-u16 rfu_UNI_PARENT_getDRAC_ACK(u8 *ackFlag);
+u16 __attribute__((long_call)) rfu_UNI_PARENT_getDRAC_ACK(u8 *ackFlag);
         // Clear the flag that indicates newly arrived reception data
-void rfu_UNI_clearRecvNewDataFlag(u8 slotStatusIndex);
+void __attribute__((long_call)) rfu_UNI_clearRecvNewDataFlag(u8 slotStatusIndex);
     // NI-type Communication
         // Set transmission data
-u16 rfu_NI_setSendData(u8 bmSendSlot, u8 subFrameSize, const void *src, u32 size);
+u16 __attribute__((long_call)) rfu_NI_setSendData(u8 bmSendSlot, u8 subFrameSize, const void *src, u32 size);
         // Used only by child device. After establishing connection at the RFU level, configure transmission of child device game identification information in order to authenticate connection
-u16 rfu_NI_CHILD_setSendGameName(u8 slotNo, u8 subFrameSize);
+u16 __attribute__((long_call)) rfu_NI_CHILD_setSendGameName(u8 slotNo, u8 subFrameSize);
         // Stop the NI data currently being received
-u16 rfu_NI_stopReceivingData(u8 slotStatusIndex);
+u16 __attribute__((long_call)) rfu_NI_stopReceivingData(u8 slotStatusIndex);
     // Shared by NI- and UNI-type communications
         // Narrow transmission targets for transmission data.
-u16 rfu_changeSendTarget(u8 connType, u8 slotStatusIndex, u8 bmNewTgtSlot);
+u16 __attribute__((long_call)) rfu_changeSendTarget(u8 connType, u8 slotStatusIndex, u8 bmNewTgtSlot);
 
     // Functions for sending/receiving data to RFU
         // Data transmission
-void rfu_REQ_sendData(bool8 clockChangeFlag);
+void __attribute__((long_call)) rfu_REQ_sendData(bool8 clockChangeFlag);
         // Used only by parent device. Resend previous sent data (packet)
-void rfu_REQ_PARENT_resumeRetransmitAndChange(void);
+void __attribute__((long_call)) rfu_REQ_PARENT_resumeRetransmitAndChange(void);
         // Read receive data
-void rfu_REQ_recvData(void);
+void __attribute__((long_call)) rfu_REQ_recvData(void);
 
 // For Multi-boot
     // Inherits the information about the link established by the downloader just after the program downloaded with multiboot starts up.
-u16 rfu_MBOOT_CHILD_inheritanceLinkStatus(void);
+u16 __attribute__((long_call)) rfu_MBOOT_CHILD_inheritanceLinkStatus(void);
 
 // For Debug
     // Obtain address of the SWTI-layer receive buffer
-u8 *rfu_getSTWIRecvBuffer(void);
+u8 __attribute__((long_call)) *rfu_getSTWIRecvBuffer(void);
     // Obtain RFU state
-void rfu_REQ_RFUStatus(void);
-u16 rfu_getRFUStatus(u8 *rfuState);
+void __attribute__((long_call)) rfu_REQ_RFUStatus(void);
+u16 __attribute__((long_call)) rfu_getRFUStatus(u8 *rfuState);
     // Using RFU, generate noise (jamming radio waves) for other RFUs
-void rfu_REQ_noise(void);
+void __attribute__((long_call)) rfu_REQ_noise(void);
 
 // librfu_intr
-void IntrSIO32(void);
+void __attribute__((long_call)) IntrSIO32(void);
 
 // librfu_stwi
-void STWI_init_all(struct RfuIntrStruct *interruptStruct, IntrFunc *interrupt, bool8 copyInterruptToRam);
-void STWI_set_MS_mode(u8 mode);
-void STWI_init_Callback_M(void);
-void STWI_init_Callback_S(void);
-void STWI_set_Callback_M(void *callbackM);
-void STWI_set_Callback_S(void (*callbackS)(u16));
-void STWI_init_timer(IntrFunc *interrupt, s32 timerSelect);
-void AgbRFU_SoftReset(void);
-void STWI_set_Callback_ID(void (*func)(void));
-u16 STWI_read_status(u8 index);
-u16 STWI_poll_CommandEnd(void);
-void STWI_send_DataRxREQ(void);
-void STWI_send_MS_ChangeREQ(void);
-void STWI_send_StopModeREQ(void);
-void STWI_send_SystemStatusREQ(void);
-void STWI_send_GameConfigREQ(const u8 *serial_uname, const u8 *gname);
-void STWI_send_ResetREQ(void);
-void STWI_send_LinkStatusREQ(void);
-void STWI_send_VersionStatusREQ(void);
-void STWI_send_SlotStatusREQ(void);
-void STWI_send_ConfigStatusREQ(void);
-void STWI_send_ResumeRetransmitAndChangeREQ(void);
-void STWI_send_SystemConfigREQ(u16 availSlotFlag, u8 maxMFrame, u8 mcTimer);
-void STWI_send_SC_StartREQ(void);
-void STWI_send_SC_PollingREQ(void);
-void STWI_send_SC_EndREQ(void);
-void STWI_send_SP_StartREQ(void);
-void STWI_send_SP_PollingREQ(void);
-void STWI_send_SP_EndREQ(void);
-void STWI_send_CP_StartREQ(u16 unk1);
-void STWI_send_CP_PollingREQ(void);
-void STWI_send_CP_EndREQ(void);
-void STWI_send_DataTxREQ(const void *in, u8 size);
-void STWI_send_DataTxAndChangeREQ(const void *in, u8 size);
-void STWI_send_DataReadyAndChangeREQ(u8 unk);
-void STWI_send_DisconnectedAndChangeREQ(u8 unk0, u8 unk1);
-void STWI_send_DisconnectREQ(u8 unk);
-void STWI_send_TestModeREQ(u8 unk0, u8 unk1);
-void STWI_send_CPR_StartREQ(u16 unk0, u16 unk1, u8 unk2);
-void STWI_send_CPR_PollingREQ(void);
-void STWI_send_CPR_EndREQ(void);
+void __attribute__((long_call)) STWI_init_all(struct RfuIntrStruct *interruptStruct, IntrFunc *interrupt, bool8 copyInterruptToRam);
+void __attribute__((long_call)) STWI_set_MS_mode(u8 mode);
+void __attribute__((long_call)) STWI_init_Callback_M(void);
+void __attribute__((long_call)) STWI_init_Callback_S(void);
+void __attribute__((long_call)) STWI_set_Callback_M(void *callbackM);
+void __attribute__((long_call)) STWI_set_Callback_S(void (*callbackS)(u16));
+void __attribute__((long_call)) STWI_init_timer(IntrFunc *interrupt, s32 timerSelect);
+void __attribute__((long_call)) AgbRFU_SoftReset(void);
+void __attribute__((long_call)) STWI_set_Callback_ID(void (*func)(void));
+u16 __attribute__((long_call)) STWI_read_status(u8 index);
+u16 __attribute__((long_call)) STWI_poll_CommandEnd(void);
+void __attribute__((long_call)) STWI_send_DataRxREQ(void);
+void __attribute__((long_call)) STWI_send_MS_ChangeREQ(void);
+void __attribute__((long_call)) STWI_send_StopModeREQ(void);
+void __attribute__((long_call)) STWI_send_SystemStatusREQ(void);
+void __attribute__((long_call)) STWI_send_GameConfigREQ(const u8 *serial_uname, const u8 *gname);
+void __attribute__((long_call)) STWI_send_ResetREQ(void);
+void __attribute__((long_call)) STWI_send_LinkStatusREQ(void);
+void __attribute__((long_call)) STWI_send_VersionStatusREQ(void);
+void __attribute__((long_call)) STWI_send_SlotStatusREQ(void);
+void __attribute__((long_call)) STWI_send_ConfigStatusREQ(void);
+void __attribute__((long_call)) STWI_send_ResumeRetransmitAndChangeREQ(void);
+void __attribute__((long_call)) STWI_send_SystemConfigREQ(u16 availSlotFlag, u8 maxMFrame, u8 mcTimer);
+void __attribute__((long_call)) STWI_send_SC_StartREQ(void);
+void __attribute__((long_call)) STWI_send_SC_PollingREQ(void);
+void __attribute__((long_call)) STWI_send_SC_EndREQ(void);
+void __attribute__((long_call)) STWI_send_SP_StartREQ(void);
+void __attribute__((long_call)) STWI_send_SP_PollingREQ(void);
+void __attribute__((long_call)) STWI_send_SP_EndREQ(void);
+void __attribute__((long_call)) STWI_send_CP_StartREQ(u16 unk1);
+void __attribute__((long_call)) STWI_send_CP_PollingREQ(void);
+void __attribute__((long_call)) STWI_send_CP_EndREQ(void);
+void __attribute__((long_call)) STWI_send_DataTxREQ(const void *in, u8 size);
+void __attribute__((long_call)) STWI_send_DataTxAndChangeREQ(const void *in, u8 size);
+void __attribute__((long_call)) STWI_send_DataReadyAndChangeREQ(u8 unk);
+void __attribute__((long_call)) STWI_send_DisconnectedAndChangeREQ(u8 unk0, u8 unk1);
+void __attribute__((long_call)) STWI_send_DisconnectREQ(u8 unk);
+void __attribute__((long_call)) STWI_send_TestModeREQ(u8 unk0, u8 unk1);
+void __attribute__((long_call)) STWI_send_CPR_StartREQ(u16 unk0, u16 unk1, u8 unk2);
+void __attribute__((long_call)) STWI_send_CPR_PollingREQ(void);
+void __attribute__((long_call)) STWI_send_CPR_EndREQ(void);
 
 #endif // GUARD_LIBRFU_H

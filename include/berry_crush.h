@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-void StartBerryCrush(MainCallback callback);
-void ShowBerryCrushRankings(void);
+void __attribute__((long_call)) StartBerryCrush(MainCallback callback);
+void __attribute__((long_call)) ShowBerryCrushRankings(void);
 
 #endif // GUARD_BERRY_CRUSH_H

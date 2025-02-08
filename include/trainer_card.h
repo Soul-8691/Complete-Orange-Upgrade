@@ -48,9 +48,9 @@ struct TrainerCard
 
 extern struct TrainerCard gTrainerCards[4];
 
-void ShowPlayerTrainerCard(void (*callback)(void));
-void ShowTrainerCardInLink(u8 whoseCard, MainCallback callback);
-u8 GetTrainerCardStars(u8 cardId);
-void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard);
+void __attribute__((long_call)) ShowPlayerTrainerCard(void (*callback)(void));
+void __attribute__((long_call)) ShowTrainerCardInLink(u8 whoseCard, MainCallback callback);
+u8 __attribute__((long_call)) GetTrainerCardStars(u8 cardId);
+void __attribute__((long_call)) TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard);
 
 #endif //GUARD_TRAINER_CARD_H

@@ -57,10 +57,10 @@
 #define Dma3FillLarge32_(value, dest, size) Dma3FillLarge_(value, dest, size, 32)
 
 // Cancel pending DMA3 requests
-void ClearDma3Requests(void);
+void __attribute__((long_call)) ClearDma3Requests(void);
 
 // Handle pending DMA3 requests
-void ProcessDma3Requests(void);
+void __attribute__((long_call)) ProcessDma3Requests(void);
 
 // Copy size bytes from src to dest.
 // mode takes a DMA3_*BIT macro

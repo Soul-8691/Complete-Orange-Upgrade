@@ -14,11 +14,11 @@ enum BerryPouchType
     BERRYPOUCH_NA
 };
 
-void BerryPouch_StartFadeToExitCallback(u8 taskId);
-void BerryPouch_SetExitCallback(void (*exitCallback)(void));
-void InitBerryPouch(u8 type, void (*savedCallback)(void), u8 allowSelect);
-void DisplayItemMessageInBerryPouch(u8 taskId, u8 fontId, const u8 * str, TaskFunc followUpFunc);
-void Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu(u8 taskId);
-void BerryPouch_CursorResetToTop(void);
+void __attribute__((long_call)) BerryPouch_StartFadeToExitCallback(u8 taskId);
+void __attribute__((long_call)) BerryPouch_SetExitCallback(void (*exitCallback)(void));
+void __attribute__((long_call)) InitBerryPouch(u8 type, void (*savedCallback)(void), u8 allowSelect);
+void __attribute__((long_call)) DisplayItemMessageInBerryPouch(u8 taskId, u8 fontId, const u8 * str, TaskFunc followUpFunc);
+void __attribute__((long_call)) Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu(u8 taskId);
+void __attribute__((long_call)) BerryPouch_CursorResetToTop(void);
 
 #endif //GUARD_BERRY_POUCH_H

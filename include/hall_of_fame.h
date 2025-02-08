@@ -3,11 +3,11 @@
 
 #include "global.h"
 
-void CB2_DoHallOfFameScreen(void);
-void CB2_DoHallOfFameScreenDontSaveData(void);
-void CB2_DoHallOfFamePC(void);
-void CB2_InitHofPC(void);
-void HallOfFamePCBeginFade(void);
-void ReturnFromHallOfFamePC(void);
+void __attribute__((long_call)) CB2_DoHallOfFameScreen(void);
+void __attribute__((long_call)) CB2_DoHallOfFameScreenDontSaveData(void);
+void __attribute__((long_call)) CB2_DoHallOfFamePC(void);
+void __attribute__((long_call)) CB2_InitHofPC(void);
+void __attribute__((long_call)) HallOfFamePCBeginFade(void);
+void __attribute__((long_call)) ReturnFromHallOfFamePC(void);
 
 #endif // GUARD_HALL_OF_FAME_H

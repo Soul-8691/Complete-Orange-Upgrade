@@ -39,10 +39,10 @@ extern struct ScanlineEffect gScanlineEffect;
 
 extern u16 gScanlineEffectRegBuffers[2][0x3C0];
 
-void ScanlineEffect_Stop(void);
-void ScanlineEffect_Clear(void);
-void ScanlineEffect_SetParams(struct ScanlineEffectParams);
-void ScanlineEffect_InitHBlankDmaTransfer(void);
-u8 ScanlineEffect_InitWave(u8 startLine, u8 endLine, u8 frequency, u8 amplitude, u8 delayInterval, u8 regOffset, bool8 a7);
+void __attribute__((long_call)) ScanlineEffect_Stop(void);
+void __attribute__((long_call)) ScanlineEffect_Clear(void);
+void __attribute__((long_call)) ScanlineEffect_SetParams(struct ScanlineEffectParams);
+void __attribute__((long_call)) ScanlineEffect_InitHBlankDmaTransfer(void);
+u8 __attribute__((long_call)) ScanlineEffect_InitWave(u8 startLine, u8 endLine, u8 frequency, u8 amplitude, u8 delayInterval, u8 regOffset, bool8 a7);
 
 #endif // GUARD_SCANLINE_EFFECT_H

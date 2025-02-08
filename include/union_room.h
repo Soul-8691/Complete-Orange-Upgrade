@@ -150,7 +150,7 @@ extern struct RfuGameCompatibilityData gRfuPartnerCompatibilityData;
 extern u16 gUnionRoomOfferedSpecies;
 extern u8 gUnionRoomRequestedMonType;
 
-void StartUnionRoomBattle(u16 battleFlags);
-u8 CreateTask_CreateTradeMenu(void);
+void __attribute__((long_call)) StartUnionRoomBattle(u16 battleFlags);
+u8 __attribute__((long_call)) CreateTask_CreateTradeMenu(void);
 
 #endif //GUARD_UNION_ROOM_H

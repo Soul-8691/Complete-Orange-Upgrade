@@ -10,11 +10,11 @@ enum {
     FIELD_MESSAGE_BOX_AUTO_SCROLL,
 };
 
-bool8 ShowFieldMessage(const u8 *message);
-bool8 ShowFieldAutoScrollMessage(const u8 *message);
-void HideFieldMessageBox(void);
-bool8 IsFieldMessageBoxHidden(void);
-u8 GetFieldMessageBoxType(void);
-void InitFieldMessageBox(void);
+bool8 __attribute__((long_call)) ShowFieldMessage(const u8 *message);
+bool8 __attribute__((long_call)) ShowFieldAutoScrollMessage(const u8 *message);
+void __attribute__((long_call)) HideFieldMessageBox(void);
+bool8 __attribute__((long_call)) IsFieldMessageBoxHidden(void);
+u8 __attribute__((long_call)) GetFieldMessageBoxType(void);
+void __attribute__((long_call)) InitFieldMessageBox(void);
 
 #endif // GUARD_FIELD_MESSAGE_BOX_H

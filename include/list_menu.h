@@ -94,16 +94,16 @@ struct ListMenuWindowRect
 
 extern struct ListMenuTemplate gMultiuseListMenuTemplate;
 
-u32 DoMysteryGiftListMenu(const struct WindowTemplate *windowTemplate, const struct ListMenuTemplate *listMenuTemplate, u8 arg2, u16 tileNum, u16 palNum);
-u8 ListMenuInit(const struct ListMenuTemplate *listMenuTemplate, u16 cursorPos, u16 itemsAbove);
-u8 ListMenuInitInRect(const struct ListMenuTemplate *listMenuTemplate, const struct ListMenuWindowRect *rect, u16 cursorPos, u16 itemsAbove);
+u32 __attribute__((long_call)) DoMysteryGiftListMenu(const struct WindowTemplate *windowTemplate, const struct ListMenuTemplate *listMenuTemplate, u8 arg2, u16 tileNum, u16 palNum);
+u8 __attribute__((long_call)) ListMenuInit(const struct ListMenuTemplate *listMenuTemplate, u16 cursorPos, u16 itemsAbove);
+u8 __attribute__((long_call)) ListMenuInitInRect(const struct ListMenuTemplate *listMenuTemplate, const struct ListMenuWindowRect *rect, u16 cursorPos, u16 itemsAbove);
 s32 ListMenu_ProcessInput(u8 listTaskId);
-void DestroyListMenuTask(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);
-void RedrawListMenu(u8 listTaskId);
-void ListMenuGetScrollAndRow(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);
-u16 ListMenuGetYCoordForPrintingArrowCursor(u8 listTaskId);
-void ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal);
-void ListMenuDefaultCursorMoveFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list);
-void ListMenuSetTemplateField(u8 taskId, u8 field, s32 value);
+void __attribute__((long_call)) DestroyListMenuTask(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);
+void __attribute__((long_call)) RedrawListMenu(u8 listTaskId);
+void __attribute__((long_call)) ListMenuGetScrollAndRow(u8 listTaskId, u16 *cursorPos, u16 *itemsAbove);
+u16 __attribute__((long_call)) ListMenuGetYCoordForPrintingArrowCursor(u8 listTaskId);
+void __attribute__((long_call)) ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal);
+void __attribute__((long_call)) ListMenuDefaultCursorMoveFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list);
+void __attribute__((long_call)) ListMenuSetTemplateField(u8 taskId, u8 field, s32 value);
 
 #endif //GUARD_LIST_MENU_H

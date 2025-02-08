@@ -23,7 +23,7 @@ extern struct PlayerPCItemPageStruct gPlayerPcMenuManager;
 
 // Exported ROM declarations
 
-void NewGameInitPCItems(void);
-void Mailbox_ReturnToMailListAfterDeposit(void);
+void __attribute__((long_call)) NewGameInitPCItems(void);
+void __attribute__((long_call)) Mailbox_ReturnToMailListAfterDeposit(void);
 
 #endif //GUARD_PLAYER_PC_H

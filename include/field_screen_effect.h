@@ -3,12 +3,12 @@
 
 #include "global.h"
 
-void AnimateFlash(u8);
-void FieldCB_SafariZoneRanOutOfBalls(void);
-void DoOutwardBarnDoorWipe(void);
-void Task_BarnDoorWipe(u8 taskId);
-void FieldCB_RushInjuredPokemonToCenter(void);
-void WriteFlashScanlineEffectBuffer(u8 flashLevel);
+void __attribute__((long_call)) AnimateFlash(u8);
+void __attribute__((long_call)) FieldCB_SafariZoneRanOutOfBalls(void);
+void __attribute__((long_call)) DoOutwardBarnDoorWipe(void);
+void __attribute__((long_call)) Task_BarnDoorWipe(u8 taskId);
+void __attribute__((long_call)) FieldCB_RushInjuredPokemonToCenter(void);
+void __attribute__((long_call)) WriteFlashScanlineEffectBuffer(u8 flashLevel);
 
 extern const s32 gMaxFlashLevel;
 

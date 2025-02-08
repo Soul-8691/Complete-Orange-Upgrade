@@ -35,19 +35,19 @@ struct WildPokemonHeader
 
 extern const struct WildPokemonHeader gWildMonHeaders[];
 
-void DisableWildEncounters(bool8 disabled);
-bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetaTileBehavior);
-bool8 SweetScentWildEncounter(void);
-bool8 DoesCurrentMapHaveFishingMons(void);
-void FishingWildEncounter(u8 rod);
-u16 GetLocalWildMon(bool8 *isWaterMon);
-u16 GetLocalWaterMon(void);
-bool8 UpdateRepelCounter(void);
-void DisableWildEncounters(bool8 state);
-u8 GetUnownLetterByPersonalityLoByte(u32 personality);
-bool8 SweetScentWildEncounter(void);
-void SeedWildEncounterRng(u16 randVal);
-void ResetEncounterRateModifiers(void);
-bool8 TryStandardWildEncounter(u32 currMetatileAttrs);
+void __attribute__((long_call)) DisableWildEncounters(bool8 disabled);
+bool8 __attribute__((long_call)) StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetaTileBehavior);
+bool8 __attribute__((long_call)) SweetScentWildEncounter(void);
+bool8 __attribute__((long_call)) DoesCurrentMapHaveFishingMons(void);
+void __attribute__((long_call)) FishingWildEncounter(u8 rod);
+u16 __attribute__((long_call)) GetLocalWildMon(bool8 *isWaterMon);
+u16 __attribute__((long_call)) GetLocalWaterMon(void);
+bool8 __attribute__((long_call)) UpdateRepelCounter(void);
+void __attribute__((long_call)) DisableWildEncounters(bool8 state);
+u8 __attribute__((long_call)) GetUnownLetterByPersonalityLoByte(u32 personality);
+bool8 __attribute__((long_call)) SweetScentWildEncounter(void);
+void __attribute__((long_call)) SeedWildEncounterRng(u16 randVal);
+void __attribute__((long_call)) ResetEncounterRateModifiers(void);
+bool8 __attribute__((long_call)) TryStandardWildEncounter(u32 currMetatileAttrs);
 
 #endif // GUARD_WILD_ENCOUNTER_H

@@ -23,12 +23,12 @@
 #define CHATDISPLAYROUTINE_PRINTLEADERLEFT 19
 #define CHATDISPLAYROUTINE_SHOWCONFIRMLEADERLEAVEDIALOG 20
 
-bool8 UnionRoomChat_TryAllocGraphicsWork(void);
-bool32 UnionRoomChat_RunDisplaySubtask0(void);
-void UnionRoomChat_FreeGraphicsWork(void);
-void UnionRoomChat_RunDisplaySubtasks(void);
-void UnionRoomChat_StartDisplaySubtask(u16 a0, u8 a1);
-u8 RunDisplaySubtask(u8 a0);
+bool8 __attribute__((long_call)) UnionRoomChat_TryAllocGraphicsWork(void);
+bool32 __attribute__((long_call)) UnionRoomChat_RunDisplaySubtask0(void);
+void __attribute__((long_call)) UnionRoomChat_FreeGraphicsWork(void);
+void __attribute__((long_call)) UnionRoomChat_RunDisplaySubtasks(void);
+void __attribute__((long_call)) UnionRoomChat_StartDisplaySubtask(u16 a0, u8 a1);
+u8 __attribute__((long_call)) RunDisplaySubtask(u8 a0);
 s8 UnionRoomChat_ProcessInput(void);
 
 #endif //GUARD_UNION_ROOM_CHAT_DISPLAY_H

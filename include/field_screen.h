@@ -8,7 +8,7 @@
 // Exported RAM declarations
 
 // Exported ROM declarations
-void pal_fill_black(void);
-void UpdateWeatherPerDay(u16 days);
+void __attribute__((long_call)) pal_fill_black(void);
+void __attribute__((long_call)) UpdateWeatherPerDay(u16 days);
 
 #endif //GUARD_FIELD_SCREEN_H

@@ -17,8 +17,8 @@ enum {
 };
 
 
-void QuestLogUpdatePlayerSprite(u8 state);
-bool32 QuestLogTryRecordPlayerAvatarGfxTransition(u8 state);
-void QuestLogCallUpdatePlayerSprite(u8 state);
+void __attribute__((long_call)) QuestLogUpdatePlayerSprite(u8 state);
+bool32 __attribute__((long_call)) QuestLogTryRecordPlayerAvatarGfxTransition(u8 state);
+void __attribute__((long_call)) QuestLogCallUpdatePlayerSprite(u8 state);
 
 #endif //GUARD_QUEST_LOG_PLAYER_H

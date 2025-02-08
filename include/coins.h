@@ -3,12 +3,12 @@
 
 #include "global.h"
 
-void PrintCoinsString(u32 coinAmount);
-void ShowCoinsWindow(u32 coinAmount, u8 x, u8 y);
-void HideCoinsWindow(void);
-u16 GetCoins(void);
-void SetCoins(u16 coinAmount);
-bool8 AddCoins(u16 toAdd);
-bool8 RemoveCoins(u16 toSub);
+void __attribute__((long_call)) PrintCoinsString(u32 coinAmount);
+void __attribute__((long_call)) ShowCoinsWindow(u32 coinAmount, u8 x, u8 y);
+void __attribute__((long_call)) HideCoinsWindow(void);
+u16 __attribute__((long_call)) GetCoins(void);
+void __attribute__((long_call)) SetCoins(u16 coinAmount);
+bool8 __attribute__((long_call)) AddCoins(u16 toAdd);
+bool8 __attribute__((long_call)) RemoveCoins(u16 toSub);
 
 #endif // GUARD_COINS_H

@@ -48,17 +48,17 @@ struct MapPreviewScreen
     const void *palptr;
 };
 
-u16 MapPreview_CreateMapNameWindow(u8 id);
-void MapPreview_SetFlag(u16 a0);
-u16 MapPreview_GetDuration(u8 id);
-bool8 MapHasPreviewScreen(u8 mapsec, u8 type);
-bool32 ForestMapPreviewScreenIsRunning(void);
+u16 __attribute__((long_call)) MapPreview_CreateMapNameWindow(u8 id);
+void __attribute__((long_call)) MapPreview_SetFlag(u16 a0);
+u16 __attribute__((long_call)) MapPreview_GetDuration(u8 id);
+bool8 __attribute__((long_call)) MapHasPreviewScreen(u8 mapsec, u8 type);
+bool32 __attribute__((long_call)) ForestMapPreviewScreenIsRunning(void);
 const struct MapPreviewScreen * GetDungeonMapPreviewScreenInfo(u8 mapsec);
-bool32 MapHasPreviewScreen_HandleQLState2(u8 mapsec, u8 type);
-void MapPreview_InitBgs(void);
-void MapPreview_LoadGfx(u8 mapsec);
-bool32 MapPreview_IsGfxLoadFinished(void);
-void MapPreview_Unload(s32 windowId);
-void MapPreview_StartForestTransition(u8 mapsec);
+bool32 __attribute__((long_call)) MapHasPreviewScreen_HandleQLState2(u8 mapsec, u8 type);
+void __attribute__((long_call)) MapPreview_InitBgs(void);
+void __attribute__((long_call)) MapPreview_LoadGfx(u8 mapsec);
+bool32 __attribute__((long_call)) MapPreview_IsGfxLoadFinished(void);
+void __attribute__((long_call)) MapPreview_Unload(s32 windowId);
+void __attribute__((long_call)) MapPreview_StartForestTransition(u8 mapsec);
 
 #endif //GUARD_MAP_PREVIEW_SCREEN_H

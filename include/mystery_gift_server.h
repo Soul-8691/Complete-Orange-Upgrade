@@ -97,8 +97,8 @@ struct MysteryGiftServer
     struct MysteryGiftLink manager;
 };
 
-void MysterGiftServer_CreateForNews(void);
-void MysterGiftServer_CreateForCard(void);
-u32 MysterGiftServer_Run(u16 * endVal);
+void __attribute__((long_call)) MysterGiftServer_CreateForNews(void);
+void __attribute__((long_call)) MysterGiftServer_CreateForCard(void);
+u32 __attribute__((long_call)) MysterGiftServer_Run(u16 * endVal);
 
 #endif //GUARD_MYSTERY_GIFT_SERVER_H

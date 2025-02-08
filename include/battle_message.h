@@ -208,14 +208,14 @@ struct BattleMsgData
     u8 textBuffs[3][0x10];
 };
 
-void BufferStringBattle(u16 stringID);
-u32 BattleStringExpandPlaceholdersToDisplayedString(const u8 *src);
-u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst);
-void BattleHandleAddTextPrinter(const u8 *text, u8 arg1);
-void SetPpNumbersPaletteInMoveSelection(void);
-u8 GetCurrentPpToMaxPpState(u8 currentPp, u8 maxPp);
-void BattlePutTextOnWindow(const u8 *text, u8 windowId_flags);
-bool8 BattleStringShouldBeColored(u16);
+void __attribute__((long_call)) BufferStringBattle(u16 stringID);
+u32 __attribute__((long_call)) BattleStringExpandPlaceholdersToDisplayedString(const u8 *src);
+u32 __attribute__((long_call)) BattleStringExpandPlaceholders(const u8 *src, u8 *dst);
+void __attribute__((long_call)) BattleHandleAddTextPrinter(const u8 *text, u8 arg1);
+void __attribute__((long_call)) SetPpNumbersPaletteInMoveSelection(void);
+u8 __attribute__((long_call)) GetCurrentPpToMaxPpState(u8 currentPp, u8 maxPp);
+void __attribute__((long_call)) BattlePutTextOnWindow(const u8 *text, u8 windowId_flags);
+bool8 __attribute__((long_call)) BattleStringShouldBeColored(u16);
 
 extern struct BattleMsgData *gBattleMsgDataPtr;
 

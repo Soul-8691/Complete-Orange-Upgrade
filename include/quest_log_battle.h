@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-void TrySetQuestLogBattleEvent(void);
-void TrySetQuestLogLinkBattleEvent(void);
+void __attribute__((long_call)) TrySetQuestLogBattleEvent(void);
+void __attribute__((long_call)) TrySetQuestLogLinkBattleEvent(void);
 
 #endif // GUARD_QUEST_LOG_BATTLE_H

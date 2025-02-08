@@ -3,17 +3,17 @@
 
 #include "global.h"
 
-void InitSeedotSizeRecord(void);
-void GetSeedotSizeRecordInfo(void);
-void CompareSeedotSize(void);
+void __attribute__((long_call)) InitSeedotSizeRecord(void);
+void __attribute__((long_call)) GetSeedotSizeRecordInfo(void);
+void __attribute__((long_call)) CompareSeedotSize(void);
 
-void InitLotadSizeRecord(void);
-void GetLotadSizeRecordInfo(void);
-void CompareLotadSize(void);
+void __attribute__((long_call)) InitLotadSizeRecord(void);
+void __attribute__((long_call)) GetLotadSizeRecordInfo(void);
+void __attribute__((long_call)) CompareLotadSize(void);
 
-void InitHeracrossSizeRecord(void);
-void InitMagikarpSizeRecord(void);
+void __attribute__((long_call)) InitHeracrossSizeRecord(void);
+void __attribute__((long_call)) InitMagikarpSizeRecord(void);
 
-void GiveGiftRibbonToParty(u8 index, u8 ribbonId);
+void __attribute__((long_call)) GiveGiftRibbonToParty(u8 index, u8 ribbonId);
 
 #endif // GUARD_POKEMON_SIZE_RECORD_H

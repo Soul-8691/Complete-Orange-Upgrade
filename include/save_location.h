@@ -8,9 +8,9 @@
 #define UNK_SPECIAL_SAVE_WARP_FLAG_3 (1 << 3)
 #define CHAMPION_SAVEWARP            (1 << 7)
 
-void TrySetMapSaveWarpStatus(void);
-bool32 IsCurMapPokeCenter(void);
-void SetUnlockedPokedexFlags(void);
-void SetPostgameFlags(void);
+void __attribute__((long_call)) TrySetMapSaveWarpStatus(void);
+bool32 __attribute__((long_call)) IsCurMapPokeCenter(void);
+void __attribute__((long_call)) SetUnlockedPokedexFlags(void);
+void __attribute__((long_call)) SetPostgameFlags(void);
 
 #endif // GUARD_SAVE_LOCATION_H
