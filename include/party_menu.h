@@ -36,7 +36,7 @@ u8 GetCursorSelectionMonId(void);
 u8 GetPartyMenuType(void);
 void Task_HandleChooseMonInput(u8 taskId);
 u8* __attribute__((long_call)) GetMonNickname(struct Pokemon *mon, u8 *dest);
-u8 DisplayPartyMenuMessage(const u8 *str, bool8 keepOpen);
+u8 __attribute__((long_call)) DisplayPartyMenuMessage(const u8 *str, bool8 keepOpen);
 bool8 IsPartyMenuTextPrinterActive(void);
 void PartyMenuModifyHP(u8 taskId, u8 slot, s8 hpIncrement, s16 hpDifference, TaskFunc task);
 u8 GetAilmentFromStatus(u32 status);

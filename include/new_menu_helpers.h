@@ -8,7 +8,7 @@
 extern const u16 gMenuMessageWindow_Gfx[];
 
 void ClearScheduledBgCopiesToVram(void);
-void ScheduleBgCopyTilemapToVram(u8 bgId);
+void __attribute__((long_call)) ScheduleBgCopyTilemapToVram(u8 bgId);
 void DoScheduledBgTilemapCopiesToVram(void);
 void ResetTempTileDataBuffers(void);
 bool8 FreeTempTileDataBuffersIfPossible(void);

@@ -47,7 +47,7 @@ void CopyItemNameHandlePlural(u16 itemId, u8 *string, u32 quantity);
 bool8 IsBagPocketNonEmpty(u8 pocket);
 bool8 CheckBagHasItem(u16 itemId, u16 count);
 bool8 CheckBagHasSpace(u16 itemId, u16 count);
-bool8 RemoveBagItem(u16 itemId, u16 count);
+bool8 __attribute__((long_call)) RemoveBagItem(u16 itemId, u16 count);
 u8 GetPocketByItemId(u16 itemId);
 void ClearItemSlots(struct ItemSlot *itemSlots, u8 b);
 u8 CountUsedPCItemSlots(void);

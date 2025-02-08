@@ -140,6 +140,7 @@ extern void __attribute__((long_call)) DisplayLearnMoveMessageAndClose(u8 taskId
 extern void __attribute__((long_call)) DisplayLearnMoveMessage(const u8 *str);
 // void __attribute__((long_call)) Task_DoUseItemAnim(u8 taskId);
 void Task_LearnedMove_(u8 taskId);
+extern void __attribute__((long_call)) Task_LearnedMove(u8 taskId);
 static u8 CanTeachMove(struct Pokemon *mon, u16 move);
 
 void DisplayPartyPokemonDataToTeachMove_(u8 slot, u16 move)
@@ -228,7 +229,7 @@ void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
     {
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, item, 0xFFFF);
         // Task_DoUseItemAnim(taskId);
-        gItemUseCB = ItemUseCB_LearnedMove;
+        gTasks[taskId].func = Task_LearnedMove_;
     }
     else
     {
@@ -324,7 +325,7 @@ u16 ItemIdToBattleMoveId_(u16 item)
 {
     u16 tmNumber;
     if (item >= ITEM_TM01 && item <= ITEM_HM08) tmNumber = item - ITEM_TM01;
-    else if (item >= ITEM_TM51) tmNumber = item - 318;
+    else if (item >= ITEM_TM51) tmNumber = item - 326;
 
     return sTMHMMoves[tmNumber];
 }

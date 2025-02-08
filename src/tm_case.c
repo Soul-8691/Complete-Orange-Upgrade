@@ -268,7 +268,7 @@ void GetTMNumberAndMoveString_(u8 * dest, u16 itemId)
         
         StringAppend(gStringVar4, gText_NumberClear01);
         if (itemId <= ITEM_TM50) ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, tmDigits);
-        else ConvertIntToDecimalStringN(gStringVar1, itemId - 318 + 1, STR_CONV_MODE_LEADING_ZEROS, tmDigits);
+        else ConvertIntToDecimalStringN(gStringVar1, itemId - 326 + 1, STR_CONV_MODE_LEADING_ZEROS, tmDigits);
         StringAppend(gStringVar4, gStringVar1);
     }
     
