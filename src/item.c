@@ -33,7 +33,7 @@ static void SortAndCompactBagPocket_(struct BagPocket * pocket)
         }
     }
 
-    if (Isitem_HM(pocket->itemSlots[j].itemId) && !Isitem_HM(pocket->itemSlots[i].itemId))
+    if (!Isitem_HM(pocket->itemSlots[j].itemId) && Isitem_HM(pocket->itemSlots[i].itemId))
         SwapItemSlots(&pocket->itemSlots[i], &pocket->itemSlots[j]);
 }
 
