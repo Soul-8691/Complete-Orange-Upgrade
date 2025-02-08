@@ -15,7 +15,7 @@ Task_SelectTMAction_FromFieldBag_ 08132414 1
 ##CreateDiscSprite_ 0813368c 1
 SetTMSpriteAnim 08133714 2
 TMCase_ItemPrintFunc 08131e68 3
-##SortPocketAndPlaceHMsFirst_ 0809a5e4 1
+SortPocketAndPlaceHMsFirst_ 0809a5e4 1
 BufferTMHMMoveName_ 080cc8cc 1
 SanitizeItemId_ 0809a8a4 1
 TMSlotsHack 08099E6C 0

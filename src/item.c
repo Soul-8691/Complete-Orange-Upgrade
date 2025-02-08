@@ -11,10 +11,13 @@
 #include "../include/constants/items.h"
 #include "../include/constants/maps.h"
 
-u8 Isitem_HM(u16 itemId)
+extern u16 __attribute__((long_call)) GetBagItemQuantity(u16 * ptr);
+extern void __attribute__((long_call)) SwapItemSlots(struct ItemSlot * a, struct ItemSlot * b);
+
+u8 Isitem_OriginalTM(u16 itemId)
 {
     if (ItemId_GetPocket(itemId) == POCKET_TM_CASE
-     && itemId >= ITEM_HM01 && itemId <= ITEM_HM08)
+     && itemId >= ITEM_TM01 && itemId <= ITEM_TM50)
         return TRUE;
 
     return FALSE;
@@ -33,9 +36,11 @@ static void SortAndCompactBagPocket_(struct BagPocket * pocket)
         }
     }
 
-    if (!Isitem_HM(pocket->itemSlots[j].itemId) && Isitem_HM(pocket->itemSlots[i].itemId))
+    if (!Isitem_OriginalTM(pocket->itemSlots[j].itemId) && Isitem_OriginalTM(pocket->itemSlots[i].itemId))
         SwapItemSlots(&pocket->itemSlots[i], &pocket->itemSlots[j]);
 }
+
+extern void __attribute__((long_call)) SetBagItemQuantity(u16 * ptr, u16 value);
 
 void SortPocketAndPlaceHMsFirst_(struct BagPocket * pocket)
 {
