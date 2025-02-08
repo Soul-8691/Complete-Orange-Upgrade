@@ -329,7 +329,7 @@ u16 ItemIdToBattleMoveId_(u16 item)
 {
     u16 tmNumber;
     if (item >= ITEM_TM01 && item <= ITEM_HM08) tmNumber = item - ITEM_TM01;
-    else if (item >= ITEM_TM51) tmNumber = item - 326;
+    else if (item >= ITEM_TM51) tmNumber = item - 318;
 
     return sTMHMMoves[tmNumber];
 }

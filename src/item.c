@@ -11,30 +11,53 @@
 #include "../include/constants/items.h"
 #include "../include/constants/maps.h"
 
+u8 Isitem_HM(u16 itemId)
+{
+    if (ItemId_GetPocket(itemId) == POCKET_TM_CASE
+     && itemId >= ITEM_HM01 && itemId <= ITEM_HM08)
+        return TRUE;
+
+    return FALSE;
+}
+
+static void SortAndCompactBagPocket_(struct BagPocket * pocket)
+{
+    u16 i, j;
+
+    for (i = 0; i < pocket->capacity; i++)
+    {
+        for (j = i + 1; j < pocket->capacity; j++)
+        {
+            if (GetBagItemQuantity(&pocket->itemSlots[i].quantity) == 0 || (GetBagItemQuantity(&pocket->itemSlots[j].quantity) != 0 && pocket->itemSlots[i].itemId > pocket->itemSlots[j].itemId))
+                SwapItemSlots(&pocket->itemSlots[i], &pocket->itemSlots[j]);
+        }
+    }
+
+    if (Isitem_HM(pocket->itemSlots[j].itemId) && !Isitem_HM(pocket->itemSlots[i].itemId))
+        SwapItemSlots(&pocket->itemSlots[i], &pocket->itemSlots[j]);
+}
+
 void SortPocketAndPlaceHMsFirst_(struct BagPocket * pocket)
 {
     u16 i;
     u16 j = 0;
-    u16 k, l;
+    u16 k;
     struct ItemSlot * buff;
 
-    SortAndCompactBagPocket(pocket);
+    SortAndCompactBagPocket_(pocket);
 
     for (i = 0; i < pocket->capacity; i++)
     {
         if (pocket->itemSlots[i].itemId == ITEM_NONE && GetBagItemQuantity(&pocket->itemSlots[i].quantity) == 0)
             return;
-        if (pocket->itemSlots[i].itemId >= ITEM_TM01 && pocket->itemSlots[i].itemId <= ITEM_LAST_TM && GetBagItemQuantity(&pocket->itemSlots[i].quantity) != 0)
+        if (pocket->itemSlots[i].itemId >= ITEM_HM01 && pocket->itemSlots[i].itemId <= ITEM_HM08 && GetBagItemQuantity(&pocket->itemSlots[i].quantity) != 0)
         {
-            if (pocket->itemSlots[i].itemId >= ITEM_HM01 && pocket->itemSlots[i].itemId <= ITEM_HM08)
+            for (j = i + 1; j < pocket->capacity; j++)
             {
-                for (j = i + 1; j < pocket->capacity; j++)
-                {
-                    if (pocket->itemSlots[j].itemId == ITEM_NONE && GetBagItemQuantity(&pocket->itemSlots[j].quantity) == 0)
-                        break;
-                }
-                break;
+                if (pocket->itemSlots[j].itemId == ITEM_NONE && GetBagItemQuantity(&pocket->itemSlots[j].quantity) == 0)
+                    break;
             }
+            break;
         }
     }
 

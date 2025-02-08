@@ -2,6 +2,8 @@
     "files.associations": {
         "hooks": "cpp",
         "moves.h": "c",
-        "trainers.h": "c"
+        "trainers.h": "c",
+        "hold_effects.h": "c",
+        "items.h": "c"
     }
 }
