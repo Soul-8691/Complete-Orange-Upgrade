@@ -5,9 +5,7 @@
 
 // Each 4 KiB flash sector contains 3968 bytes of actual data followed by a 128 byte footer.
 // Only 12 bytes of the footer are used.
-#define SECTOR_DATA_SIZE 3968
-#define SECTOR_FOOTER_SIZE 128
-#define SECTOR_SIZE (SECTOR_DATA_SIZE + SECTOR_FOOTER_SIZE)
+#define SECTOR_DATA_SIZE 4084
 
 #define NUM_SAVE_SLOTS 2
 
@@ -69,12 +67,11 @@ struct SaveSectionOffsets
 struct SaveSector
 {
     u8 data[SECTOR_DATA_SIZE];
-    u8 unused[SECTOR_FOOTER_SIZE - 12]; // Unused portion of the footer
     u16 id;
     u16 checksum;
     u32 signature;
     u32 counter;
-}; // size is SECTOR_SIZE (0x1000)
+}; // size is SECTOR_DATA_SIZE (0x1000)
 
 #define SECTOR_SIGNATURE_OFFSET offsetof(struct SaveSector, signature)
 #define SECTOR_COUNTER_OFFSET   offsetof(struct SaveSector, counter)
@@ -87,11 +84,11 @@ enum
     CHECK // unused
 };
 
-extern u32 __attribute__((long_call)) gDamagedSaveSectors;
+extern u32 gDamagedSaveSectors;
 extern struct SaveSector *gSaveDataBufferPtr; // the pointer is in fast IWRAM but points to the slower EWRAM.
-extern u16 __attribute__((long_call)) gSaveFileStatus;
-extern void __attribute__((long_call)) (*gGameContinueCallback)(void);
-extern u16 __attribute__((long_call)) gSaveAttemptStatus;
+extern u16 SaveFileStatus;
+extern void (*gGameContinueCallback)(void);
+extern u16 gSaveAttemptStatus;
 
 extern struct SaveSector gSaveDataBuffer;
 
@@ -110,13 +107,18 @@ u32 __attribute__((long_call)) TryReadSpecialSaveSector(u8 sector, u8 *dst);
 u32 __attribute__((long_call)) TryWriteSpecialSaveSector(u8 sector, u8 *src);
 void __attribute__((long_call)) Task_LinkFullSave(u8 taskId);
 
-extern __attribute__((long_call)) u16 gLastWrittenSector;
-extern __attribute__((long_call)) u32 gLastSaveCounter;
-extern __attribute__((long_call)) u16 gLastKnownGoodSector;
-extern __attribute__((long_call)) u32 gSaveCounter;
-extern __attribute__((long_call)) u16 gUnknown_3005398;
-extern __attribute__((long_call)) u16 gSaveUnusedVar;
+extern u16 gLastWrittenSector;
+extern u32 gLastSaveCounter;
+extern u16 gLastKnownGoodSector;
+extern u32 gSaveCounter;
+extern u16 gUnknown_3005398;
+extern u16 gSaveUnusedVar;
 extern struct SaveSectorLocation gRamSaveSectorLocations[0xE];
-extern __attribute__((long_call)) u16 gSaveSucceeded;
+
+void __attribute__((long_call)) UpdateSaveAddresses(void);
+u16 __attribute__((long_call)) CalculateChecksum(void* data, u16 size);
+u8 __attribute__((long_call)) TryWriteSector(u8 sector, u8 *data);
+u8 __attribute__((long_call)) ReadFlashSector(u8 sector, struct SaveSection *section);
+u8 __attribute__((long_call)) HandleWriteSectorNBytes(u8 sector, u8 *data, u16 size);
 
 #endif // GUARD_SAVE_H

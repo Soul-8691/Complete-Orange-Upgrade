@@ -118,7 +118,7 @@ u32 __attribute__((long_call)) ComputeWhiteOutMoneyLoss(void);
 extern u8 __attribute__((long_call)) gDisableMapMusicChangeOnMapLoad;
 extern u8 __attribute__((long_call)) gGlobalFieldTintMode;
 
-extern bool8 __attribute__((long_call)) (* gFieldCallback2)(void);
+extern bool8 (* gFieldCallback2)(void);
 
 void __attribute__((long_call)) SetLastHealLocationWarp(u8 healLocaionId);
 void __attribute__((long_call)) LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum);

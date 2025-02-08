@@ -19,6 +19,6 @@ void __attribute__((long_call)) BufferMoveToLearnIntoBattleTextBuff2(void);
 void __attribute__((long_call)) HandleBattleWindow(u8 xStart, u8 yStart, u8 xEnd, u8 yEnd, u8 flags);
 bool8 __attribute__((long_call)) UproarWakeUpCheck(u8 battlerId);
 
-extern void __attribute__((long_call)) (* const gBattleScriptingCommandsTable[])(void);
+extern void (* const gBattleScriptingCommandsTable[])(void);
 
 #endif // GUARD_BATTLE_SCRIPT_COMMANDS_H

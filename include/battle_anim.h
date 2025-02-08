@@ -75,7 +75,7 @@ struct BattleAnimBackground
 #define sTransl_DestY    data[4]
 #define sTransl_ArcAmpl  data[5]
 
-extern void __attribute__((long_call)) (*gAnimScriptCallback)(void);
+extern void (*gAnimScriptCallback)(void);
 extern bool8 __attribute__((long_call)) gAnimScriptActive;
 extern u8 __attribute__((long_call)) gAnimVisualTaskCount;
 extern u8 __attribute__((long_call)) gAnimSoundTaskCount;

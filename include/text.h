@@ -176,7 +176,7 @@ bool16 __attribute__((long_call)) TextPrinterWaitWithDownArrow(struct TextPrinte
 bool16 __attribute__((long_call)) TextPrinterWait(struct TextPrinter *textPrinter);
 void __attribute__((long_call)) DrawDownArrow(u8 windowId, u16 x, u16 y, u8 bgColor, bool8 drawArrow, u8 *counter, u8 *yCoordIndex);
 u16 __attribute__((long_call)) RenderText(struct TextPrinter *textPrinter);
-s32 __attribute__((long_call)) (*GetFontWidthFunc(u8 glyphId))(u16, bool32);
+s32 (*GetFontWidthFunc(u8 glyphId))(u16, bool32);
 s32 __attribute__((long_call)) GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing);
 u8 __attribute__((long_call)) RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str, int a3, int a4, int a5, int a6, int a7);
 u8 __attribute__((long_call)) DrawKeypadIcon(u8 windowId, u8 keypadIconId, u16 x, u16 y);

@@ -27,7 +27,7 @@ extern MainCallback gPostMenuFieldCallback;
 extern u8 __attribute__((long_call)) gSelectedOrderFromParty[3];
 extern u8 __attribute__((long_call)) gBattlePartyCurrentOrder[PARTY_SIZE / 2];
 
-extern void __attribute__((long_call)) (*gItemUseCB)(u8, TaskFunc);
+extern void (*gItemUseCB)(u8, TaskFunc);
 
 void __attribute__((long_call)) InitPartyMenu(u8 menuType, u8 layout, u8 partyAction, bool8 keepCursorPos, u8 messageId, TaskFunc task, MainCallback callback);
 void __attribute__((long_call)) AnimatePartySlot(u8 slot, u8 animNum);

@@ -5,8 +5,8 @@
 #include "constants/field_effects.h"
 
 extern u32 __attribute__((long_call)) gFieldEffectArguments[8];
-extern void __attribute__((long_call)) (*gPostMenuFieldCallback)(void);
-extern bool8 __attribute__((long_call)) (*gFieldCallback2)(void);
+extern void (*gPostMenuFieldCallback)(void);
+extern bool8 (*gFieldCallback2)(void);
 
 u32 __attribute__((long_call)) FieldEffectStart(u8);
 bool8 __attribute__((long_call)) FieldEffectActiveListContains(u8 id);

@@ -13,7 +13,7 @@ bool8 __attribute__((long_call)) ScriptMenu_ShowPokemonPic(u16 var1, u8 var2, u8
 bool8 __attribute__((long_call)) CreatePCMenu(void);
 void __attribute__((long_call)) ScriptMenu_DisplayPCStartupPrompt(void);
 
-bool8 __attribute__((long_call)) (*ScriptMenu_HidePokemonPic(void))(void);
+bool8 (*ScriptMenu_HidePokemonPic(void))(void);
 void __attribute__((long_call)) QL_DestroyAbortedDisplay(void);
 void __attribute__((long_call)) PicboxCancel(void);
 

@@ -10,7 +10,6 @@ save.c
 */
 
 // Each 4 KiB flash sector contains 3968 bytes of actual data followed by a 128 byte footer
-extern struct SaveSector gSaveDataBuffer;
 #define SECTOR_DATA_SIZE 0xFF0
 #define SECTOR_FOOTER_SIZE 128
 #define NUM_SECTORS_PER_SAVE_SLOT 14
