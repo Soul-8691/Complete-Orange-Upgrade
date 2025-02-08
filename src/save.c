@@ -61,14 +61,7 @@ extern bool8 TryPreventIncompleteSaves(u8 taskId);
 
 static bool8 IsValidFileSignature(u32 signature)
 {
-	return signature == FILE_SIGNATURE
-		#ifdef CUSTOM_FILE_SIGNATURE_OLD
-		|| signature == CUSTOM_FILE_SIGNATURE_OLD
-		#endif
-		#ifdef CUSTOM_FILE_SIGNATURE 
-		|| signature == CUSTOM_FILE_SIGNATURE
-		#endif
-		;
+	return signature == FILE_SIGNATURE;
 }
 
 //Saving and loading for sector 30 and 31.
@@ -78,15 +71,15 @@ static void LoadSector30And31(void)
 
 	//Load sector 30
 	u32 startLoc = SAVE_BLOCK_PARASITE + PARASITE_SIZE;
-	memset(saveBuffer, 0, sizeof(struct SaveSector));
+	Memset(saveBuffer, 0, sizeof(struct SaveSector));
 	ReadFlashSector(30, saveBuffer);
-	memcpy((void*)(startLoc), saveBuffer, SECTOR_DATA_SIZE);
+	Memcpy((void*)(startLoc), saveBuffer, SECTOR_DATA_SIZE);
 
 	//Load sector 31
 	startLoc += SECTOR_DATA_SIZE;
-	memset(saveBuffer, 0, sizeof(struct SaveSector));
+	Memset(saveBuffer, 0, sizeof(struct SaveSector));
 	ReadFlashSector(31, saveBuffer);
-	memcpy((void*) startLoc, saveBuffer, SECTOR_DATA_SIZE);
+	Memcpy((void*) startLoc, saveBuffer, SECTOR_DATA_SIZE);
 }
 
 static u8 SaveSector30And31(void)
@@ -95,17 +88,17 @@ static u8 SaveSector30And31(void)
 	struct SaveSector* saveBuffer = &gSaveDataBuffer;
 
 	//Write sector 30
-	memset(saveBuffer, 0, sizeof(struct SaveSector));
+	Memset(saveBuffer, 0, sizeof(struct SaveSector));
 	u32 startLoc = SAVE_BLOCK_PARASITE + PARASITE_SIZE;
-	memcpy(saveBuffer->data, (void*)(startLoc), SECTOR_DATA_SIZE);
+	Memcpy(saveBuffer->data, (void*)(startLoc), SECTOR_DATA_SIZE);
 	retVal = TryWriteSector(30, saveBuffer->data);
 	if (retVal != SAVE_STATUS_OK)
 		return retVal; //Error
 
 	//Write sector 31
-	memset(saveBuffer, 0, sizeof(struct SaveSector));
+	Memset(saveBuffer, 0, sizeof(struct SaveSector));
 	startLoc += SECTOR_DATA_SIZE;
-	memcpy(saveBuffer->data, (void*)(startLoc), SECTOR_DATA_SIZE);
+	Memcpy(saveBuffer->data, (void*)(startLoc), SECTOR_DATA_SIZE);
 	return TryWriteSector(31, saveBuffer->data);
 }
 
@@ -137,7 +130,7 @@ void SaveParasite(void)
 	}
 
 	u16 index = SECTOR_DATA_SIZE - size;
-	memcpy(&sector->data[index], (u32*) data, size);
+	Memcpy(&sector->data[index], (u32*) data, size);
 }
 
 static void LoadParasite(void)
@@ -167,7 +160,7 @@ static void LoadParasite(void)
 	}
 
 	u16 index = SECTOR_DATA_SIZE - size;
-	memcpy(data, &sector->data[index], size);
+	Memcpy(data, &sector->data[index], size);
 }
 
 // 080D9E54
@@ -189,7 +182,7 @@ u8 CopySaveSlotData_(unusedArg u16 a1, const struct SaveSectorLocation* location
 		if (IsValidFileSignature(gSaveDataBufferPtr->signature)
 		&&  gSaveDataBufferPtr->checksum == checksum)
 		{
-			memcpy(location[id].data, gSaveDataBufferPtr->data, location[id].size);
+			Memcpy(location[id].data, gSaveDataBufferPtr->data, location[id].size);
 			LoadParasite();
 			checksumStatus = TRUE;
 		}
@@ -200,33 +193,6 @@ u8 CopySaveSlotData_(unusedArg u16 a1, const struct SaveSectorLocation* location
 		LoadSector30And31();
 
 	return 1;
-}
-
-// 080DA120
-u8 TryLoadSaveSector_(u8 sector, u8* data, u16 size)
-{
-	u16 i;
-	struct SaveSector* section = &gSaveDataBuffer;
-
-	ReadFlashSector(sector, section);
-	if (IsValidFileSignature(section->signature))
-	{
-		u16 checksum = CalculateChecksum(section->data, size);
-		if (section->id == checksum)
-		{
-			for (i = 0; i < size; i++)
-				data[i] = section->data[i];
-			return SAVE_STATUS_OK;
-		}
-		else
-		{
-			return SAVE_STATUS_INVALID;
-		}
-	}
-	else
-	{
-		return SAVE_STATUS_EMPTY;
-	}
 }
 
 u8 GetSaveValidStatus_(const struct SaveSectorLocation *chunks)
@@ -367,18 +333,14 @@ u8 HandleWriteSector_(u16 chunkId, const struct SaveSectorLocation* location)
 	chunkSize = location[chunkId].size;
 
 	//Clear save section
-	memset(gSaveDataBufferPtr, 0, sizeof(struct SaveSector));
+	Memset(gSaveDataBufferPtr, 0, sizeof(struct SaveSector));
 
 	gSaveDataBufferPtr->id = chunkId;
-	#ifdef CUSTOM_FILE_SIGNATURE 
-	gSaveDataBufferPtr->signature = CUSTOM_FILE_SIGNATURE;
-	#else
 	gSaveDataBufferPtr->signature = FILE_SIGNATURE;
-	#endif
 
 	gSaveDataBufferPtr->counter = gSaveCounter;
 
-	memcpy(gSaveDataBufferPtr->data, chunkData, chunkSize);
+	Memcpy(gSaveDataBufferPtr->data, chunkData, chunkSize);
 
 	gSaveDataBufferPtr->checksum = CalculateChecksum(chunkData, chunkSize);
 
@@ -494,7 +456,7 @@ u8 SaveDataAfterLinkTrade(void)
 
 void NewGameWipeNewSaveData(void)
 {
-	memset((void*) SAVE_BLOCK_PARASITE, 0, 0x2EA4);
+	Memset((void*) SAVE_BLOCK_PARASITE, 0, 0x2EA4);
 }
 
 static void Task_SaveErrorStatus_RunPrinter(unusedArg u8 taskId)
@@ -507,50 +469,4 @@ void PrintChangeSaveTypeErrorStatus(u8 taskId, const u8* str)
 {
 	PrintSaveErrorStatus(taskId, str);
 	gTasks[taskId].func = Task_SaveErrorStatus_RunPrinter; //Override normal
-}
-
-extern const u8 gText_MainMenuEnableRTC[];
-extern const u8 gText_MainMenuEnableRTCNoSave[];
-extern const u8 gText_MainMenuTimeSetInFuture[];
-extern bool8 sPrintedRTCWarning;
-bool8 TryDisplayMainMenuRTCWarning(unusedArg u8 taskId)
-{
-	#ifdef TIME_ENABLED
-	if (!sPrintedRTCWarning)
-	{
-		#ifdef UNBOUND
-		if (TryPreventIncompleteSaves(taskId))
-		{
-			sPrintedRTCWarning = TRUE;
-			return TRUE;
-		}
-		else
-		#endif
-		if (RtcGetErrorStatus() & RTC_ERR_FLAG_MASK)
-		{
-			const u8* warning;
-			sPrintedRTCWarning = TRUE;
-			
-			if (gSaveFileStatus == SAVE_STATUS_EMPTY)
-				warning = gText_MainMenuEnableRTCNoSave;
-			else
-				warning = gText_MainMenuEnableRTC;
-			
-			PrintSaveErrorStatus(taskId, warning);
-			gTasks[taskId].func = (void*) (0x0800C688 | 1); // Task_SaveErrorStatus_RunPrinterThenWaitButton
-			return TRUE;
-		}
-		else if (IsDayInVarInFuture(VAR_SWARM_DAILY_EVENT)) //If the player tampered with their system time to access more daily events
-		{
-			sPrintedRTCWarning = TRUE;
-			BufferYearMonthDayFromVar(VAR_SWARM_DAILY_EVENT);
-			StringExpandPlaceholders(gStringVarC, gText_MainMenuTimeSetInFuture);
-			PrintSaveErrorStatus(taskId, gStringVarC);
-			gTasks[taskId].func = (void*) (0x0800C688 | 1); // Task_SaveErrorStatus_RunPrinterThenWaitButton
-			return TRUE;
-		}
-	}
-	#endif
-
-	return FALSE;
 }

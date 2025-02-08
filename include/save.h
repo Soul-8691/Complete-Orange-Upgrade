@@ -5,8 +5,6 @@
 
 // Each 4 KiB flash sector contains 3968 bytes of actual data followed by a 128 byte footer.
 // Only 12 bytes of the footer are used.
-#define SECTOR_DATA_SIZE 4084
-
 #define NUM_SAVE_SLOTS 2
 
 // If the sector's signature field is not this value then the sector is either invalid or empty.
@@ -66,12 +64,12 @@ struct SaveSectionOffsets
 
 struct SaveSector
 {
-    u8 data[SECTOR_DATA_SIZE];
+    u8 data[0xFF4];
     u16 id;
     u16 checksum;
     u32 signature;
     u32 counter;
-}; // size is SECTOR_DATA_SIZE (0x1000)
+}; // size is 0x1000
 
 #define SECTOR_SIGNATURE_OFFSET offsetof(struct SaveSector, signature)
 #define SECTOR_COUNTER_OFFSET   offsetof(struct SaveSector, counter)

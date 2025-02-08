@@ -27,7 +27,6 @@ WriteSaveSectorOrSlot_ 80D97D0 2
 HandleWriteSector_ 80D9870 2
 CopySaveSlotData_ 80D9E54 2
 GetSaveValidStatus_ 80D9F0C 1
-TryLoadSaveSector_ 80DA120 3
 HandleSavingData_ 80DA248 1
 LinkTradeSaveHook 805415E 0
 LinkBattleSaveHook 806FC84 0
