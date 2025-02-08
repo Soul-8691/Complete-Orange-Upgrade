@@ -14,10 +14,19 @@
 extern u16 __attribute__((long_call)) GetBagItemQuantity(u16 * ptr);
 extern void __attribute__((long_call)) SwapItemSlots(struct ItemSlot * a, struct ItemSlot * b);
 
-u8 Isitem_OriginalTM(u16 itemId)
+static u8 Isitem_OriginalTM(u16 itemId)
 {
     if (ItemId_GetPocket(itemId) == POCKET_TM_CASE
      && itemId >= ITEM_TM01 && itemId <= ITEM_TM50)
+        return TRUE;
+
+    return FALSE;
+}
+
+static u8 Isitem_ExpandedTM(u16 itemId)
+{
+    if (ItemId_GetPocket(itemId) == POCKET_TM_CASE
+     && itemId >= ITEM_TM51 && itemId <= ITEM_LAST_TM)
         return TRUE;
 
     return FALSE;
@@ -36,7 +45,7 @@ static void SortAndCompactBagPocket_(struct BagPocket * pocket)
         }
     }
 
-    if (!Isitem_OriginalTM(pocket->itemSlots[j].itemId) && Isitem_OriginalTM(pocket->itemSlots[i].itemId))
+    if (Isitem_ExpandedTM(pocket->itemSlots[j].itemId) && Isitem_OriginalTM(pocket->itemSlots[i].itemId))
         SwapItemSlots(&pocket->itemSlots[i], &pocket->itemSlots[j]);
 }
 
