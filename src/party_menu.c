@@ -294,7 +294,7 @@ void CB2_UseItem_(void)
         GiveMoveToMon(&gPlayerParty[gPartyMenu.slotId], ItemIdToBattleMoveId_(gSpecialVar_ItemId));
         AdjustFriendship(&gPlayerParty[gPartyMenu.slotId], FRIENDSHIP_EVENT_LEARN_TMHM);
         #ifndef REUSABLE_TMS
-        if (gSpecialVar_ItemId >= ITEM_FIRST_TM && gSpecialVar_ItemId <= ITEM_LAST_TM)
+        if ((gSpecialVar_ItemId >= ITEM_FIRST_TM && gSpecialVar_ItemId <= ITEM_TM50) || (gSpecialVar_ItemId >= ITEM_TM51 && gSpecialVar_ItemId <= ITEM_LAST_TM))
             RemoveBagItem(gSpecialVar_ItemId, 1);
         #endif
         SetMainCallback2(gPartyMenu.exitCallback);
@@ -316,7 +316,7 @@ void CB2_UseTMHMAfterForgettingMove_(void)
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, move);
         #ifndef REUSABLE_TMS
-        if (gSpecialVar_ItemId >= ITEM_FIRST_TM && gSpecialVar_ItemId <= ITEM_LAST_TM)
+        if ((gSpecialVar_ItemId >= ITEM_FIRST_TM && gSpecialVar_ItemId <= ITEM_TM50) || (gSpecialVar_ItemId >= ITEM_TM51 && gSpecialVar_ItemId <= ITEM_LAST_TM))
             RemoveBagItem(gSpecialVar_ItemId, 1);
         #endif
         SetMainCallback2(gPartyMenu.exitCallback);
