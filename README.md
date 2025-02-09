@@ -147,10 +147,10 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 **NOTE** Personalized options are available in *src/config.h*. The options can be customized by commenting and uncommenting lines.
 
 # Installation Instructions
-### Windows
+## Windows
 See [the wiki](https://github.com/Skeli789/Complete-Fire-Red-Upgrade/wiki/Windows-Installation-Instructions).
 
-### UNIX-like OS (Linux, MacOS, ...)
+## UNIX-like OS (Linux, MacOS, ...)
 1. Install devkitPro with instructions [here](https://devkitpro.org/wiki/Getting_Started).
 
 2. Export `${DEVKITARM}/bin/` to your `PATH` variable.
@@ -173,14 +173,14 @@ In *scripts/make.py* change `OFFSET_TO_PUT=YYY` to the location you want to inse
 A new gba file will appear named as **test.gba** and an **offsets.ini** file.
 Those are your resultant files.
 
-## Notes
+# Notes
 
 Anytime you make changes, the compiler will only compile the files you have changed.
 
-### Specific to Windows
+## Specific to Windows
 Any changes made to header files will require you to type ``python scripts//clean.py build``
 in cmd and then rerun the build scripts. For more command line options, see "Engine
 Scripts" in the documentation.
 
-### Specific to UNIX-like OS (linux, macOS, ...):
+## Specific to UNIX-like OS (linux, macOS, ...):
 Any changes made to header files will require you to clean everything in *build/* and then rerun the build scripts.
