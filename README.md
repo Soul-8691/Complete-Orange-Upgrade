@@ -5,7 +5,8 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 **Before doing anything it will be HIGHLY recommended the documentation be read thoroughly.**
 
-## Planned Features
+# Planned Features
+## Unordered
 * 120 TMs (50 new, 20 extra)
 * 64 move tutor moves (49 new)
 * Ability Capsule
@@ -67,6 +68,77 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Trainer Pokemon can have EVs
 * Updated evolution methods
 * Z-Moves
+
+## First Tier (Pressing)
+* Day/Night system (and wild encounters)
+* Distribution of TMs in TM mart (badge-scaling)
+* Distribution of new TMs in maps
+* Dynamic Overworld Palettes
+* Edited trainer parties (Gen 1/2 mons)
+* Edited wild Pokemon (Gen 1/2 mons)
+* Expanded (and rescripted) maps
+* Expanded Poke Balls (including apricorn Balls)
+* Fairy type
+* Fly obtained at start of game and can be used without any badges
+* Gen 1 Exp All
+* HMs usable without learning (still need to own)
+* Headbutt Trees
+* Megas (keep original Ability)
+* More move tutors
+* New music
+* New trainer classes
+* New trainers
+* Overworld sight encounters
+* Physical/Special Split
+* Regional Pokedex now goes includes second Generation
+* Safari Zone
+* Swarms (done differently)
+* Time-based events
+* Trade evolutions now evolve based on level
+* Trainer Pokemon can have EVs
+
+## Second Tier (Moderately Pressing)
+* Ability updates (only that exist in Gen 3)
+* Bottle Caps
+* Competitive move tutor (badge-scaling)
+* Confusion-healing Berry update
+* Daycare
+* Deletable HMs
+* EV/IV display in summary screen (L/R)
+* Egg move tutor
+* Evos per mon expanded to 8
+* Move base power updates (not effects)
+* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/* mons, including regional formes, and does not include unrelated Gen 3 mons)
+* Nature Mints
+* Rebattleable trainers (step count-based)
+* Stat updates
+* TM case icons (denote learnable)
+
+## Third Tier (Non-Essential)
+* Ability Capsule
+* Damage-reducing Berries
+* Gen 4-9 prevos/evos of Gen 1/2 mons (keep original Abilities)
+* Learnset compatibility updates
+* More balanced level-up learnsets
+* Regional Formes (keep original Abilities)
+* Select Gen 4-9 items
+* Select Gen 4-9 moves
+* SwSh egg move transferral update
+* Terrains (in-battle, permanent)
+* Trade move tutor
+* Updated evolution methods
+
+## Fourth Tier (Hopeful/Difficult)
+* Battle Points system
+* Battle Tower (includes Gen 4-9 related lines of Gen 1/2 mons, including regional formes)
+* Berry Trees
+* Gen 4-9 related lines of Gen 1/2 mons (including regional formes) available to buy with Battle Points (need National Dex)
+* Quest menu
+* Z-Moves
+
+## Fifth Tier (Done)
+* 120 TMs (50 new, 20 extra)
+* 64 move tutor moves (49 new)
 
 ## Features
 * Expanded TMs to 120
