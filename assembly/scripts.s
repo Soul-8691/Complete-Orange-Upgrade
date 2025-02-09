@@ -8,7 +8,10 @@
 .global EventScript_ObjectApproachPlayer
 EventScript_ObjectApproachPlayer:
 	lock
+    applymovement LASTTALKED LockFacing
 	special EndTrainerApproach
 	waitstate
 	gotonative LoadTrainerObjectScript
 	end
+
+LockFacing: .byte lock_facing, end_m
