@@ -140,13 +140,13 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * 120 TMs (50 new, 20 extra)
 * 64 move tutor moves (49 new)
 
-## Features
+# Features
 * Expanded TMs to 120
 * Can tutor any move (port of pokeemerald-expansion's learnable moves system)
 
 **NOTE** Personalized options are available in *src/config.h*. The options can be customized by commenting and uncommenting lines.
 
-## Installation Instructions
+# Installation Instructions
 ### Windows
 See [the wiki](https://github.com/Skeli789/Complete-Fire-Red-Upgrade/wiki/Windows-Installation-Instructions).
 
