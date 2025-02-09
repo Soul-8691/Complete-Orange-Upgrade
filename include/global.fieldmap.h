@@ -119,6 +119,7 @@ struct ObjectEventTemplate
             u8 movementType;
             u16 movementRangeX:4;
             u16 movementRangeY:4;
+            // u16 fillerB:8;
             u16 trainerType;
             u16 trainerRange_berryTreeId;
         } normal;
@@ -264,6 +265,7 @@ struct ObjectEvent
     /*0x20*/        u8 previousMovementDirection;
     /*0x21*/        u8 directionSequenceIndex;
     /*0x22*/        u8 playerCopyableMovement;
+    // u8 padding;
     /*size = 0x24*/
 };
 
@@ -392,7 +394,7 @@ struct Camera
 };
 
 extern struct ObjectEvent gObjectEvents[OBJECT_EVENTS_COUNT];
-extern u8 __attribute__((long_call)) gSelectedObjectEvent;
+extern u8 gSelectedObjectEvent;
 extern struct MapHeader gMapHeader;
 extern struct PlayerAvatar gPlayerAvatar;
 extern struct Camera gCamera;

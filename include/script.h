@@ -53,7 +53,7 @@ void __attribute__((long_call)) TryRunOnWarpIntoMapScript(void);
 u32 __attribute__((long_call)) CalculateRamScriptChecksum(void);
 void __attribute__((long_call)) ClearRamScript(void);
 bool8 __attribute__((long_call)) InitRamScript(u8 *script, u16 scriptSize, u8 mapGroup, u8 mapNum, u8 objectId);
-const u8 *GetRamScript(u8 objectId, const u8 *script);
+const u8 __attribute__((long_call)) *GetRamScript(u8 objectId, const u8 *script);
 bool32 __attribute__((long_call)) ValidateRamScript(void);
 void __attribute__((long_call)) InitRamScript_NoObjectEvent(u8 * script, u16 scriptSize);
 u8 __attribute__((long_call)) * GetSavedRamScriptIfValid(void);

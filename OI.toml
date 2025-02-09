@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''167540'''
+FreeSpaceSearch = '''167A80'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -6024,7 +6024,7 @@ DefaultHash = '''6B6E11EC'''
 157 = [
    '''StartOldManTutorialBattle''',
    '''ChangePokemonNickname''',
-   '''ChoosePartyMon''',# Selected index will be stored in var4. var4=1 for lead pokemon, var4=6 for last pokemon, var4=7 for cancel. Requires `waitstate` after.
+   '''ChoosePartyMon''',
 ]
 163 = [
    '''Script_IsFanClubMemberFanOfPlayer''',
@@ -6160,7 +6160,7 @@ DefaultHash = '''6B6E11EC'''
    '''StartSouthernIslandBattle''',
 ]
 327 = [
-   '''GetPartyMonSpecies''',# Read party index from var4, return species
+   '''GetPartyMonSpecies''',
    '''IsSelectedMonEgg''',
 ]
 331 = [
@@ -6179,7 +6179,7 @@ DefaultHash = '''6B6E11EC'''
    '''SetPostgameFlags''',
    '''StartMarowakBattle''',
    '''ForcePlayerOntoBike''',
-   '''ListMenu''',# Lists options from scripts.text.listmenu based on the value of var4
+   '''ListMenu''',
    '''ReturnToListMenu''',
    '''DoPicboxCancel''',
    '''SetVermilionTrashCans''',
@@ -6215,7 +6215,7 @@ DefaultHash = '''6B6E11EC'''
    '''GetNumLevelsGainedForRoute5DaycareMon''',
    '''TakePokemonFromRoute5Daycare''',
    '''DoSeagallopFerryScene''',
-   '''DoesPlayerPartyContainSpecies''',# read species from var4, if it's in the party, return 1 (recommend returning to varResult)
+   '''DoesPlayerPartyContainSpecies''',
    '''Script_SetHelpContext''',
    '''BackupHelpContext''',
    '''RestoreHelpContext''',
@@ -7050,8 +7050,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/4/maps/1/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank4.PALLET TOWN.4-1'''
+Image = '''data.maps.banks/3/maps/0/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank3.PALLET TOWN.3-0'''
 
 #################################
 [[TableGroup]]

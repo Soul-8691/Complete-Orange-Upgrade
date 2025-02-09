@@ -5,6 +5,17 @@
         "trainers.h": "c",
         "hold_effects.h": "c",
         "items.h": "c",
-        "vars.h": "c"
+        "vars.h": "c",
+        "overworld.h": "c",
+        "global.h": "c",
+        "trainer_types.h": "c",
+        "event_objects.h": "c",
+        "map_scripts.h": "c",
+        "battle_setup.h": "c",
+        "event_object_movement.h": "c",
+        "field_message_box.h": "c",
+        "maps.h": "c",
+        "global.fieldmap.h": "c",
+        "union_room.h": "c"
     }
 }

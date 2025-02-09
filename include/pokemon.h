@@ -358,7 +358,7 @@ bool8 __attribute__((long_call)) ExecuteTableBasedItemEffect(struct Pokemon *mon
 bool8 __attribute__((long_call)) PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 moveIndex, bool8 usedByAI);
 bool8 __attribute__((long_call)) PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 moveIndex);
 u8 __attribute__((long_call)) GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
-const u8 *Battle_PrintStatBoosterEffectMessage(u16 itemId);
+const u8 __attribute__((long_call)) *Battle_PrintStatBoosterEffectMessage(u16 itemId);
 u8 __attribute__((long_call)) GetNature(struct Pokemon *mon);
 u16 __attribute__((long_call)) GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem);
 u16 __attribute__((long_call)) NationalPokedexNumToSpecies(u16 nationalNum);
