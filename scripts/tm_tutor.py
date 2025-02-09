@@ -858,6 +858,6 @@ for move in move_stats:
     if 'hiddenpower' in move:
         move_ = 'hiddenpower'
     if moves[move_] > 45 and move_ not in tms and move_ not in tutor_moves:
-        output.write(move + ': ' + str(list(move_stats).index(move)) + '\n')
+        output.write("'" + move + "', // " + str(list(move_stats).index(move)) + '\n')
 
 output.close()
