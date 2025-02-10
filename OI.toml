@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''167540'''
+FreeSpaceSearch = '''182800'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -110,7 +110,7 @@ DefaultHash = '''0E9784EA'''
 
 [[NamedAnchors]]
 Name = '''data.items.stats'''
-Address = 0x3DB028
+Address = 0x17CCC0
 Format = '''[name""13 unused. index: price: holdeffect.holdeffects param. description<""> keyitemvalue. bagkeyitem. pocket.pocketid type.|s=pocket(0=itemtype|1=itemtype|2=itemtype|4=itemtype|5=itemtype) fieldeffect<> battleusage:: battleeffect<> battleextra::]data.items.count'''
 DefaultHash = '''07F16966'''
 
@@ -578,7 +578,7 @@ DefaultHash = '''37B1CAEE'''
 
 [[NamedAnchors]]
 Name = '''graphics.items.sprites'''
-Address = 0x3D4294
+Address = 0x1819C0
 Format = '''[sprite<`lzs4x3x3`> palette<`lzp4`>]data.items.stats+1'''
 DefaultHash = '''A0AF2FB0'''
 
@@ -638,8 +638,8 @@ DefaultHash = '''ED9BD5FC'''
 
 [[NamedAnchors]]
 Name = '''data.items.effects'''
-Address = 0x2528BC
-Format = '''[data<`pie`>]data.items.stats-13-199'''
+Address = 0x182800
+Format = '''[data<`pie`>]data.items.stats-13'''
 DefaultHash = '''9A3E396F'''
 
 [[NamedAnchors]]
@@ -3234,6 +3234,12 @@ Address = 0x1A6955
 Format = '''`xse`'''
 DefaultHash = '''919E3ECB'''
 
+[[NamedAnchors]]
+Name = '''thumb.item.SanitizeItemId'''
+Address = 0x09A8A4
+Format = ''''''
+DefaultHash = '''15316515'''
+
 #################################
 #################################
 [[MatchedWords]]
@@ -3718,6 +3724,11 @@ Length = 2
 [[MatchedWords]]
 Name = '''data.items.count'''
 Address = 0x13D428
+Length = 2
+
+[[MatchedWords]]
+Name = '''data.items.count'''
+Address = 0x09A8B0
 Length = 2
 
 [[MatchedWords]]
@@ -6024,7 +6035,7 @@ DefaultHash = '''6B6E11EC'''
 157 = [
    '''StartOldManTutorialBattle''',
    '''ChangePokemonNickname''',
-   '''ChoosePartyMon''',# Selected index will be stored in var4. var4=1 for lead pokemon, var4=6 for last pokemon, var4=7 for cancel. Requires `waitstate` after.
+   '''ChoosePartyMon''',
 ]
 163 = [
    '''Script_IsFanClubMemberFanOfPlayer''',
@@ -6160,7 +6171,7 @@ DefaultHash = '''6B6E11EC'''
    '''StartSouthernIslandBattle''',
 ]
 327 = [
-   '''GetPartyMonSpecies''',# Read party index from var4, return species
+   '''GetPartyMonSpecies''',
    '''IsSelectedMonEgg''',
 ]
 331 = [
@@ -6179,7 +6190,7 @@ DefaultHash = '''6B6E11EC'''
    '''SetPostgameFlags''',
    '''StartMarowakBattle''',
    '''ForcePlayerOntoBike''',
-   '''ListMenu''',# Lists options from scripts.text.listmenu based on the value of var4
+   '''ListMenu''',
    '''ReturnToListMenu''',
    '''DoPicboxCancel''',
    '''SetVermilionTrashCans''',
@@ -6215,7 +6226,7 @@ DefaultHash = '''6B6E11EC'''
    '''GetNumLevelsGainedForRoute5DaycareMon''',
    '''TakePokemonFromRoute5Daycare''',
    '''DoSeagallopFerryScene''',
-   '''DoesPlayerPartyContainSpecies''',# read species from var4, if it's in the party, return 1 (recommend returning to varResult)
+   '''DoesPlayerPartyContainSpecies''',
    '''Script_SetHelpContext''',
    '''BackupHelpContext''',
    '''RestoreHelpContext''',
