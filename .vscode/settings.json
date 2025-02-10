@@ -16,6 +16,7 @@
         "field_message_box.h": "c",
         "maps.h": "c",
         "global.fieldmap.h": "c",
-        "union_room.h": "c"
+        "union_room.h": "c",
+        "trainer_pokemon_sprites.h": "c"
     }
 }

@@ -56,5 +56,7 @@ void __attribute__((long_call)) EnableNationalPokedex_RSE(void);
 void __attribute__((long_call)) ClearTempFieldEventData(void);
 
 #define var8000 (*((u16*) 0x20370B8))
+#define gPlayerAvatar ((struct PlayerAvatar*) 0x02037078)
+#define gSpecialVar_LastResult (*((u16*) 0x20370D0))
 
 #endif // GUARD_EVENT_DATA_H
