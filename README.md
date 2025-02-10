@@ -23,7 +23,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Deletable HMs
 * Distribution of TMs in TM mart (badge-scaling)
 * Distribution of new TMs in maps
-* Dynamic Overworld Palettes
 * EV/IV display in summary screen (L/R)
 * Edited trainer parties (Gen 1/2 mons)
 * Edited wild Pokemon (Gen 1/2 mons)
@@ -49,7 +48,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New trainer classes
 * New trainers
 * Overworld sight encounters
-* Physical/Special Split
 * Pokemon overworlds (that walk around and approach you)
 * Quest menu
 * Rebattleable trainers (step count-based)
@@ -86,7 +84,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 ### Existing Implementation Available
 * Day/Night system (and wild encounters)
-* Dynamic Overworld Palettes
 * Expanded Poke Balls (including apricorn Balls)
 * Fairy type
 * Fly obtained at start of game and can be used without any badges
@@ -97,7 +94,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New music
 * New trainer classes
 * New trainers
-* Physical/Special Split
 * Regional Pokedex now goes includes second Generation
 * Trainer Pokemon can have EVs
 
