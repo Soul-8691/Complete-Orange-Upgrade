@@ -28,7 +28,7 @@ void __attribute__((long_call)) UpdateSwapLinePos(s16 x, u16 y);
 void __attribute__((long_call)) SetSwapLineInvisibility(bool8 invisible);
 void __attribute__((long_call)) SetBagVisualPocketId(u8);
 void __attribute__((long_call)) ShakeBagSprite(void);
-const u32 *GetItemIconGfxPtr(u16 itemId, u8 ptrId);
+const u32 * __attribute__((long_call))GetItemIconGfxPtr(u16 itemId, u8 ptrId);
 void __attribute__((long_call)) CreateBagSprite(u8 animNum);
 
 #endif // GUARD_ITEM_MENU_ICONS

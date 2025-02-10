@@ -486,7 +486,7 @@ void __attribute__((long_call)) CreateItemIconSprites(void);
 void __attribute__((long_call)) MoveItemFromCursorToBag(void);
 void __attribute__((long_call)) MoveHeldItemWithPartyMenu(void);
 bool8 __attribute__((long_call)) IsItemIconAnimActive(void);
-const u8 *GetMovingItemName(void);
+const u8 * __attribute__((long_call))GetMovingItemName(void);
 void __attribute__((long_call)) InitItemInfoWindow(void);
 bool8 __attribute__((long_call)) UpdateItemInfoWindowSlideIn(void);
 bool8 __attribute__((long_call)) UpdateItemInfoWindowSlideOut(void);

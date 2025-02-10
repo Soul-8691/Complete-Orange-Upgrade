@@ -31,3 +31,6 @@ HandleSavingData_ 80DA248 1
 LinkTradeSaveHook 805415E 0
 LinkBattleSaveHook 806FC84 0
 NewGameSaveClearHook 8054A60 0
+
+## Trainer Sight
+CheckForTrainersWantingBattle_ 8081B30 0

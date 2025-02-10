@@ -392,9 +392,15 @@ struct Camera
 };
 
 extern struct ObjectEvent gObjectEvents[OBJECT_EVENTS_COUNT];
-extern u8 __attribute__((long_call)) gSelectedObjectEvent;
+extern u8 gSelectedObjectEvent;
 extern struct MapHeader gMapHeader;
 extern struct PlayerAvatar gPlayerAvatar;
 extern struct Camera gCamera;
+
+#define NUM_FIELD_OBJECTS 16
+
+extern struct ObjectEvent gObjectEvents[NUM_FIELD_OBJECTS];
+#define gPlayerAvatar ((struct PlayerAvatar*) 0x02037078)
+#define gSelectedEventObject (*((u8*) 0x3005074))
 
 #endif // GUARD_GLOBAL_FIELDMAP_H

@@ -8,9 +8,9 @@ extern const struct SpritePalette gMonIconPaletteTable[];
 extern const u16 gMonIconPalettes[][16];
 extern const u8 gMonIconPaletteIndices[];
 
-const u8 *GetMonIconPtr(u16 speciesId, u32 personality, u32 frameNo);
-const u8 *GetMonIconTiles(u16 iconSpecies, bool32 extra);
-const u16 *GetValidMonIconPalettePtr(u16 speciesId);
+const u8 * __attribute__((long_call))GetMonIconPtr(u16 speciesId, u32 personality, u32 frameNo);
+const u8 * __attribute__((long_call))GetMonIconTiles(u16 iconSpecies, bool32 extra);
+const u16 * __attribute__((long_call))GetValidMonIconPalettePtr(u16 speciesId);
 void __attribute__((long_call)) LoadMonIconPalettes(void);
 void __attribute__((long_call)) FreeMonIconPalettes(void);
 u16 __attribute__((long_call)) MailSpeciesToIconSpecies(u16);

@@ -40,3 +40,6 @@ Cover Art.png
 *.4bpp
 *.lz
 *.gbapal
+
+# HMA
+*.toml

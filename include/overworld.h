@@ -185,4 +185,6 @@ extern u16 __attribute__((long_call)) *gBGTilemapBuffers2;
 extern u16 __attribute__((long_call)) *gBGTilemapBuffers3;
 extern u16 __attribute__((long_call)) gHeldKeyCodeToSend;
 
+void TrainerFaceFix(void);
+
 #endif //GUARD_OVERWORLD_H

@@ -156,7 +156,7 @@ void __attribute__((long_call)) SetJumpSpriteData(struct Sprite *, u8, u8, u8);
 u8 __attribute__((long_call)) DoJumpSpriteMovement(struct Sprite *);
 u8 __attribute__((long_call)) DoJumpSpecialSpriteMovement(struct Sprite *);
 void __attribute__((long_call)) TurnVirtualObject(u8 virtualObjId, u8 direction);
-const u8 *GetObjectEventScriptPointerByObjectEventId(u8 objectEventId);
+const u8 * __attribute__((long_call))GetObjectEventScriptPointerByObjectEventId(u8 objectEventId);
 u8 __attribute__((long_call)) GetFirstInactiveObjectEventId(void);
 u8 __attribute__((long_call)) GetCollisionFlagsAtCoords(struct ObjectEvent * objectEvent, s16 x, s16 y, u8 direction);
 void __attribute__((long_call)) OverrideTemplateCoordsForObjectEvent(const struct ObjectEvent *objectEvent);

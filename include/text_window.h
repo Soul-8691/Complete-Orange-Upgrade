@@ -10,8 +10,8 @@ struct TilesPal
 };
 
 void __attribute__((long_call)) rbox_fill_rectangle(u8 windowId);
-const u16 *GetTextWindowPalette(u8 id);
-const u16 *GetOverworldTextboxPalettePtr(void);
+const u16 * __attribute__((long_call))GetTextWindowPalette(u8 id);
+const u16 * __attribute__((long_call))GetOverworldTextboxPalettePtr(void);
 void __attribute__((long_call)) LoadMenuMessageWindowGfx(u8 windowId, u16 tileStart, u8 palette);
 void __attribute__((long_call)) LoadStdWindowGfx(u8 windowId, u16 tileStart, u8 palette);
 void __attribute__((long_call)) LoadUserWindowGfx(u8 windowId, u16 tileStart, u8 palette);

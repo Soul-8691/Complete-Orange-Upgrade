@@ -3,7 +3,7 @@
 #include "../../../include/constants/moves.h"
 #include "teachable_learnsets.c"
 
-const u16 *const gTeachableLearnsets[NUM_SPECIES] =
+const u16 * __attribute__((long_call))const gTeachableLearnsets[NUM_SPECIES] =
 {
     [SPECIES_BULBASAUR] = sBulbasaurTeachableLearnset,
     [SPECIES_IVYSAUR] = sIvysaurTeachableLearnset,

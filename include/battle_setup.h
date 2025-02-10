@@ -14,7 +14,7 @@ void __attribute__((long_call)) StartGroudonKyogreBattle(void);
 void __attribute__((long_call)) StartRegiBattle(void);
 u8 __attribute__((long_call)) BattleSetup_GetTerrainId(void);
 u8 __attribute__((long_call)) BattleSetup_GetBattleTowerBattleTransition(void);
-const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data);
+const u8 * __attribute__((long_call))BattleSetup_ConfigureTrainerBattle(const u8 *data);
 void __attribute__((long_call)) ConfigureAndSetUpOneTrainerBattle(u8 trainerEventObjId, const u8 *trainerScript);
 bool32 __attribute__((long_call)) GetTrainerFlagFromScriptPointer(const u8 *data);
 void __attribute__((long_call)) SetUpTrainerMovement(void);
@@ -27,11 +27,11 @@ void __attribute__((long_call)) ClearTrainerFlag(u16 trainerId);
 void __attribute__((long_call)) StartTrainerBattle(void);
 void __attribute__((long_call)) StartRematchBattle(void);
 void __attribute__((long_call)) ShowTrainerIntroSpeech(void);
-const u8 *BattleSetup_GetScriptAddrAfterBattle(void);
-const u8 *BattleSetup_GetTrainerPostBattleScript(void);
+const u8 * __attribute__((long_call))BattleSetup_GetScriptAddrAfterBattle(void);
+const u8 * __attribute__((long_call))BattleSetup_GetTrainerPostBattleScript(void);
 void __attribute__((long_call)) ShowTrainerCantBattleSpeech(void);
 void __attribute__((long_call)) PlayTrainerEncounterMusic(void);
-const u8 *GetTrainerALoseText(void);
-const u8 *GetTrainerWonSpeech(void);
+const u8 * __attribute__((long_call))GetTrainerALoseText(void);
+const u8 * __attribute__((long_call))GetTrainerWonSpeech(void);
 
 #endif // GUARD_BATTLE_SETUP_H
