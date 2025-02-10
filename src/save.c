@@ -4,6 +4,8 @@
 #include "../include/save.h"
 #include "../include/string_util.h"
 #include "../include/constants/vars.h"
+#include "../include/overworld.h"
+#include "../include/text.h"
 /*
 save.c
 	handles save block expansion functions/structures
