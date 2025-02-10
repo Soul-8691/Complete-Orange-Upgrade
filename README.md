@@ -174,8 +174,8 @@ See [the wiki](https://github.com/Skeli789/Complete-Fire-Red-Upgrade/wiki/Window
 
 4. Clone the repo and go inside:   
 ```bash
-git clone https://github.com/Skeli789/Complete-Fire-Red-Upgrade
-cd Complete-Fire-Red-Upgrade
+git clone https://github.com/Soul-8691/Complete-Orange-Upgrade
+cd Complete-Orange-Upgrade
 ```
 
 5. Get your ROM into the current directory and rename it to **OI.gba**.
