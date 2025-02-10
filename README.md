@@ -71,13 +71,22 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Z-Moves
 
 ## First Tier (Pressing)
-* Day/Night system (and wild encounters)
+
+### Doable
 * Distribution of TMs in TM mart (badge-scaling)
 * Distribution of new TMs in maps
-* Dynamic Overworld Palettes
 * Edited trainer parties (Gen 1/2 mons)
 * Edited wild Pokemon (Gen 1/2 mons)
 * Expanded (and rescripted) maps
+* More move tutors
+* Pokemon overworlds (that walk around and approach you)
+* Safari Zone
+* Time-based events
+* Trade evolutions now evolve based on level
+
+### Existing Implementation Available
+* Day/Night system (and wild encounters)
+* Dynamic Overworld Palettes
 * Expanded Poke Balls (including apricorn Balls)
 * Fairy type
 * Fly obtained at start of game and can be used without any badges
@@ -85,18 +94,15 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * HMs usable without learning (still need to own)
 * Headbutt Trees
 * Megas (keep original Ability)
-* More move tutors
 * New music
 * New trainer classes
 * New trainers
 * Physical/Special Split
-* Pokemon overworlds (that walk around and approach you)
 * Regional Pokedex now goes includes second Generation
-* Safari Zone
-* Swarms (done differently)
-* Time-based events
-* Trade evolutions now evolve based on level
 * Trainer Pokemon can have EVs
+
+### Custom
+* Swarms (done differently)
 
 ## Second Tier (Moderately Pressing)
 * Ability updates (only that exist in Gen 3)
@@ -140,6 +146,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 ## Fifth Tier (Done)
 * 120 TMs (50 new, 20 extra)
 * 64 move tutor moves (49 new)
+* Overworld sight encounters
 
 # Features
 * Expanded TMs to 120
