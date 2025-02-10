@@ -88,7 +88,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New music
 * New trainer classes
 * New trainers
-* Overworld sight encounters
 * Physical/Special Split
 * Regional Pokedex now goes includes second Generation
 * Safari Zone
@@ -143,6 +142,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 # Features
 * Expanded TMs to 120
 * Can tutor any move (port of pokeemerald-expansion's learnable moves system)
+* Overworld sight encounters
 
 **NOTE** Personalized options are available in *src/config.h*. The options can be customized by commenting and uncommenting lines.
 
