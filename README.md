@@ -128,17 +128,21 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Competitive move tutor (badge-scaling)
 
 ## Third Tier (Non-Essential)
-* Ability Capsule
-* Damage-reducing Berries
+
+### Doable
 * Gen 4-9 prevos/evos of Gen 1/2 mons (keep original Abilities)
 * Learnset compatibility updates
 * More balanced level-up learnsets
 * Regional Formes (keep original Abilities)
+* SwSh egg move transferral update
+* Trade move tutor
+
+### Existing Implementation Available
+* Ability Capsule
+* Damage-reducing Berries
 * Select Gen 4-9 items
 * Select Gen 4-9 moves
-* SwSh egg move transferral update
 * Terrains (in-battle, permanent)
-* Trade move tutor
 * Updated evolution methods
 
 ## Fourth Tier (Hopeful/Difficult)
