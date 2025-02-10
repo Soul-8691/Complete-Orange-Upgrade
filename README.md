@@ -105,21 +105,27 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Swarms (done differently)
 
 ## Second Tier (Moderately Pressing)
+
+### Doable
 * Ability updates (only that exist in Gen 3)
-* Bottle Caps
-* Competitive move tutor (badge-scaling)
-* Confusion-healing Berry update
 * Daycare
+* Move base power updates (not effects)
+* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/* mons, including regional formes, and does not include unrelated Gen 3 mons)
+* Stat updates
+
+### Existing Implementation Available
+* Bottle Caps
+* Confusion-healing Berry update
 * Deletable HMs
 * EV/IV display in summary screen (L/R)
 * Egg move tutor
 * Evos per mon expanded to 8
-* Move base power updates (not effects)
-* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/* mons, including regional formes, and does not include unrelated Gen 3 mons)
 * Nature Mints
 * Rebattleable trainers (step count-based)
-* Stat updates
 * TM case icons (denote learnable)
+
+### Custom
+* Competitive move tutor (badge-scaling)
 
 ## Third Tier (Non-Essential)
 * Ability Capsule
