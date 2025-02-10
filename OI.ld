@@ -31154,3 +31154,7 @@ sEmptyPal = 0x08EAFE80;
 gBerryCrush_Crusher_Pal = 0x08EAFEA0;
 gBerryCrush_Crusher_Gfx = 0x08EAFFC0;
 gBerryCrush_TextWindows_Tilemap = 0x08EB0ADC;
+
+replace_colors_blend = 0x09CB1370;
+gFieldEffectObjectPic_BallLight = 0x09CB1400;
+gFieldEffectObjectPic_BallLightPal = 0x09CB1610;
