@@ -50,6 +50,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New trainers
 * Overworld sight encounters
 * Physical/Special Split
+* Pokemon overworlds (that walk around and approach you)
 * Quest menu
 * Rebattleable trainers (step count-based)
 * Regional Formes (keep original Abilities)
@@ -89,6 +90,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New trainer classes
 * New trainers
 * Physical/Special Split
+* Pokemon overworlds (that walk around and approach you)
 * Regional Pokedex now goes includes second Generation
 * Safari Zone
 * Swarms (done differently)
