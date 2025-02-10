@@ -13,12 +13,3 @@
 
 ## Skip Intro Scene
 080EC5D0 15 89 07
-
-## Day/Night System
-080004B0 00 B5
-080004BC 00 00 10 BC
-08059A28 00 00 00 00 00 00 00 00
-08059A12 00 00
-
-#append to the pal table
-087B52C0 10 16 CB 09 01 80 00 00
