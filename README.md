@@ -78,6 +78,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * More move tutors
 * New trainers
 * Pokemon overworlds (that walk around and approach you)
+* Regional Pokedex now goes includes second Generation
 * Safari Zone
 * Time-based events
 * Trade evolutions now evolve based on level
@@ -94,7 +95,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Megas (keep original Ability)
 * New music
 * New trainer classes
-* Regional Pokedex now goes includes second Generation
 * Swarms (done differently)
 * Trainer Pokemon can have EVs
 
