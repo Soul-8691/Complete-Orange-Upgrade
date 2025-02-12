@@ -111,6 +111,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New music
   * ShinkoNet
   * MezmerKaiser
+  * All instruments
 * New trainer classes
   * Touch up Smogon trainer sprites
   * Batch download aveontrainer overworlds
