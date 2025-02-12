@@ -95,10 +95,8 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New trainer classes
 * New trainers
 * Regional Pokedex now goes includes second Generation
-* Trainer Pokemon can have EVs
-
-### Custom
 * Swarms (done differently)
+* Trainer Pokemon can have EVs
 
 ## Second Tier (Moderately Pressing)
 
