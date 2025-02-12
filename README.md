@@ -86,39 +86,39 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Trade evolutions now evolve based on level
 
 ### Existing Implementation Available
+* Fairy type
+  * HMA Script
+* Trainer Pokemon can have EVs
+  * HMA script
 * Day/Night system (and wild encounters)
   * Prime-Dialga
   * Script in HMA
-* Distribution of TMs in TM mart (badge-scaling)
-  * Zeturic
-* Expanded Poke Balls (including apricorn Balls)
-  * pokefirered-expansion
-  * Ansh
-* Fairy type
-  * HMA Script
-* Fly obtained at start of game and can be used without any badges
-  * Script in HMA
-* Gen 1 Exp All
-  * Lunos
-* HMs usable without learning (still need to own)
-  * Zake
 * Headbutt Trees
   * JPAN behavior byte
   * Script in HMA
-* Megas (keep original Ability)
-  * Touched repo
-  * Add new mons
+* Distribution of TMs in TM mart (badge-scaling)
+  * Zeturic
+* Fly obtained at start of game and can be used without any badges
+  * Script in HMA
+* HMs usable without learning (still need to own)
+  * Zake
+* Gen 1 Exp All
+  * Lunos
 * New music
   * ShinkoNet
   * MezmerKaiser
   * All instruments voicegroup
+* Megas (keep original Ability)
+  * Touched repo
+  * Add new mons
+* Swarms (done differently)
+  * Script in HMA
+* Expanded Poke Balls (including apricorn Balls)
+  * pokefirered-expansion
+  * Ansh
 * New trainer classes
   * Touch up Smogon trainer sprites
   * Batch download aveontrainer overworlds
-* Swarms (done differently)
-  * Script in HMA
-* Trainer Pokemon can have EVs
-  * HMA script
 
 ## Second Tier (Moderately Pressing)
 
