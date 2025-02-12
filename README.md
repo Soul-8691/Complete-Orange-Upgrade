@@ -71,12 +71,12 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 ## First Tier (Pressing)
 
 ### Doable
-* Distribution of TMs in TM mart (badge-scaling)
 * Distribution of new TMs in maps
 * Edited trainer parties (Gen 1/2 mons)
 * Edited wild Pokemon (Gen 1/2 mons)
 * Expanded (and rescripted) maps
 * More move tutors
+* New trainers
 * Pokemon overworlds (that walk around and approach you)
 * Safari Zone
 * Time-based events
@@ -84,6 +84,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 ### Existing Implementation Available
 * Day/Night system (and wild encounters)
+* Distribution of TMs in TM mart (badge-scaling)
 * Expanded Poke Balls (including apricorn Balls)
 * Fairy type
 * Fly obtained at start of game and can be used without any badges
@@ -93,7 +94,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Megas (keep original Ability)
 * New music
 * New trainer classes
-* New trainers
 * Regional Pokedex now goes includes second Generation
 * Swarms (done differently)
 * Trainer Pokemon can have EVs
