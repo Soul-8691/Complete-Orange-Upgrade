@@ -71,19 +71,19 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 ## First Tier (Pressing)
 
 ### Doable
+* Trade evolutions now evolve based on level
+* Regional Pokedex now goes includes second Generation
 * Distribution of new TMs in maps
-* Edited trainer parties (Gen 1/2 mons)
-* Edited wild Pokemon (Gen 1/2 mons)
-* Expanded (and rescripted) maps
-  * Axcellerator
 * More move tutors
+* Edited wild Pokemon (Gen 1/2 mons)
+* Edited trainer parties (Gen 1/2 mons)
 * New trainers
+* Time-based events
+* Safari Zone
 * Pokemon overworlds (that walk around and approach you)
   * Dynamic
-* Regional Pokedex now goes includes second Generation
-* Safari Zone
-* Time-based events
-* Trade evolutions now evolve based on level
+* Expanded (and rescripted) maps
+  * Axcellerator
 
 ### Existing Implementation Available
 * Fairy type
