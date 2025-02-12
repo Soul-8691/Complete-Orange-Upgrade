@@ -75,9 +75,11 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Edited trainer parties (Gen 1/2 mons)
 * Edited wild Pokemon (Gen 1/2 mons)
 * Expanded (and rescripted) maps
+  * Axcellerator
 * More move tutors
 * New trainers
 * Pokemon overworlds (that walk around and approach you)
+  * Dynamic
 * Regional Pokedex now goes includes second Generation
 * Safari Zone
 * Time-based events
