@@ -43,15 +43,6 @@ mov r1, #0xc
 add r2, r5, #0x0
 bl Insert_Element
 
-LoadAbility:
-lsl r0, r6, #0x4
-ldr r2, .EV_Table
-add r2, r0
-add r2, #0xC
-mov r1, #0x2E
-mov r0, r4
-bl Insert_Element
-
 LoadHPEV:
 lsl r0, r6, #0x4
 ldr r2, .EV_Table
@@ -112,6 +103,15 @@ ldr r2, .EV_Table
 add r2, r0
 add r2, #0xB
 mov r1, #0x26
+mov r0, r4
+bl Insert_Element
+
+LoadAbility:
+lsl r0, r6, #0x4
+ldr r2, .EV_Table
+add r2, r0
+add r2, #0xC
+mov r1, #0x2E
 mov r0, r4
 bl Insert_Element
 
