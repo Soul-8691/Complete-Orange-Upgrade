@@ -81,7 +81,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Time-based events
 * Safari Zone
 * Pokemon overworlds (that walk around and approach you)
-  * Dynamic
 * Expanded (and rescripted) maps
   * Axcellerator
 
