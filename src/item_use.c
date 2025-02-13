@@ -43,14 +43,15 @@
 
 void FieldUseFunc_ExpShare(u8 taskId)
 {
-	if (FlagGet(FLAG_EXP_ALL))
+	if (!FlagGet(FLAG_EXP_ALL_2))
 	{
 		PlaySE(SE_EXP_MAX);
 		if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
 			DisplayItemMessageOnField(taskId, 2, gText_ExpShareOn, Task_ItemUse_CloseMessageBoxAndReturnToField);
 		else
 			DisplayItemMessageInBag(taskId, 2, gText_ExpShareOn, Task_ReturnToBagFromContextMenu);
-        FlagClear(FLAG_EXP_ALL);
+        FlagSet(FLAG_EXP_ALL_2);
+        FlagSet(FLAG_EXP_ALL);
 	}
 	else
 	{
@@ -59,6 +60,7 @@ void FieldUseFunc_ExpShare(u8 taskId)
 			DisplayItemMessageOnField(taskId, 2, gText_ExpShareOff, Task_ItemUse_CloseMessageBoxAndReturnToField);
 		else
 			DisplayItemMessageInBag(taskId, 2, gText_ExpShareOff, Task_ReturnToBagFromContextMenu);
-        FlagSet(FLAG_EXP_ALL);
+        FlagClear(FLAG_EXP_ALL_2);
+        FlagClear(FLAG_EXP_ALL);
 	}
 }

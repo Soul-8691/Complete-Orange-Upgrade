@@ -11,6 +11,10 @@
         "cable_club.h": "c",
         "battle_scripts.h": "c",
         "item.h": "c",
-        "songs.h": "c"
+        "songs.h": "c",
+        "maps.h": "c",
+        "pokemon_icon.h": "c",
+        "event_data.h": "c",
+        "field_camera.h": "c"
     }
 }

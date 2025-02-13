@@ -233,6 +233,7 @@ struct SpeciesInfo
  /* 0x18 */ u8 safariZoneFleeRate;
  /* 0x19 */ u8 bodyColor : 7;
             u8 noFlip : 1;
+            u16 padding;
 };
 
 struct BattleMove
@@ -282,9 +283,9 @@ struct Evolution
 #define GET_SHINY_VALUE(otId, personality) (HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality))
 
 extern const struct BattleMove gBattleMoves[];
-extern u8 __attribute__((long_call)) gPlayerPartyCount;
+extern u8 gPlayerPartyCount;
 extern struct Pokemon gPlayerParty[PARTY_SIZE];
-extern u8 __attribute__((long_call)) gEnemyPartyCount;
+extern u8 gEnemyPartyCount;
 extern struct Pokemon gEnemyParty[PARTY_SIZE];
 extern const struct SpeciesInfo gSpeciesInfo[];
 extern const u8 *const gItemEffectTable[];
@@ -337,8 +338,8 @@ void __attribute__((long_call)) SetMultiuseSpriteTemplateToTrainerBack(u16 train
 
 u32 __attribute__((long_call)) GetMonData_(struct Pokemon *mon, s32 field, u8 *data);
 u32 __attribute__((long_call)) GetBoxMonData_(struct BoxPokemon *boxMon, s32 field, u8 *data);
-u32 __attribute__((long_call)) GetMonData(struct Pokemon *mon, u8 *data);
-u32 __attribute__((long_call)) GetBoxMonData(struct BoxPokemon *boxMon, u8 *data);
+u32 GetMonData(struct Pokemon *mon, u8 *data);
+u32 GetBoxMonData(struct BoxPokemon *boxMon, u8 *data);
 
 void __attribute__((long_call)) SetMonData(struct Pokemon *mon, s32 field, const void *dataArg);
 void __attribute__((long_call)) SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg);

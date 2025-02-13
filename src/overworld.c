@@ -58,6 +58,7 @@
 #include "../include/constants/moves.h"
 #include "../include/constants/items.h"
 #include "../include/party_menu.h"
+#include "../include/item.h"
 
 static bool8 GetProperDirection(u16 currentX, u16 currentY, u16 toX, u16 toY)
 {
