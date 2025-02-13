@@ -3045,7 +3045,7 @@ const struct Item gItems_[] = {
         .battleUseFunc = NULL,
         .secondaryId = 0
     }, {
-        .name = _("EXP. SHARE"),
+        .name = _("EXP. ALL"),
         .itemId = ITEM_EXP_SHARE,
         .price = 3000,
         .holdEffect = HOLD_EFFECT_EXP_SHARE,
