@@ -39,3 +39,6 @@ CheckForTrainersWantingBattle_ 8081B30 0
 TryRunOnFrameMapScript_ 8069C74 0
 GetInteractedWaterScript_ 806D548 3
 SetPartyMonFieldSelectionActions_ 81229FC 2
+
+## Exp All
+Cmd_getexp_ 8021A68 0

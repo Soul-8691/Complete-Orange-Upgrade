@@ -37,7 +37,7 @@
 #include "../include/constants/pokemon.h"
 #include "../include/constants/maps.h"
 
-static void Cmd_getexp(void)
+void Cmd_getexp_(void)
 {
     u16 item;
     s32 i; // also used as stringId
@@ -152,6 +152,8 @@ static void Cmd_getexp(void)
                     else
                         gBattleMoveDamage = 0;
 
+                    if (FlagGet(FLAG_EXP_ALL))
+                        gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
