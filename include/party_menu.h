@@ -86,4 +86,25 @@ void __attribute__((long_call)) ShowPartyMenuToShowcaseMultiBattleParty(void);
 void __attribute__((long_call)) ChooseMonForDaycare(void);
 void __attribute__((long_call)) ChoosePartyMonByMenuType(u8 menuType);
 
+#define MENU_SUMMARY 0
+#define MENU_SWITCH 1
+#define MENU_CANCEL1 2
+#define MENU_ITEM 3
+#define MENU_GIVE 4
+#define MENU_TAKE_ITEM 5
+#define MENU_MAIL 6
+#define MENU_TAKE_MAIL 7
+#define MENU_READ 8
+#define MENU_CANCEL2 9
+#define MENU_SHIFT 10
+#define MENU_SEND_OUT 11
+#define MENU_ENTER 12
+#define MENU_NO_ENTRY 13
+#define MENU_STORE 14
+#define MENU_REGISTER 15
+#define MENU_TRADE1 16
+#define MENU_TRADE2 17
+#define MENU_MOVE_ITEM 18
+#define MENU_FIELD_MOVES 19
+
 #endif // GUARD_PARTY_MENU_H

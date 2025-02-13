@@ -5,6 +5,9 @@
         "trainers.h": "c",
         "hold_effects.h": "c",
         "items.h": "c",
-        "vars.h": "c"
+        "vars.h": "c",
+        "field_effect.h": "c",
+        "region_map_sections.h": "c",
+        "cable_club.h": "c"
     }
 }

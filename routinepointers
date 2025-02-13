@@ -1,2 +1,4 @@
 #include "src/config.h"
-##JPANSaveblock2 080D995C
+sp10A_CanUseCutOnTree 8160188
+sp10B_CanUseRockSmashOnRock 816018C
+sp10C_CanUseStrengthOnBoulder 8160190

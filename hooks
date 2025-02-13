@@ -34,3 +34,8 @@ NewGameSaveClearHook 8054A60 0
 
 ## Trainer Sight
 CheckForTrainersWantingBattle_ 8081B30 0
+
+## HMs Usable Without Learning
+TryRunOnFrameMapScript_ 8069C74 0
+GetInteractedWaterScript_ 806D548 3
+SetPartyMonFieldSelectionActions_ 81229FC 2
