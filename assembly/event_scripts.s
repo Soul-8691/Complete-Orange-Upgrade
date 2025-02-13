@@ -31,6 +31,8 @@ EventScript_UseSurf:
 	if equal _goto EventScript_SurfEnd
 	lockall
 	msgbox 0x81BDFD7 MSG_KEEPOPEN
+	setanimation 0x0 0x8004
+	doanimation 0x9
 	goto EventScript_SurfEnd
 
 EventScript_SurfEnd:
