@@ -115,11 +115,11 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 ## Second Tier (Moderately Pressing)
 
 ### Doable
-* Ability updates (only that exist in Gen 3)
 * Daycare
+* Ability updates (only that exist in Gen 3)
 * Move base power updates (not effects)
-* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/* mons, including regional formes, and does not include unrelated Gen 3 mons)
 * Stat updates
+* National Dex obtained near end of game (includes Gen 4-9 related lines of Gen 1/* mons, including regional formes, and does not include unrelated Gen 3 mons)
 
 ### Existing Implementation Available
 * Deletable HMs
