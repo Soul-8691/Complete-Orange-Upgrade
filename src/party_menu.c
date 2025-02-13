@@ -475,7 +475,7 @@ void SetPartyMonFieldSelectionActions_(struct Pokemon *mons, u8 slotId)
 		if (species != SPECIES_NONE
 		&& species != SPECIES_EGG
 		&& hasHM
-		&& HasBadgeToUseFieldMove(FIELD_MOVE_FLY)
+		// && HasBadgeToUseFieldMove(FIELD_MOVE_FLY)
 		&& CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG, NULL), MOVE_FLY))
 		{
 			AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_FIELD_MOVES + FIELD_MOVE_FLY - 1);
