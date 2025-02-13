@@ -7,14 +7,14 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 # Planned Features
 ## Unordered
-* 120 TMs (50 new, 20 extra)
-* 64 move tutor moves (49 new)
+* 120 TMs
 * Ability Capsule
 * Ability updates (only that exist in Gen 3)
 * Battle Points system
 * Battle Tower (includes Gen 4-9 related lines of Gen 1/2 mons, including regional formes)
 * Berry Trees
 * Bottle Caps
+* Can tutor any move (port of pokeemerald-expansion's learnable moves system)
 * Competitive move tutor (badge-scaling)
 * Confusion-healing Berry update
 * Damage-reducing Berries
@@ -87,9 +87,9 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 
 ### Existing Implementation Available
 * Fairy type
-  * HMA Script
-* Trainer Pokemon can have EVs
   * HMA script
+* Trainer Pokemon can have EVs
+  * CreateNPCTrainerParty individual trainer EV setting
 * Day/Night system (and wild encounters)
   * Prime-Dialga
   * Script in HMA
@@ -97,16 +97,13 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
   * JPAN behavior byte
   * Script in HMA
 * Distribution of TMs in TM mart (badge-scaling)
-  * Zeturic
-* Fly obtained at start of game and can be used without any badges
-  * Script in HMA
-* HMs usable without learning (still need to own)
-  * Zake
-* Gen 1 Exp All
-  * Lunos
+  * Modify Spherical Ice script
 * New music
   * ShinkoNet
   * MezmerKaiser
+  * Lewmoth
+  * Ristar
+  * Avir
   * All instruments voicegroup
 * Megas (keep original Ability)
   * Touched repo
@@ -119,6 +116,7 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * New trainer classes
   * Touch up Smogon trainer sprites
   * Batch download aveontrainer overworlds
+  * Insert using HMA
 
 ## Second Tier (Moderately Pressing)
 
@@ -169,15 +167,13 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Quest menu
 * Z-Moves
 
-## Fifth Tier (Done)
-* 120 TMs (50 new, 20 extra)
-* 64 move tutor moves (49 new)
-* Overworld sight encounters
-
 # Features
 * Expanded TMs to 120
 * Can tutor any move (port of pokeemerald-expansion's learnable moves system)
 * Overworld sight encounters
+* Fly can be used without any badges
+* HMs usable without learning (still need to own)
+* Gen 1 Exp All
 
 **NOTE** Personalized options are available in *src/config.h*. The options can be customized by commenting and uncommenting lines.
 
@@ -219,3 +215,28 @@ Scripts" in the documentation.
 
 ## Specific to UNIX-like OS (linux, macOS, ...):
 Any changes made to header files will require you to clean everything in *build/* and then rerun the build scripts.
+
+# Credits
+* Alisa180
+* Ansh
+* Aveontrainer
+* Avir
+* Blazer
+* Cawt
+* Ghoulslash
+* Haven
+* JPAN
+* Lewmoth
+* MezmerKaiser
+* Payst
+* Pret
+* Prime-Dialga
+* Prime-Dialga
+* Ristar
+* ShinkoNet
+* Skeli
+* Smogon
+* Spherical Ice
+* Touched
+* Yak Attack
+* Zake
