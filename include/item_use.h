@@ -42,4 +42,7 @@ void __attribute__((long_call)) Task_UseDigEscapeRopeOnField(u8 taskId);
 u8 __attribute__((long_call)) CanUseEscapeRopeOnCurrMap(void);
 u8 __attribute__((long_call)) CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
 
+void FieldUseFunc_ExpShare(u8 taskId);
+void __attribute__((long_call)) Task_ItemUse_CloseMessageBoxAndReturnToField(u8 taskId);
+
 #endif //GUARD_ITEM_USE_H

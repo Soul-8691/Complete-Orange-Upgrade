@@ -183,7 +183,7 @@ bool8 DisplayPartyPokemonDataForMoveTutorOrEvolutionItem_(u8 slot)
             DisplayPartyPokemonDataToTeachMove_(slot, ItemIdToBattleMoveId_(item));
             break;
         case 2: // Evolution stone
-            if (!GetMonData(currentPokemon, MON_DATA_IS_EGG, NULL) && GetEvolutionTargetSpecies(currentPokemon, EVO_MODE_ITEM_CHECK, item) != SPECIES_NONE)
+            if (!GetMonData(currentPokemon, MON_DATA_IS_EGG) && GetEvolutionTargetSpecies(currentPokemon, EVO_MODE_ITEM_CHECK, item) != SPECIES_NONE)
                 return FALSE;
             DisplayPartyPokemonDescriptionData(slot, PARTYBOX_DESC_NO_USE);
             break;
@@ -194,9 +194,9 @@ bool8 DisplayPartyPokemonDataForMoveTutorOrEvolutionItem_(u8 slot)
 
 static u8 CanTeachMove(struct Pokemon *mon, u16 move)
 {
-    if (GetMonData(mon, MON_DATA_IS_EGG, NULL))
+    if (GetMonData(mon, MON_DATA_IS_EGG))
         return CANNOT_LEARN_MOVE_IS_EGG;
-    else if (!CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL), move))
+    else if (!CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG), move))
         return CANNOT_LEARN_MOVE;
     else if (MonKnowsMove(mon, move) == TRUE)
         return ALREADY_KNOWS_MOVE;
@@ -310,7 +310,7 @@ void CB2_UseTMHMAfterForgettingMove_(void)
     {
         struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
         u8 moveIdx = GetMoveSlotToReplace();
-        u16 move = GetMonData(mon, moveIdx + MON_DATA_MOVE1, NULL);
+        u16 move = GetMonData(mon, moveIdx + MON_DATA_MOVE1);
         
         RemoveMonPPBonus(mon, moveIdx);
         SetMonMoveSlot(mon, ItemIdToBattleMoveId_(gSpecialVar_ItemId), moveIdx);
@@ -454,7 +454,7 @@ void SetPartyMonFieldSelectionActions_(struct Pokemon *mons, u8 slotId)
 	{
 		for (j = 0; j < FIELD_MOVE_END; ++j)
 		{
-			if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1, NULL) == sFieldMoves[j])
+			if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == sFieldMoves[j])
 			{
 				AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
 				++k;
@@ -470,22 +470,22 @@ void SetPartyMonFieldSelectionActions_(struct Pokemon *mons, u8 slotId)
 	if (k < MAX_MON_MOVES) //Doesn't know 4 field moves
 	{
 		bool8 hasHM = CheckBagHasItem(ITEM_HM02_FLY, 1) > 0;
-		u16 species = GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG, NULL);
+		u16 species = GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG);
 
 		if (species != SPECIES_NONE
 		&& species != SPECIES_EGG
 		&& hasHM
 		// && HasBadgeToUseFieldMove(FIELD_MOVE_FLY)
-		&& CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG, NULL), MOVE_FLY))
+		&& CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG), MOVE_FLY))
 		{
 			AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_FIELD_MOVES + FIELD_MOVE_FLY - 1);
 			++k;
 		}
 	}
 
-    if (GetMonData(&mons[1], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
+    if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SWITCH);
-    if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM, NULL)))
+    if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM)))
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MAIL);
     else
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);

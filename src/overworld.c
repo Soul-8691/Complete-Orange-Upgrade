@@ -139,12 +139,12 @@ u8 PartyHasMonWithFieldMovePotential(u16 move, u16 item, u8 surfingType)
 		for (u32 i = 0; i < PARTY_SIZE; ++i)
 		{
 			struct Pokemon* mon = &gPlayerParty[i];
-			if (GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_NONE && !GetMonData(mon, MON_DATA_IS_EGG, NULL))
+			if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(mon, MON_DATA_IS_EGG))
 			{
 				if (MonKnowsMove(mon, move) && move != 0)
 					return i;
 
-				if (hasHM && CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL), move))
+				if (hasHM && CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG), move))
 					return i;
 			}
 		}

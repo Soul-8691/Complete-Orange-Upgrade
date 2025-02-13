@@ -8,6 +8,9 @@
         "vars.h": "c",
         "field_effect.h": "c",
         "region_map_sections.h": "c",
-        "cable_club.h": "c"
+        "cable_club.h": "c",
+        "battle_scripts.h": "c",
+        "item.h": "c",
+        "songs.h": "c"
     }
 }

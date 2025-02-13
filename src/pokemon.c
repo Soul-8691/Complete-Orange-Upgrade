@@ -35,6 +35,18 @@
 #include "../include/constants/hold_effects.h"
 #include "../include/constants/battle_move_effects.h"
 
+u32 GetMonData(struct Pokemon *mon, u8 *data)
+{
+    s32 field;
+    return GetMonData_(mon, data, field);
+}
+
+u32 GetBoxMonData(struct BoxPokemon *boxMon, u8 *data)
+{
+    s32 field;
+    return GetBoxMonData_(boxMon, data, field);
+}
+
 u8 CanLearnTeachableMove(u16 species, u16 move)
 {
     if (species == SPECIES_EGG)

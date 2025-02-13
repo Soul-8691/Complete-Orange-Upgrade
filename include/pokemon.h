@@ -335,8 +335,10 @@ u8 __attribute__((long_call)) GetGenderFromSpeciesAndPersonality(u16 species, u3
 void __attribute__((long_call)) SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition);
 void __attribute__((long_call)) SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosition);
 
-u32 __attribute__((long_call)) GetMonData(struct Pokemon *mon, s32 field, u8 *data);
-u32 __attribute__((long_call)) GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data);
+u32 __attribute__((long_call)) GetMonData_(struct Pokemon *mon, s32 field, u8 *data);
+u32 __attribute__((long_call)) GetBoxMonData_(struct BoxPokemon *boxMon, s32 field, u8 *data);
+u32 __attribute__((long_call)) GetMonData(struct Pokemon *mon, u8 *data);
+u32 __attribute__((long_call)) GetBoxMonData(struct BoxPokemon *boxMon, u8 *data);
 
 void __attribute__((long_call)) SetMonData(struct Pokemon *mon, s32 field, const void *dataArg);
 void __attribute__((long_call)) SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg);

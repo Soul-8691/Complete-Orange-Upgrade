@@ -141,4 +141,5 @@
   additem 443 1
   additem 444 1
   additem 445 1
+  additem "EXP SHARE" 1
   end
