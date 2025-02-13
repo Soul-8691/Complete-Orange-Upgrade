@@ -87,8 +87,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 ### Existing Implementation Available
 * Fairy type
   * HMA script
-* Trainer Pokemon can have EVs
-  * CreateNPCTrainerParty individual trainer EV setting
 * Day/Night system (and wild encounters)
   * Prime-Dialga
   * Script in HMA
@@ -104,9 +102,6 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
   * Ristar
   * Avir
   * All instruments voicegroup
-* Megas (keep original Ability)
-  * Touched repo
-  * Add new mons
 * Swarms (done differently)
   * Script in HMA
 * Expanded Poke Balls (including apricorn Balls)
@@ -127,15 +122,23 @@ This will be a ROM base for Pokemon Orange Islands (GBA) by Kalarie made from th
 * Stat updates
 
 ### Existing Implementation Available
-* Bottle Caps
-* Confusion-healing Berry update
 * Deletable HMs
-* EV/IV display in summary screen (L/R)
-* Egg move tutor
-* Evos per mon expanded to 8
-* Nature Mints
-* Rebattleable trainers (step count-based)
+* Trainer Pokemon can have EVs
+  * CreateNPCTrainerParty individual trainer EV setting
 * TM case icons (denote learnable)
+  * Compatibility with TM expansion
+* Rebattleable trainers (step count-based)
+  * Port from MAGM
+* Egg move tutor
+  * pokeemerald wiki
+* Confusion-healing Berry update
+* Megas (keep original Ability)
+  * Touched repo
+  * Add new mons
+* EV/IV display in summary screen (L/R)
+* Nature Mints
+* Bottle Caps
+* Evos per mon expanded to 8
 
 ### Custom
 * Competitive move tutor (badge-scaling)
