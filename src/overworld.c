@@ -57,6 +57,7 @@
 #include "../include/constants/party_menu.h"
 #include "../include/constants/moves.h"
 #include "../include/constants/items.h"
+#include "../include/party_menu.h"
 
 static bool8 GetProperDirection(u16 currentX, u16 currentY, u16 toX, u16 toY)
 {
@@ -65,18 +66,18 @@ static bool8 GetProperDirection(u16 currentX, u16 currentY, u16 toX, u16 toY)
 	if (currentX == toX)
 	{
 		if (currentY < toY)
-			gSpecialVar_LastResult = DIR_SOUTH;
+			gSpecialVar_Result = DIR_SOUTH;
 		else
-			gSpecialVar_LastResult = DIR_NORTH;
+			gSpecialVar_Result = DIR_NORTH;
 
 		ret = TRUE;
 	}
 	else if (currentY == toY)
 	{
 		if (currentX < toX)
-			gSpecialVar_LastResult = DIR_EAST;
+			gSpecialVar_Result = DIR_EAST;
 		else
-			gSpecialVar_LastResult = DIR_WEST;
+			gSpecialVar_Result = DIR_WEST;
 
 		ret = TRUE;
 	}
@@ -93,7 +94,7 @@ void TrainerFaceFix(void)
 	u16 npcY = gObjectEvents[gSelectedEventObject].currentCoords.y;
 
 	if (!GetProperDirection(playerX, playerY, npcX, npcY))
-		gSpecialVar_LastResult = 0xFFFF;
+		gSpecialVar_Result = 0xFFFF;
 }
 
 u8 __attribute__((long_call)) *MapHeaderCheckScriptTable(u8 tag);
@@ -138,7 +139,6 @@ u8 PartyHasMonWithFieldMovePotential(u16 move, u16 item, u8 surfingType)
 		for (u32 i = 0; i < PARTY_SIZE; ++i)
 		{
 			struct Pokemon* mon = &gPlayerParty[i];
-
 			if (GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_NONE && !GetMonData(mon, MON_DATA_IS_EGG, NULL))
 			{
 				if (MonKnowsMove(mon, move) && move != 0)
@@ -166,7 +166,7 @@ static const u8* TryUseFlashInDarkCave(void)
 
 	if (gSpecialVar_Result && HasBadgeToUseFieldMove(FIELD_MOVE_FLASH))
 	{
-		if ((gSpecialVar_0x8004 = gFieldEffectArguments[0] = PartyHasMonWithFieldMovePotential(MOVE_FLASH, ITEM_HM05_FLASH, 0)) < PARTY_SIZE)
+		if ((gSpecialVar_0x8004 == gFieldEffectArguments[0]) && (PartyHasMonWithFieldMovePotential(MOVE_FLASH, ITEM_HM05_FLASH, 0) < PARTY_SIZE))
 			return EventScript_UseFlash;
 	}
 
