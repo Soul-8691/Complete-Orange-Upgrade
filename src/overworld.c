@@ -96,7 +96,7 @@ void TrainerFaceFix(void)
 		gSpecialVar_LastResult = 0xFFFF;
 }
 
-u8 *MapHeaderCheckScriptTable(u8 tag);
+u8 __attribute__((long_call)) *MapHeaderCheckScriptTable(u8 tag);
 
 extern const u8 EventScript_UseFlash[];
 extern const u8 EventScript_UseSurf[];
@@ -144,7 +144,7 @@ u8 PartyHasMonWithFieldMovePotential(u16 move, u16 item, u8 surfingType)
 				if (MonKnowsMove(mon, move) && move != 0)
 					return i;
 
-				if (hasHM && CanMonLearnTMTutor(mon, item, 0) == 0)
+				if (hasHM && CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL), move))
 					return i;
 			}
 		}

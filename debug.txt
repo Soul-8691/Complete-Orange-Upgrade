@@ -4,7 +4,15 @@
   givePokemon CHARIZARD 50 ????????   
   givePokemon TAUROS 50 ????????   
   givePokemon JYNX 50 ????????   
-  setflag 0x0828
+  setflag 0x820
+  setflag 0x821
+  setflag 0x822
+  setflag 0x823
+  setflag 0x824
+  setflag 0x825
+  setflag 0x826
+  setflag 0x827
+  setflag 0x828
   additem TM01 1
   additem TM02 1
   additem TM03 1

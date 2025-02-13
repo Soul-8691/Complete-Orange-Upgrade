@@ -179,6 +179,9 @@ void __attribute__((long_call)) StoreInitialPlayerAvatarState(void);
 void __attribute__((long_call)) UpdateEscapeWarp(s16 x, s16 y);
 bool8 __attribute__((long_call)) SetDiveWarpEmerge(u16 x, u16 y);
 bool8 __attribute__((long_call)) SetDiveWarpDive(u16 x, u16 y);
+bool8 HasBadgeToUseFieldMove(u8 id);
+u8 PartyHasMonWithFieldMovePotential(u16 move, u16 item, u8 surfingType);
+bool8 IsPlayerSurfingNorthOrSouth(void);
 
 extern u16 __attribute__((long_call)) *gBGTilemapBuffers1;
 extern u16 __attribute__((long_call)) *gBGTilemapBuffers2;

@@ -476,9 +476,9 @@ void SetPartyMonFieldSelectionActions_(struct Pokemon *mons, u8 slotId)
 		&& species != SPECIES_EGG
 		&& hasHM
 		&& HasBadgeToUseFieldMove(FIELD_MOVE_FLY)
-		&& CanMonLearnTMTutor(&mons[slotId], ITEM_HM02_FLY, 0) == 0)
+		&& CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES_OR_EGG, NULL), MOVE_FLY))
 		{
-			AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_FIELD_MOVES + FIELD_MOVE_FLY);
+			AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_FIELD_MOVES + FIELD_MOVE_FLY - 1);
 			++k;
 		}
 	}
