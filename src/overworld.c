@@ -205,7 +205,7 @@ const u8* GetInteractedWaterScript_(u32 unused1, u8 metatileBehavior, u8 directi
 		item = ITEM_HM03_SURF;
 		u8 partyId = PartyHasMonWithFieldMovePotential(MOVE_SURF, item, 1);
 
-		if (partyId < PARTY_SIZE)
+		if (partyId < PARTY_SIZE && FlagGet(FLAG_LAPRAS_OBTAINED))
 		{
 			gSpecialVar_0x8004 = partyId;
 			return EventScript_UseSurf;

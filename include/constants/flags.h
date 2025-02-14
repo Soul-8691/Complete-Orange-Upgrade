@@ -549,7 +549,7 @@
 #define FLAG_0x20F               0x20F
 #define FLAG_0x210               0x210
 #define FLAG_0x211               0x211
-#define FLAG_0x212               0x212
+#define FLAG_LAPRAS_OBTAINED     0x212
 #define FLAG_0x213               0x213
 #define FLAG_0x214               0x214
 #define FLAG_0x215               0x215
