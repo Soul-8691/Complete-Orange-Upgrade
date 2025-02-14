@@ -3,4 +3,6 @@ GAME FREAK -> KALARIE
 Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
+Start out with Running Shoes
+Get Exp. All from Mom
 Repoint Cut tree script
