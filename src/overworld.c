@@ -201,19 +201,16 @@ const u8* GetInteractedWaterScript_(u32 unused1, u8 metatileBehavior, u8 directi
 
 	if (IsPlayerFacingSurfableFishableWater())
 	{
-		if (HasBadgeToUseFieldMove(FIELD_MOVE_SURF))
+		item = ITEM_HM03_SURF;
+		u8 partyId = PartyHasMonWithFieldMovePotential(MOVE_SURF, item, 1);
+
+		if (partyId < PARTY_SIZE)
 		{
-			item = ITEM_HM03_SURF;
-			u8 partyId = PartyHasMonWithFieldMovePotential(MOVE_SURF, item, 1);
-
-			if (partyId < PARTY_SIZE)
-			{
-				gSpecialVar_0x8004 = partyId;
-				return EventScript_UseSurf;
-			}
-
-			return EventScript_WaterDyedBlue;
+			gSpecialVar_0x8004 = partyId;
+			return EventScript_UseSurf;
 		}
+
+		return EventScript_WaterDyedBlue;
 	}
 	else if (MetatileBehavior_IsWaterfall(metatileBehavior))
 	{
