@@ -13,6 +13,7 @@
   setflag 0x826
   setflag 0x827
   setflag 0x828
+  setflag 0x829
   additem TM01 1
   additem TM02 1
   additem TM03 1
