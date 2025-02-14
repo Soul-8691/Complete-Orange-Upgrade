@@ -5,3 +5,4 @@ JPAN Behaviour byte hack
 COU
 RTC
 DAN
+Trade Pokemon changes

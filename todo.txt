@@ -3,5 +3,4 @@ GAME FREAK -> KALARIE
 Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
-Trade Pokemon changes
 Repoint Cut tree script
