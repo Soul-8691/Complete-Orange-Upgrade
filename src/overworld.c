@@ -101,11 +101,9 @@ void TrainerFaceFix(void)
 u8 __attribute__((long_call)) *MapHeaderCheckScriptTable(u8 tag);
 
 extern const u8 EventScript_UseFlash[];
-extern const u8 EventScript_UseSurf[];
 extern const u8 EventScript_UseWaterfall[];
 extern const u8 EventScript_WaterDyedBlue[];
 extern const u8 EventScript_WallOfWater[];
-extern const u8 EventScript_CantUseWaterfall[];
 
 // The values here can be modified i guess
 const u8 gFieldMoveBadgeRequirements[] =
@@ -145,6 +143,9 @@ u8 PartyHasMonWithFieldMovePotential(u16 move, u16 item, u8 surfingType)
 				if (MonKnowsMove(mon, move) && move != 0)
 					return i;
 
+				if (move == MOVE_SURF && CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG), move))
+					return i;
+	
 				if (hasHM && CanLearnTeachableMove(GetMonData(mon, MON_DATA_SPECIES_OR_EGG), move))
 					return i;
 			}
