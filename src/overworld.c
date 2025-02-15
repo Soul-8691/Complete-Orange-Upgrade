@@ -226,6 +226,7 @@ const u8* GetInteractedWaterScript_(u32 unused1, u8 metatileBehavior, u8 directi
 				{
 					gSpecialVar_0x8004 = partyId;
 					return EventScript_UseWaterfall;
+					CountBadgesForOverworldWhiteOutLossCalculation();
 				}
 
 				return EventScript_WallOfWater;
@@ -236,4 +237,17 @@ const u8* GetInteractedWaterScript_(u32 unused1, u8 metatileBehavior, u8 directi
 	}
 
 	return NULL;
+}
+extern const u16 sWhiteOutMoneyLossBadgeFlagIDs[];
+
+void CountBadgesForOverworldWhiteOutLossCalculationVarResult(void)
+{
+    int i;
+    u8 nbadges = 0;
+    for (i = 0; i < 8; i++)
+    {
+        if (FlagGet(sWhiteOutMoneyLossBadgeFlagIDs[i]))
+            nbadges++;
+    }
+    gSpecialVar_Result = nbadges;
 }
