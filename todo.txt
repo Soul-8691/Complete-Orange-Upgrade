@@ -3,6 +3,7 @@ GAME FREAK -> KALARIE
 Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
+Headbutt tutor
 Bite tutor
 MDN wild encounters
 Update trainer parties with Gen 2 mons
