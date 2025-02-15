@@ -9,6 +9,8 @@
 EventScript_ObjectApproachPlayer:
 	lock
     applymovement LASTTALKED LockFacing
+	checksound
+	sound 0x15
 	special EndTrainerApproach
 	waitstate
     call TrainerFaceFixScript
