@@ -5,4 +5,9 @@ JPAN Behaviour byte hack
 COU
 RTC
 DAN
-Trade Pokemon changes
+Regional Dex expanded to first 251 mons
+Trade Pokemon evolution changes
+Start out with Running Shoes
+Get Exp. All from Mom
+Fix items
+MDN encounters for Valencia Park

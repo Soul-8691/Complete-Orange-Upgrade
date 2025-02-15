@@ -1,4 +1,6 @@
 Flags:
+0x20 (Exp. All)
+0x21 (Bite tutor)
 0x200-0x206 (Pallet Town Pokemon)
 0x207 (Giveitem Route 1)
 0x208 (Brock & Misty Route 1)
