@@ -3,6 +3,14 @@ GAME FREAK -> KALARIE
 Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
-Repoint Cut tree script
 Bite tutor
+MDN wild encounters
+Update trainer parties with Gen 2 mons
+Add TMs to overworld
+Add more tutors
+Pokemon overworlds that walk around and spot you
+Headbutt trees
+TM mart
 Improve dialogue
+Change existing tutor scripts to use move IDs
+Repoint Cut tree script
