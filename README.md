@@ -226,19 +226,25 @@ Any changes made to header files will require you to clean everything in *build/
 * Blazer
 * Cawt
 * Ghoulslash
+* Grunt-Lucas
 * Haven
 * JPAN
+* Jordank
 * Kyledove
 * Lewmoth
 * MezmerKaiser
 * Payst
 * Pret
 * Prime-Dialga
+* ROM Hacking Hideout
 * Ristar
 * ShinkoNet
 * Skeli
+* Slawter666
 * Smogon
 * Spherical Ice
+* Surskitty
 * Touched
+* Wally-217
 * Yak Attack
 * Zake
