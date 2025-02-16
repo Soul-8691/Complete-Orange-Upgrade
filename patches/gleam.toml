@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''17AE00'''
+FreeSpaceSearch = '''17B0C0'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -3245,6 +3245,30 @@ Name = '''data.wild.valenciapark.grass.night'''
 Address = 0x71E450
 Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
 DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.beach.morning'''
+Address = 0x71E480
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.beach.day'''
+Address = 0x71E4B0
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.beach.night'''
+Address = 0x71E4E0
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.pokemon.wild'''
+Address = 0xA1B1B0
+Format = '''[bank. map. unused: grass::|h surf<[rate:: list<[lowLevel. highLevel. species:data.pokemon.names]5>]1> rocksmash::|h fish<[rate:: list<[old|comment=0|old_rod: good|comment=2|good_rod: super|comment=5|super_rod: lowLevel. highLevel. species:data.pokemon.names]10>]1>]!FFFF'''
+DefaultHash = '''EC391A98'''
 
 #################################
 #################################

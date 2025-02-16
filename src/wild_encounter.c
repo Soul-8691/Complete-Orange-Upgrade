@@ -60,7 +60,6 @@ bool8 StandardWildEncounter_(u32 currMetatileAttrs, u16 previousMetatileBehavior
 
     if (MetatileBehavior_IsSand(ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR)) == TRUE)
     {
-        // try a regular wild land encounter
         if (FlagGet(FLAG_ROCK_SMASH_SAND_ENCOUNTERS))
         {
             RockSmashWildEncounter();
