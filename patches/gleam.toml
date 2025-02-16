@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''169100'''
+FreeSpaceSearch = '''17AE00'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -896,7 +896,7 @@ DefaultHash = '''30272D09'''
 
 [[NamedAnchors]]
 Name = '''scripts.newgame.setflags'''
-Address = 0x1A6481
+Address = 0x17AB40
 Format = '''`xse`'''
 DefaultHash = '''919E3ECB'''
 
@@ -2883,7 +2883,7 @@ DefaultHash = '''74F01E53'''
 [[NamedAnchors]]
 Name = '''graphics.overworld.sprites'''
 Address = 0x801C80
-Format = '''[data<[starterbytes:|h paletteid:|h secondid:|h length: width: height: info.|t|palSlot::|shadowSize:|inanimate.|reflectionPalette. footprint.owfootprints unused: distribution<> sizedraw<> animation<> sprites<`osl`> ramstore<>]1>]230'''
+Format = '''[data<[starterbytes:|h paletteid:|h secondid:|h length: width: height: info.|t|palSlot::|shadowSize:|inanimate.|reflectionPalette. footprint.owfootprints unused: distribution<> sizedraw<> animation<> sprites<`osl`> ramstore<>]1>]231'''
 DefaultHash = '''7BDF419E'''
 
 [[NamedAnchors]]
@@ -7062,8 +7062,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/1/maps/0/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank1.VALENCIA PARK.1-0'''
+Image = '''data.maps.banks/3/maps/1/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank3.VALENCIA ISLAND.3-1'''
 
 #################################
 [[TableGroup]]
