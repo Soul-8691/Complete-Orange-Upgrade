@@ -1,5 +1,6 @@
 #include "src/config.h"
 
+## TM Expansion/Move Tutor Rework
 BuildEggMoveset_ 8045cd0 0
 DisplayPartyPokemonDataToTeachMove_ 0811f4d0 2
 DisplayPartyPokemonDataForMoveTutorOrEvolutionItem_ 0811f430 1
@@ -19,7 +20,6 @@ SortPocketAndPlaceHMsFirst_ 0809a5e4 1
 BufferTMHMMoveName_ 080cc8cc 1
 SanitizeItemId_ 0809a8a4 1
 TMSlotsHack 08099E6C 0
-##JPANSaveblock 080D9EDC 0
 ##ItemExpansion 08099e50 0
 
 ## Save Expansion Hooks
@@ -42,3 +42,6 @@ SetPartyMonFieldSelectionActions_ 81229FC 2
 
 ## Exp All
 Cmd_getexp_ 8021A68 0
+
+## Sand Encounters
+TryStandardWildEncounter_ 80833B0 1

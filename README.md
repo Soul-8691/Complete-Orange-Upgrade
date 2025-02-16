@@ -233,6 +233,7 @@ Any changes made to header files will require you to clean everything in *build/
 * Kyledove
 * Lewmoth
 * MezmerKaiser
+* Mudskip
 * Payst
 * Pret
 * Prime-Dialga
