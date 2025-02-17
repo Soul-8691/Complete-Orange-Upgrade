@@ -7,6 +7,24 @@ ShowRawIVByteForTrainer = False
 
 #################################
 [[NamedAnchors]]
+Name = '''data.wild.valenciapark.grass.morning'''
+Address = 0x71E3F0
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.valenciapark.grass.day'''
+Address = 0x71E420
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.valenciapark.grass.night'''
+Address = 0x71E450
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
 Name = '''graphics.pokemon.sprites.front'''
 Address = 0x2A3580
 Format = '''^[sprite<`lzs4x8x8`> uncompressedLength: index:]data.pokemon.names'''
@@ -3203,6 +3221,24 @@ Name = '''data.pokedex.search.weight'''
 Address = 0x1A53EC8
 Format = '''[species:data.pokedex.national]1015'''
 DefaultHash = '''372DB1AA'''
+
+[[NamedAnchors]]
+Name = '''data.wild.sand.morning'''
+Address = 0x71E480
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.sand.day'''
+Address = 0x71E4B0
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''data.wild.sand.night'''
+Address = 0x71E4E0
+Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
+DefaultHash = '''7B8CC355'''
 
 #################################
 #################################
