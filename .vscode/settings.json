@@ -17,6 +17,7 @@
         "event_data.h": "c",
         "field_camera.h": "c",
         "event_objects.h": "c",
-        "global.h": "c"
+        "global.h": "c",
+        "gflib.h": "c"
     }
 }

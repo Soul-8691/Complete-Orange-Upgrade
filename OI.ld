@@ -31157,3 +31157,5 @@ gBerryCrush_TextWindows_Tilemap = 0x08EB0ADC;
 EventScript_CantUseWaterfall = 0x081BE2FF;
 BattleScript_LevelUp = 0x081d89f5;
 CreateSandMons = 0x087203E0;
+gMugshots = 0x08720000;
+gMugshotPaletteTable = 0x08730000;
