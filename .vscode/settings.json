@@ -19,6 +19,14 @@
         "event_objects.h": "c",
         "global.h": "c",
         "gflib.h": "c",
-        "event_object_movement.h": "c"
+        "event_object_movement.h": "c",
+        "field_fadetransition.h": "c",
+        "slot_machine.h": "c",
+        "field_door.h": "c",
+        "sound.h": "c",
+        "decompress.h": "c",
+        "flags.h": "c",
+        "pokemon.h": "c",
+        "window.h": "c"
     }
 }

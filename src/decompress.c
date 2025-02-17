@@ -2,35 +2,46 @@
 #include "../include/gflib.h"
 #include "../include/decompress.h"
 #include "../include/pokemon.h"
-#include "../include/data.h"
+#include "../include/constants/flags.h"
+#include "../include/menu.h"
 #include "../include/event_data.h"
+#include "../include/window.h"
 
-extern void __attribute__((long_call)) DuplicateDeoxysTiles(void *pointer, s32 species);
-extern const struct CompressedSpriteSheet gMugshots[];
+#define MUGSHOT_PALETTE_NUM 13
 
-void LoadSpecialPokePic_(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic)
-{
-    if (FlagGet(FLAG_MUGSHOT))
-        LZ77UnCompWram(gMugshots[species].data, dest);
-    else if (species == SPECIES_UNOWN)
-    {
-        u16 i = (((personality & 0x3000000) >> 18) | ((personality & 0x30000) >> 12) | ((personality & 0x300) >> 6) | (personality & 3)) % 0x1C;
+extern const struct WindowTemplate __attribute__((long_call)) SetWindowTemplateFields(u8 bg, u8 left, u8 top, u8 width, u8 height, u8 paletteNum, u16 baseBlock);
+extern u8 __attribute__((long_call)) sMugshotWindow;
 
-        // The other Unowns are separate from Unown A.
-        if (i == 0)
-            i = SPECIES_UNOWN;
-        else
-            i += SPECIES_UNOWN_B - 1;
-        if (!isFrontPic)
-            LZ77UnCompWram(gMonBackPicTable[i].data, dest);
-        else
-            LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
+void ClearMugshot(void){
+    if(sMugshotWindow != 0){
+        ClearStdWindowAndFrameToTransparent(sMugshotWindow - 1, 0);
+        CopyWindowToVram(sMugshotWindow - 1, 3);
+        RemoveWindow(sMugshotWindow - 1);
+        sMugshotWindow = 0;
     }
-    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
-        LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
-    else
-        LZ77UnCompWram(src->data, dest);
+}
 
-    DuplicateDeoxysTiles(dest, species);
-    DrawSpindaSpots(species, personality, dest, isFrontPic);
+void DrawMugshotCore(void){
+    struct WindowTemplate t;
+    u16 windowId;
+    extern struct CompressedSpriteSheet mugshots[];
+    extern struct CompressedSpritePalette mugshotPals[];
+    u8 x = gSpecialVar_0x8000;
+    u8 y = gSpecialVar_0x8001;
+    u8 width = gSpecialVar_0x8002;
+    u8 height = gSpecialVar_0x8003;
+    u16 mugshotIndex = gSpecialVar_0x8004;
+
+    if(sMugshotWindow != 0){
+        ClearMugshot();
+    }
+    
+    t = SetWindowTemplateFields(0, x, y, width, height, MUGSHOT_PALETTE_NUM, 0x40);
+    windowId = AddWindow(&t);
+    sMugshotWindow = windowId + 1;
+    
+    LoadCompressedPalette(mugshotPals[mugshotIndex].data, BG_PLTT_ID(MUGSHOT_PALETTE_NUM), 0x20);
+    CopyToWindowPixelBuffer(windowId, mugshots[mugshotIndex].data, 0, 0);
+    PutWindowRectTilemap(windowId, 0, 0, width, height);
+    CopyWindowToVram(windowId, 3);
 }

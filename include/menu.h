@@ -69,6 +69,5 @@ void __attribute__((long_call)) ClearStdWindowAndFrameToTransparent(u8 windowId,
 void __attribute__((long_call)) DrawStdFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 baseTileNum, u8 paletteNum);
 void __attribute__((long_call)) ClearDialogWindowAndFrameToTransparent(u8 windowId, bool8 copyToVram);
 void __attribute__((long_call)) DrawDialogFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 tileNum, u8 paletteNum);
-struct WindowTemplate SetWindowTemplateFields(u8 bg, u8 left, u8 top, u8 width, u8 height, u8 paletteNum, u16 baseBlock);
 
 #endif // GUARD_MENU_H
