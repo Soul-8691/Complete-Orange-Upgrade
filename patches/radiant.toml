@@ -3195,7 +3195,13 @@ DefaultHash = '''0C7DE74D'''
 [[NamedAnchors]]
 Name = '''data.pokedex.search.size'''
 Address = 0x72F580
-Format = '''[species:data.pokedex.national]data.pokedex.national-25'''
+Format = '''[species:data.pokedex.national]1019'''
+DefaultHash = '''372DB1AA'''
+
+[[NamedAnchors]]
+Name = '''data.pokedex.search.weight'''
+Address = 0x1A53EC8
+Format = '''[species:data.pokedex.national]1015'''
 DefaultHash = '''372DB1AA'''
 
 #################################
