@@ -46,5 +46,5 @@ Cmd_getexp_ 8021A68 0
 ## Sand Encounters
 TryStandardWildEncounter_ 80833B0 1
 
+## Mugshots
 LoadSpecialPokePic_ 800ECF0 5
-LoadPicPaletteBySlot_ 810BD40

@@ -3,13 +3,16 @@
 #include "../include/decompress.h"
 #include "../include/pokemon.h"
 #include "../include/data.h"
+#include "../include/event_data.h"
 
 extern void __attribute__((long_call)) DuplicateDeoxysTiles(void *pointer, s32 species);
 extern const struct CompressedSpriteSheet gMugshots[];
 
 void LoadSpecialPokePic_(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic)
 {
-    if (species == SPECIES_UNOWN)
+    if (FlagGet(FLAG_MUGSHOT))
+        LZ77UnCompWram(gMugshots[species].data, dest);
+    else if (species == SPECIES_UNOWN)
     {
         u16 i = (((personality & 0x3000000) >> 18) | ((personality & 0x30000) >> 12) | ((personality & 0x300) >> 6) | (personality & 3)) % 0x1C;
 
@@ -23,10 +26,8 @@ void LoadSpecialPokePic_(const struct CompressedSpriteSheet *src, void *dest, s3
         else
             LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
     }
-    else if (species > NUM_SPECIES && species < 5000) // is species unknown? draw the ? icon
+    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
         LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
-    else if (species >= 5000)
-        LZ77UnCompWram(gMugshots[species - 5000].data, dest);
     else
         LZ77UnCompWram(src->data, dest);
 

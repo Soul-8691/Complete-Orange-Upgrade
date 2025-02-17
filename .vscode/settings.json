@@ -18,6 +18,7 @@
         "field_camera.h": "c",
         "event_objects.h": "c",
         "global.h": "c",
-        "gflib.h": "c"
+        "gflib.h": "c",
+        "event_object_movement.h": "c"
     }
 }
