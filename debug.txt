@@ -428,6 +428,8 @@ givePokemon 859 5 ????????
   setflag 0x827
   setflag 0x828
   setflag 0x829
+  setflag 0x212
+  special EnableNationalPokedex
   additem TM01 1
   additem TM02 1
   additem TM03 1
