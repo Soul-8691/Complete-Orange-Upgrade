@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''BB6480'''
+FreeSpaceSearch = '''BB6940'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -3251,6 +3251,12 @@ Name = '''graphics.pokemon.palettes.pmd.angry'''
 Address = 0xA7DCC4
 Format = '''^[palette<`lzp4`> index: unused:]data.pokemon.names'''
 DefaultHash = '''162586F6'''
+
+[[NamedAnchors]]
+Name = '''data.pokemon.wild'''
+Address = 0xA1B1B0
+Format = '''[bank. map. unused: grass::|h surf<[rate:: list<[lowLevel. highLevel. species:data.pokemon.names]5>]1> rocksmash::|h fish<[rate:: list<[old|comment=0|old_rod: good|comment=2|good_rod: super|comment=5|super_rod: lowLevel. highLevel. species:data.pokemon.names]10>]1>]!FFFF'''
+DefaultHash = '''EC391A98'''
 
 #################################
 #################################
@@ -7068,8 +7074,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/4/maps/1/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank4.PALLET TOWN.4-1'''
+Image = '''data.maps.banks/1/maps/0/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank1.VALENCIA PARK.1-0'''
 
 #################################
 [[TableGroup]]
