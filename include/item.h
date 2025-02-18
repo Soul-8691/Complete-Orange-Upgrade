@@ -88,7 +88,7 @@ void __attribute__((long_call)) ItemPcCompaction(void);
 void __attribute__((long_call)) RemovePCItem(u16 itemId, u16 quantity);
 void __attribute__((long_call)) SortAndCompactBagPocket(struct BagPocket * pocket);
 u8 __attribute__((long_call)) CountItemsInPC(void);
-void __attribute__((long_call)) ApplyNewEncryptionKeyToBagItems_(u32 newKey);
+void __attribute__((long_call)) ApplyNewEncryptionKeyToBagItems(u32 newKey);
 bool8 __attribute__((long_call)) HasAtLeastOneBerry(void);
 
 #endif // GUARD_ITEM_H

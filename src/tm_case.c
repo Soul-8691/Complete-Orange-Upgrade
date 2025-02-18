@@ -178,7 +178,7 @@ void GetTMNumberAndMoveString_(u8 * dest, u16 itemId)
     
     StringAppend(gStringVar4, sText_SingleSpace);
     StringAppend(gStringVar4, gText_FontNormal);
-    StringAppend(gStringVar4, gMoveNames_[ItemIdToBattleMoveId_(itemId)]);
+    StringAppend(gStringVar4, gMoveNames[ItemIdToBattleMoveId_(itemId)]);
     StringCopy(dest, gStringVar4);
 }
 

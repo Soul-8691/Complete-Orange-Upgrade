@@ -1,4 +1,3 @@
 #include "src/config.h"
-gSaveSectionOffsets 080DA23C
 gFieldMoveCursorCallbacks 08124614
 gFieldMoveCursorCallbacks 08124680
