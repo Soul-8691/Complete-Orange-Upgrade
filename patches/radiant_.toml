@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''BB6940'''
+FreeSpaceSearch = '''BE5B00'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -33,7 +33,7 @@ DefaultHash = '''39732051'''
 [[NamedAnchors]]
 Name = '''sound.pokemon.cry.growl'''
 Address = 0x730100
-Format = '''^[type.|h key. length. pan_sweep. p<> attack. decay. sustain. release.]data.pokemon.names-24'''
+Format = ''''''
 DefaultHash = '''39732051'''
 
 [[NamedAnchors]]
@@ -44,8 +44,8 @@ DefaultHash = '''9A7B740C'''
 
 [[NamedAnchors]]
 Name = '''data.pokemon.evolutions'''
-Address = 0x720880
-Format = '''[method1:evolutionmethods arg1:|s=method1(6=data.items.stats|7=data.items.stats) species1:data.pokemon.names unused1: method2:evolutionmethods arg2:|s=method2(6=data.items.stats|7=data.items.stats) species2:data.pokemon.names unused2: method3:evolutionmethods arg3:|s=method3(6=data.items.stats|7=data.items.stats) species3:data.pokemon.names unused3: method4:evolutionmethods arg4:|s=method4(6=data.items.stats|7=data.items.stats) species4:data.pokemon.names unused4: method5:evolutionmethods arg5:|s=method5(6=data.items.stats|7=data.items.stats) species5:data.pokemon.names unused5:]data.pokemon.names'''
+Address = 0xBB89C0
+Format = '''[method1:evolutionmethods arg1:|s=method1(6=data.items.stats|7=data.items.stats) species1:data.pokemon.names unused: method2:evolutionmethods arg2:|s=method2(6=data.items.stats|7=data.items.stats) species2:data.pokemon.names unused: method3:evolutionmethods arg3:|s=method3(6=data.items.stats|7=data.items.stats) species3:data.pokemon.names unused: method4:evolutionmethods arg4:|s=method4(6=data.items.stats|7=data.items.stats) species4:data.pokemon.names unused: method5:evolutionmethods arg5:|s=method5(6=data.items.stats|7=data.items.stats) species5:data.pokemon.names unused: method6:evolutionmethods arg6:|s=method6(6=data.items.stats|7=data.items.stats) species6:data.pokemon.names unused: method7:evolutionmethods arg7:|s=method7(6=data.items.stats|7=data.items.stats) species7:data.pokemon.names unused: method8:evolutionmethods arg8:|s=method8(6=data.items.stats|7=data.items.stats) species8:data.pokemon.names unused: method9:evolutionmethods arg9:|s=method9(6=data.items.stats|7=data.items.stats) species9:data.pokemon.names unused: method10:evolutionmethods arg10:|s=method10(6=data.items.stats|7=data.items.stats) species10:data.pokemon.names unused: method11:evolutionmethods arg11:|s=method11(6=data.items.stats|7=data.items.stats) species11:data.pokemon.names unused: method12:evolutionmethods arg12:|s=method12(6=data.items.stats|7=data.items.stats) species12:data.pokemon.names unused: method13:evolutionmethods arg13:|s=method13(6=data.items.stats|7=data.items.stats) species13:data.pokemon.names unused: method14:evolutionmethods arg14:|s=method14(6=data.items.stats|7=data.items.stats) species14:data.pokemon.names unused: method15:evolutionmethods arg15:|s=method15(6=data.items.stats|7=data.items.stats) species15:data.pokemon.names unused: method16:evolutionmethods arg16:|s=method16(6=data.items.stats|7=data.items.stats) species16:data.pokemon.names unused:]data.pokemon.names'''
 DefaultHash = '''6D76E2E4'''
 
 [[NamedAnchors]]
@@ -919,12 +919,6 @@ Format = '''[header<""> text<""> bool::|t|unknown.]43'''
 DefaultHash = '''C82987FE'''
 
 [[NamedAnchors]]
-Name = '''scripts.evolution.routines'''
-Address = 0x042FC4
-Format = '''[thumb<>]scripts.evolution.count'''
-DefaultHash = '''B16F7B48'''
-
-[[NamedAnchors]]
 Name = '''scripts.commands.events.callstd'''
 Address = 0x160450
 Format = '''[script<`xse`>]10'''
@@ -957,7 +951,7 @@ DefaultHash = '''D8EBB975'''
 [[NamedAnchors]]
 Name = '''data.pokedex.regional'''
 Address = 0x738680
-Format = '''[index:]1440'''
+Format = '''[index:]1026'''
 DefaultHash = '''9A7B740C'''
 
 [[NamedAnchors]]
@@ -3257,6 +3251,12 @@ Name = '''data.pokemon.wild'''
 Address = 0xA1B1B0
 Format = '''[bank. map. unused: grass::|h surf<[rate:: list<[lowLevel. highLevel. species:data.pokemon.names]5>]1> rocksmash::|h fish<[rate:: list<[old|comment=0|old_rod: good|comment=2|good_rod: super|comment=5|super_rod: lowLevel. highLevel. species:data.pokemon.names]10>]1>]!FFFF'''
 DefaultHash = '''EC391A98'''
+
+[[NamedAnchors]]
+Name = '''scripts.evolution.routines'''
+Address = 0x042FC4
+Format = '''[thumb<>]scripts.evolution.count'''
+DefaultHash = '''B16F7B48'''
 
 #################################
 #################################
@@ -7074,8 +7074,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/1/maps/0/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank1.VALENCIA PARK.1-0'''
+Image = '''data.maps.banks/5/maps/4/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank5.VALENCIA ISLAND.5-4'''
 
 #################################
 [[TableGroup]]
