@@ -7,6 +7,12 @@ ShowRawIVByteForTrainer = False
 
 #################################
 [[NamedAnchors]]
+Name = '''graphics.pokemon.icons.sprites'''
+Address = 0x1A442C8
+Format = '''[icon<`ucs4x4x8|graphics.pokemon.icons.index`>]data.pokemon.names'''
+DefaultHash = '''D2DEB9B6'''
+
+[[NamedAnchors]]
 Name = '''data.wild.valenciapark.grass.morning'''
 Address = 0x71E3F0
 Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
@@ -123,7 +129,7 @@ DefaultHash = '''B8699391'''
 [[NamedAnchors]]
 Name = '''data.pokemon.names'''
 Address = 0x29F740
-Format = '''[name""11]1441'''
+Format = '''[name""11]1440'''
 DefaultHash = '''747F95CC'''
 
 [[NamedAnchors]]

@@ -9,7 +9,7 @@ import sys
 ############
 
 ROM_NAME = "OI.gba"  # The name of your rom
-OFFSET_TO_PUT = 0xB82CC0
+OFFSET_TO_PUT = 0xF91840
 SEARCH_FREE_SPACE = False  # Set to True if you want the script to search for free space
                            # Set to False if you don't want to search for free space as you for example update the engine
 
