@@ -64,12 +64,6 @@ bool8 StandardWildEncounter_(u32 currMetatileAttrs, u16 previousMetatileBehavior
         {
             RockSmashWildEncounter();
         }
-        else
-        {
-            GenerateWildMon(SPECIES_NONE, 0, 0);
-            ScriptContext_SetupScript(CreateSandMons);
-            return TRUE;
-        }
     }
 
     if (sWildEncountersDisabled == TRUE)
