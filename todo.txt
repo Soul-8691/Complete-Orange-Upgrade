@@ -4,9 +4,8 @@ Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
 Headbutt tutor
-Bite tutor
 MDN wild encounters
-Update trainer parties with Gen 2 mons
+Update trainer parties
 Add TMs to overworld
 Add more tutors
 Pokemon overworlds that walk around and spot you

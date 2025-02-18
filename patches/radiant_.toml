@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''73E6C0'''
+FreeSpaceSearch = '''BB6480'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -3239,6 +3239,18 @@ Name = '''data.wild.sand.night'''
 Address = 0x71E4E0
 Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
 DefaultHash = '''7B8CC355'''
+
+[[NamedAnchors]]
+Name = '''graphics.pokemon.sprites.pmd.angry'''
+Address = 0xA7AFBC
+Format = '''^[sprite<`lzs4x8x8`> uncompressedLength: index:]data.pokemon.names'''
+DefaultHash = '''BCE262FF'''
+
+[[NamedAnchors]]
+Name = '''graphics.pokemon.palettes.pmd.angry'''
+Address = 0xA7DCC4
+Format = '''^[palette<`lzp4`> index: unused:]data.pokemon.names'''
+DefaultHash = '''162586F6'''
 
 #################################
 #################################
@@ -7056,8 +7068,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/3/maps/0/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank3.PALLET TOWN.3-0'''
+Image = '''data.maps.banks/4/maps/1/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank4.PALLET TOWN.4-1'''
 
 #################################
 [[TableGroup]]
