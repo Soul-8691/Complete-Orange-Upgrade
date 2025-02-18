@@ -512,7 +512,7 @@ void sp10B_CanUseRockSmashOnRock(void)
 
 	gSpecialVar_0x8004 = PARTY_SIZE;
 	if (HasBadgeToUseFieldMove(FIELD_MOVE_ROCK_SMASH))
-		gSpecialVar_0x8004 = PartyHasMonWithFieldMovePotential(MOVE_ROCK_SMASH, item, 1);
+		gSpecialVar_0x8004 = PartyHasMonWithFieldMovePotential(MOVE_ROCKSMASH, item, 1);
 }
 
 void sp10C_CanUseStrengthOnBoulder(void)

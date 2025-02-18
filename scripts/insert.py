@@ -7,7 +7,7 @@ import sys
 from datetime import datetime
 import _io
 
-OFFSET_TO_PUT = 0xeb109c
+OFFSET_TO_PUT = 0xb82cc0
 SOURCE_ROM = "OI.gba"
 ROM_NAME = "test.gba"
 
