@@ -219,6 +219,7 @@ Any changes made to header files will require you to clean everything in *build/
 
 # Credits
 * Alisa180
+* Andre Freitas
 * Ansh
 * Aveontrainer
 * Avir
@@ -240,6 +241,7 @@ Any changes made to header files will require you to clean everything in *build/
 * ROM Hacking Hideout
 * Ristar
 * ShinkoNet
+* Shiny Miner
 * Skeli
 * Slawter666
 * Smogon
