@@ -418,214 +418,214 @@ givePokemon 856 5 ????????
 givePokemon 857 5 ????????
 givePokemon 858 5 ????????  
 givePokemon 859 5 ????????  
-  setflag 0x820
-  setflag 0x821
-  setflag 0x822
-  setflag 0x823
-  setflag 0x824
-  setflag 0x825
-  setflag 0x826
-  setflag 0x827
-  setflag 0x828
-  setflag 0x829
-  setflag 0x212
-  special EnableNationalPokedex
-  additem 289 1
-  additem 290 1
-  additem 291 1
-  additem 292 1
-  additem 293 1
-  additem 294 1
-  additem 295 1
-  additem 296 1
-  additem 297 1
-  additem 298 1
-  additem 299 1
-  additem 300 1
-  additem 301 1
-  additem 302 1
-  additem 303 1
-  additem 304 1
-  additem 305 1
-  additem 306 1
-  additem 307 1
-  additem 308 1
-  additem 309 1
-  additem 310 1
-  additem 311 1
-  additem 312 1
-  additem 313 1
-  additem 314 1
-  additem 315 1
-  additem 316 1
-  additem 317 1
-  additem 318 1
-  additem 319 1
-  additem 320 1
-  additem 321 1
-  additem 322 1
-  additem 323 1
-  additem 324 1
-  additem 325 1
-  additem 326 1
-  additem 327 1
-  additem 328 1
-  additem 329 1
-  additem 330 1
-  additem 331 1
-  additem 332 1
-  additem 333 1
-  additem 334 1
-  additem 335 1
-  additem 336 1
-  additem 337 1
-  additem 338 1
-  additem 339 1
-  additem 340 1
-  additem 341 1
-  additem 342 1
-  additem 343 1
-  additem 344 1
-  additem 345 1
-  additem 346 1
-  additem 376 1
-  additem 377 1
-  additem 378 1
-  additem 379 1
-  additem 380 1
-  additem 381 1
-  additem 382 1
-  additem 383 1
-  additem 384 1
-  additem 385 1
-  additem 386 1
-  additem 387 1
-  additem 388 1
-  additem 389 1
-  additem 390 1
-  additem 391 1
-  additem 392 1
-  additem 393 1
-  additem 394 1
-  additem 395 1
-  additem 396 1
-  additem 397 1
-  additem 398 1
-  additem 399 1
-  additem 400 1
-  additem 401 1
-  additem 402 1
-  additem 403 1
-  additem 404 1
-  additem 405 1
-  additem 406 1
-  additem 407 1
-  additem 408 1
-  additem 409 1
-  additem 410 1
-  additem 411 1
-  additem 412 1
-  additem 413 1
-  additem 414 1
-  additem 415 1
-  additem 416 1
-  additem 417 1
-  additem 418 1
-  additem 419 1
-  additem 420 1
-  additem 421 1
-  additem 422 1
-  additem 423 1
-  additem 424 1
-  additem 425 1
-  additem 426 1
-  additem 427 1
-  additem 428 1
-  additem 429 1
-  additem 430 1
-  additem 431 1
-  additem 432 1
-  additem 433 1
-  additem 434 1
-  additem 435 1
-  additem 436 1
-  additem 437 1
-  additem 438 1
-  additem 439 1
-  additem 440 1
-  additem 441 1
-  additem 442 1
-  additem 443 1
-  additem 444 1
-  additem 445 1
-  additem 376 1
-  additem 377 1
-  additem 378 1
-  additem 379 1
-  additem 380 1
-  additem 381 1
-  additem 382 1
-  additem 383 1
-  additem 384 1
-  additem 385 1
-  additem 386 1
-  additem 387 1
-  additem 388 1
-  additem 389 1
-  additem 390 1
-  additem 391 1
-  additem 392 1
-  additem 393 1
-  additem 394 1
-  additem 395 1
-  additem 396 1
-  additem 397 1
-  additem 398 1
-  additem 399 1
-  additem 400 1
-  additem 401 1
-  additem 402 1
-  additem 403 1
-  additem 404 1
-  additem 405 1
-  additem 406 1
-  additem 407 1
-  additem 408 1
-  additem 409 1
-  additem 410 1
-  additem 411 1
-  additem 412 1
-  additem 413 1
-  additem 414 1
-  additem 415 1
-  additem 416 1
-  additem 417 1
-  additem 418 1
-  additem 419 1
-  additem 420 1
-  additem 421 1
-  additem 422 1
-  additem 423 1
-  additem 424 1
-  additem 425 1
-  additem 426 1
-  additem 427 1
-  additem 428 1
-  additem 429 1
-  additem 430 1
-  additem 431 1
-  additem 432 1
-  additem 433 1
-  additem 434 1
-  additem 435 1
-  additem 436 1
-  additem 437 1
-  additem 438 1
-  additem 439 1
-  additem 440 1
-  additem 441 1
-  additem 442 1
-  additem 443 1
-  additem 444 1
-  additem 445 1
-  end
+setflag 0x820
+setflag 0x821
+setflag 0x822
+setflag 0x823
+setflag 0x824
+setflag 0x825
+setflag 0x826
+setflag 0x827
+setflag 0x828
+setflag 0x829
+setflag 0x212
+special EnableNationalPokedex
+additem 289 1
+additem 290 1
+additem 291 1
+additem 292 1
+additem 293 1
+additem 294 1
+additem 295 1
+additem 296 1
+additem 297 1
+additem 298 1
+additem 299 1
+additem 300 1
+additem 301 1
+additem 302 1
+additem 303 1
+additem 304 1
+additem 305 1
+additem 306 1
+additem 307 1
+additem 308 1
+additem 309 1
+additem 310 1
+additem 311 1
+additem 312 1
+additem 313 1
+additem 314 1
+additem 315 1
+additem 316 1
+additem 317 1
+additem 318 1
+additem 319 1
+additem 320 1
+additem 321 1
+additem 322 1
+additem 323 1
+additem 324 1
+additem 325 1
+additem 326 1
+additem 327 1
+additem 328 1
+additem 329 1
+additem 330 1
+additem 331 1
+additem 332 1
+additem 333 1
+additem 334 1
+additem 335 1
+additem 336 1
+additem 337 1
+additem 338 1
+additem 339 1
+additem 340 1
+additem 341 1
+additem 342 1
+additem 343 1
+additem 344 1
+additem 345 1
+additem 346 1
+additem 376 1
+additem 377 1
+additem 378 1
+additem 379 1
+additem 380 1
+additem 381 1
+additem 382 1
+additem 383 1
+additem 384 1
+additem 385 1
+additem 386 1
+additem 387 1
+additem 388 1
+additem 389 1
+additem 390 1
+additem 391 1
+additem 392 1
+additem 393 1
+additem 394 1
+additem 395 1
+additem 396 1
+additem 397 1
+additem 398 1
+additem 399 1
+additem 400 1
+additem 401 1
+additem 402 1
+additem 403 1
+additem 404 1
+additem 405 1
+additem 406 1
+additem 407 1
+additem 408 1
+additem 409 1
+additem 410 1
+additem 411 1
+additem 412 1
+additem 413 1
+additem 414 1
+additem 415 1
+additem 416 1
+additem 417 1
+additem 418 1
+additem 419 1
+additem 420 1
+additem 421 1
+additem 422 1
+additem 423 1
+additem 424 1
+additem 425 1
+additem 426 1
+additem 427 1
+additem 428 1
+additem 429 1
+additem 430 1
+additem 431 1
+additem 432 1
+additem 433 1
+additem 434 1
+additem 435 1
+additem 436 1
+additem 437 1
+additem 438 1
+additem 439 1
+additem 440 1
+additem 441 1
+additem 442 1
+additem 443 1
+additem 444 1
+additem 445 1
+additem 376 1
+additem 377 1
+additem 378 1
+additem 379 1
+additem 380 1
+additem 381 1
+additem 382 1
+additem 383 1
+additem 384 1
+additem 385 1
+additem 386 1
+additem 387 1
+additem 388 1
+additem 389 1
+additem 390 1
+additem 391 1
+additem 392 1
+additem 393 1
+additem 394 1
+additem 395 1
+additem 396 1
+additem 397 1
+additem 398 1
+additem 399 1
+additem 400 1
+additem 401 1
+additem 402 1
+additem 403 1
+additem 404 1
+additem 405 1
+additem 406 1
+additem 407 1
+additem 408 1
+additem 409 1
+additem 410 1
+additem 411 1
+additem 412 1
+additem 413 1
+additem 414 1
+additem 415 1
+additem 416 1
+additem 417 1
+additem 418 1
+additem 419 1
+additem 420 1
+additem 421 1
+additem 422 1
+additem 423 1
+additem 424 1
+additem 425 1
+additem 426 1
+additem 427 1
+additem 428 1
+additem 429 1
+additem 430 1
+additem 431 1
+additem 432 1
+additem 433 1
+additem 434 1
+additem 435 1
+additem 436 1
+additem 437 1
+additem 438 1
+additem 439 1
+additem 440 1
+additem 441 1
+additem 442 1
+additem 443 1
+additem 444 1
+additem 445 1
+end
