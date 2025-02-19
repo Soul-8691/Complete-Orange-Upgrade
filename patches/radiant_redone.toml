@@ -1,11 +1,17 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''382180'''
+FreeSpaceSearch = '''CCEF80'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
 
 #################################
+[[NamedAnchors]]
+Name = '''graphics.pokemon.icons.sprites'''
+Address = 0x1A442C8
+Format = '''[icon<`ucs4x4x8|graphics.pokemon.icons.index`>]data.pokemon.names'''
+DefaultHash = '''D2DEB9B6'''
+
 [[NamedAnchors]]
 Name = '''data.pokemon.moves.teachablelearnsets'''
 Address = 0xA878F4
@@ -3203,6 +3209,18 @@ Name = '''thumb.item.SanitizeItemId'''
 Address = 0x09A8A4
 Format = ''''''
 DefaultHash = '''15316515'''
+
+[[NamedAnchors]]
+Name = '''graphics.pokemon.sprites.pmd.angry'''
+Address = 0x733D00
+Format = '''^[sprite<`lzs4x8x8`> uncompressedLength: index:]data.pokemon.names'''
+DefaultHash = '''BCE262FF'''
+
+[[NamedAnchors]]
+Name = '''graphics.pokemon.palettes.pmd.angry'''
+Address = 0xC372C0
+Format = '''^[palette<`lzp4`> index: unused:]data.pokemon.names'''
+DefaultHash = '''162586F6'''
 
 #################################
 #################################
