@@ -1,3 +1,4 @@
+Debug script (room)
 Expand Pokedex to 1025 (PGE)
 Expand evolutions to 16 (G3HS)
 Dynamic Pokemon Expansion (Shiny Miner)
@@ -5,6 +6,10 @@ AnyGame_FairyType.hma
 AnyGame_ExpandItems.hma
 Add 71 New (items)
 COU
+Update level-up learnsets
+Update teachable learnsets
+Dynamic Surf OW expansion
+PMD angry sprites
 RTC
 DAN
 JPAN Behaviour byte hack
