@@ -1,9 +1,12 @@
+Expand Pokedex to 1025 (PGE)
+Expand evolutions to 16 (G3HS)
+Dynamic Pokemon Expansion (Shiny Miner)
+AnyGame_FairyType.hma
 AnyGame_ExpandItems.hma
 Add 71 New (items)
-AnyGame_FairyType.hma
-JPAN Behaviour byte hack
 COU
 RTC
 DAN
+JPAN Behaviour byte hack
 Start out with Running Shoes
 Get Exp. All from Mom

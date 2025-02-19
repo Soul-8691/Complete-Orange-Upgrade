@@ -31156,7 +31156,6 @@ gBerryCrush_Crusher_Gfx = 0x08EAFFC0;
 gBerryCrush_TextWindows_Tilemap = 0x08EB0ADC;
 EventScript_CantUseWaterfall = 0x081BE2FF;
 BattleScript_LevelUp = 0x081d89f5;
-CreateSandMons = 0x087203E0;
 mugshots = 0x082350AC;
 mugshotPals = 0x0823730C;
 sMugshotWindow = 0x0203C001;
