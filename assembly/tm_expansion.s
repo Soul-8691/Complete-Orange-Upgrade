@@ -13,5 +13,5 @@ ldr r0, return
 bx r0
 
 .align
-ram:.word 0x0203c0c8
+ram:.word 0x0203C1CA
 return:.word 0x08099e74+1
