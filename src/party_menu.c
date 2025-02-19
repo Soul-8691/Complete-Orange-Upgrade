@@ -220,7 +220,7 @@ void ItemUseCB_TMHM_(u8 taskId, TaskFunc func)
     PlaySE(SE_SELECT);
     mon = &gPlayerParty[gPartyMenu.slotId];
     GetMonNickname(mon, gStringVar1);
-    StringCopy(gStringVar2, gMoveNames_[move]);
+    StringCopy(gStringVar2, gMoveNames[move]);
     switch (CanTeachMove(mon, move))
     {
     case CANNOT_LEARN_MOVE:
@@ -254,7 +254,7 @@ void TryTutorSelectedMon_(u8 taskId)
         move = &gPartyMenu.data1;
         GetMonNickname(mon, gStringVar1);
         gPartyMenu.data1 = gSpecialVar_0x8005;
-        StringCopy(gStringVar2, gMoveNames_[gPartyMenu.data1]);
+        StringCopy(gStringVar2, gMoveNames[gPartyMenu.data1]);
         move[1] = 2;
         switch (CanTeachMove(mon, gPartyMenu.data1))
         {
@@ -350,7 +350,7 @@ void Task_LearnedMove_(u8 taskId)
         #endif
     }
     GetMonNickname(mon, gStringVar1);
-    StringCopy(gStringVar2, gMoveNames_[move[0]]);
+    StringCopy(gStringVar2, gMoveNames[move[0]]);
     StringExpandPlaceholders(gStringVar4, gText_PkmnLearnedMove3);
     DisplayPartyMenuMessage(gStringVar4, TRUE);
     ScheduleBgCopyTilemapToVram(2);

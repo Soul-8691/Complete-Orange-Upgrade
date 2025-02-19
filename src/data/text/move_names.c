@@ -2,7 +2,7 @@
 #include "../../../include/data.h"
 #include "../../../include/constants/moves.h"
 
-const u8 gMoveNames_[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
+const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_NONE]          = ("-$$$$$$"),
     [MOVE_POUND]         = ("POUND"),
     [MOVE_KARATECHOP]   = ("KARATE CHOP"),
