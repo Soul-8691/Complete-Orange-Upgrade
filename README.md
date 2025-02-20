@@ -226,6 +226,7 @@ Any changes made to header files will require you to clean everything in *build/
 * Beliot419
 * Blazer
 * Cawt
+* ChatGPT
 * Ghoulslash
 * Grunt-Lucas
 * Haven

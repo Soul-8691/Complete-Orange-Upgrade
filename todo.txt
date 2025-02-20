@@ -1,10 +1,5 @@
-Change copyright screen
-GAME FREAK -> KALARIE
-Game Freak logo -> Lapras
 Change title screen
 Pikachu intro
-Improve Valencia Park Headbutt
-Change Valencia Park encounters
 MDN wild encounters
 Update trainer parties
 Add TMs to overworld
