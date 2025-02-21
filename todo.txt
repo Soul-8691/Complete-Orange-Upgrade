@@ -1,9 +1,10 @@
 MDN wild encounters
 Update trainer parties
 Add TMs to overworld
-Add more tutors
-Pokemon overworlds that walk around and spot you
+Add more tutors (day of week-based)
+Pokemon overworlds that walk around and spot you (time-based)
 Headbutt trees
+Time/day of week-based item spawns
 TM mart
 Improve dialogue
 Change existing tutor scripts to use move IDs
