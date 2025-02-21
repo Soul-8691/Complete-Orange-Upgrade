@@ -1,6 +1,6 @@
 [General]
 ApplicationVersion = '''0.5.6.1'''
-FreeSpaceSearch = '''CB9D00'''
+FreeSpaceSearch = '''CC09C0'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
 ShowRawIVByteForTrainer = False
@@ -1658,8 +1658,8 @@ DefaultHash = '''2A407037'''
 
 [[NamedAnchors]]
 Name = '''graphics.battle.background.sprites'''
-Address = 0x24EE34
-Format = '''[battletiles<`lzt4`> battlemap<`lzm4x32x64|graphics.battle.background.sprites|battletiles`> | introtiles<`lzt4`> intromap<`lzm4x32x14|graphics.battle.background.sprites|introtiles`> pal<`lzp4:234`>]20'''
+Address = 0xCBC180
+Format = '''[battletiles<`lzt4`> battlemap<`lzm4x32x64|graphics.battle.background.sprites|battletiles`> | introtiles<`lzt4`> intromap<`lzm4x32x14|graphics.battle.background.sprites|introtiles`> pal<`lzp4:234`>]22'''
 DefaultHash = '''7C9AA1A9'''
 
 [[NamedAnchors]]
@@ -3246,6 +3246,12 @@ Address = 0xC86DF0
 Format = '''[lowLevel. highLevel. species:data.pokemon.names]12'''
 DefaultHash = '''7B8CC355'''
 
+[[NamedAnchors]]
+Name = '''battle.background.KarateKidBattleBackgroundHack'''
+Address = 0xCB9D80
+Format = ''''''
+DefaultHash = '''15316515'''
+
 #################################
 #################################
 [[MatchedWords]]
@@ -3873,6 +3879,22 @@ Offset = 0xFFFEC780
 [[OffsetPointer]]
 Address = 0x0728BC
 Offset = 0xFFFEC780
+
+[[OffsetPointer]]
+Address = 0x00F2E0
+Offset = 0x000031
+
+[[OffsetPointer]]
+Address = 0x00F2A0
+Offset = 0x000001
+
+[[OffsetPointer]]
+Address = 0xCB9DD0
+Offset = 0x000081
+
+[[OffsetPointer]]
+Address = 0xCB9DA0
+Offset = 0x000061
 
 #################################
 [[List]]

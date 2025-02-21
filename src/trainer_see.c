@@ -120,3 +120,9 @@ static u8 GetTrainerApproachDistance_(struct ObjectEvent *trainerObj)
 
     return 0;
 }
+
+extern const u8 something_[];
+
+void something(void) {
+    ScriptContext_SetupScript(something_);
+}

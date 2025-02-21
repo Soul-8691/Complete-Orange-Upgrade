@@ -38,6 +38,10 @@
 #include "../include/constants/maps.h"
 #include "../include/constants/sound.h"
 
+#include "../include/overworld.h"
+#include "../include/region_map.h"
+#include "../include/global.fieldmap.h"
+
 bool8 ScrCmd_setwildbattlerandomlevel(struct ScriptContext * ctx)
 {
     u16 species = ScriptReadHalfword(ctx);
@@ -46,5 +50,45 @@ bool8 ScrCmd_setwildbattlerandomlevel(struct ScriptContext * ctx)
 
     if (level == 0) level = gSpecialVar_Result;
     CreateScriptedWildMon(species, level, item);
+    return FALSE;
+}
+
+bool8 ScrCmd_setflag_(struct ScriptContext * ctx)
+{
+    u16 flag = ScriptReadHalfword(ctx);
+    if (flag >= 0x4000) flag = VarGet(flag);
+    FlagSet(flag);
+    return FALSE;
+}
+
+bool8 ScrCmd_clearflag_(struct ScriptContext * ctx)
+{
+    u16 flag = ScriptReadHalfword(ctx);
+    if (flag >= 0x4000) flag = VarGet(flag);
+    FlagClear(flag);
+    return FALSE;
+}
+
+extern u8 *const __attribute__((long_call)) sScriptStringVars[];
+extern const struct MapHeader *const __attribute__((long_call)) Overworld_GetMapHeaderByGroupAndId(u16, u16);
+
+bool8 ScrCmd_givemon_(struct ScriptContext * ctx)
+{
+    u16 species = VarGet(ScriptReadHalfword(ctx));
+    u8 level = ScriptReadByte(ctx);
+    u16 item = VarGet(ScriptReadHalfword(ctx));
+    u32 unkParam1 = ScriptReadWord(ctx);
+    u32 unkParam2 = ScriptReadWord(ctx);
+    u8 unkParam3 = ScriptReadByte(ctx);
+
+    if (level == 0) {
+        u8 mapName[25];
+        const struct MapHeader * map = Overworld_GetMapHeaderByGroupAndId(species, item);
+        GetMapName(mapName, map->regionMapSectionId, 0);
+        StringCopy(sScriptStringVars[unkParam3], mapName);
+    }
+    else {
+        gSpecialVar_Result = ScriptGiveMon(species, level, item, unkParam1, unkParam2, unkParam3);
+    }
     return FALSE;
 }

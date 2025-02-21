@@ -31159,3 +31159,4 @@ BattleScript_LevelUp = 0x081d89f5;
 mugshots = 0x082350AC;
 mugshotPals = 0x0823730C;
 sMugshotWindow = 0x0203C001;
+something_ = 0x08000000;

@@ -87,7 +87,6 @@ void __attribute__((long_call)) Overworld_ChangeMusicTo(u16);
 bool32 __attribute__((long_call)) IsUpdateLinkStateCBActive(void);
 
 void __attribute__((long_call)) ClearLinkPlayerObjectEvents(void);
-const struct MapHeader *const Overworld_GetMapHeaderByGroupAndId(u16, u16);
 void __attribute__((long_call)) ObjectEventMoveDestCoords(struct ObjectEvent *, u32, s16 *, s16 *);
 void __attribute__((long_call)) CB2_ReturnToField(void);
 void __attribute__((long_call)) CB2_ReturnToFieldContinueScriptPlayMapMusic(void);

@@ -45,3 +45,5 @@ Cmd_getexp_ 8021A68 0
 
 ## Sand Encounters
 TryStandardWildEncounter_ 80833B0 1
+
+ScrCmd_givemon_ 806BFD0 6

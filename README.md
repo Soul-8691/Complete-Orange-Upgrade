@@ -222,12 +222,14 @@ Any changes made to header files will require you to clean everything in *build/
 * Andre Freitas
 * Ansh
 * Aveontrainer
+* Arnie
 * Avir
 * Beliot419
 * Blazer
 * Caco5400
 * Cawt
 * ChatGPT
+* Demonheadge
 * Ghoulslash
 * Grunt-Lucas
 * Haven
