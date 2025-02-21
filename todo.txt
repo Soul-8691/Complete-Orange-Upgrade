@@ -6,6 +6,7 @@ Pokemon overworlds that walk around and spot you (time-based)
 Headbutt trees
 Time/day of week-based item spawns
 TM mart
+Time-based battle backgrounds
 Improve dialogue
 Change existing tutor scripts to use move IDs
 Repoint Cut tree script
