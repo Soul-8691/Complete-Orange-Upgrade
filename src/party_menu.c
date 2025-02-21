@@ -456,7 +456,7 @@ void SetPartyMonFieldSelectionActions_(struct Pokemon *mons, u8 slotId)
 		{
 			if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == sFieldMoves[j])
 			{
-				AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+				AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES - 1);
 				++k;
 
 				if (sFieldMoves[j] == MOVE_FLY)

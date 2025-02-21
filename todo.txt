@@ -1,5 +1,3 @@
-Change title screen
-Pikachu intro
 MDN wild encounters
 Update trainer parties
 Add TMs to overworld
