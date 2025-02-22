@@ -62,3 +62,37 @@ void FieldUseFunc_ExpShare(u8 taskId)
         FlagClear(FLAG_EXP_ALL);
 	}
 }
+
+struct SwarmMaps {
+    u8 mapGroup;
+    u8 mapNum;
+};
+
+extern u8 *const __attribute__((long_call)) sScriptStringVars[];
+extern const struct MapHeader *const __attribute__((long_call)) Overworld_GetMapHeaderByGroupAndId(u16, u16);
+extern const struct SwarmMaps gSwarmMaps[255];
+
+void FieldUseFunc_SwarmTracker(u8 taskId)
+{
+	if (VarGet(VAR_SWARM_MAP) > 0)
+	{
+		u8 mapName[25];
+        const struct MapHeader * map = Overworld_GetMapHeaderByGroupAndId(gSwarmMaps[VarGet(VAR_SWARM_MAP)].mapGroup, gSwarmMaps[VarGet(VAR_SWARM_MAP)].mapNum);
+        GetMapName(mapName, map->regionMapSectionId, 0);
+		StringCopy(sScriptStringVars[0], mapName);
+		PlaySE(SE_EXP_MAX);
+		if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+			DisplayItemMessageOnField(taskId, 2, gText_ExpShareOn, Task_ItemUse_CloseMessageBoxAndReturnToField);
+		else
+			DisplayItemMessageInBag(taskId, 2, gText_ExpShareOn, Task_ReturnToBagFromContextMenu);
+        FlagSet(FLAG_EXP_ALL);
+	}
+	else
+	{
+		PlaySE(SE_PC_OFF);
+		if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+			DisplayItemMessageOnField(taskId, 2, gText_ExpShareOff, Task_ItemUse_CloseMessageBoxAndReturnToField);
+		else
+			DisplayItemMessageInBag(taskId, 2, gText_ExpShareOff, Task_ReturnToBagFromContextMenu);
+	}
+}

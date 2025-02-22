@@ -8,6 +8,8 @@ Time/day of week-based item spawns
 Swarms
 TM mart
 Time-based battle backgrounds
+Type-based item givers (day of week-based)
+Match Call
 Improve dialogue
 Change existing tutor scripts to use move IDs
 Repoint Cut tree script

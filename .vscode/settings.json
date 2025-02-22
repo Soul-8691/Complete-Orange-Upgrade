@@ -27,6 +27,7 @@
         "decompress.h": "c",
         "flags.h": "c",
         "pokemon.h": "c",
-        "window.h": "c"
+        "window.h": "c",
+        "metatile_behaviors.h": "c"
     }
 }

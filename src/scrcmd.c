@@ -87,6 +87,10 @@ bool8 ScrCmd_givemon_(struct ScriptContext * ctx)
         GetMapName(mapName, map->regionMapSectionId, 0);
         StringCopy(sScriptStringVars[unkParam3], mapName);
     }
+    else if (unkParam1 == 0xFE)
+        gSpecialVar_Result = gSaveBlock1Ptr->location.mapGroup;
+    else if (unkParam1 == 0xFF)
+        gSpecialVar_Result = gSaveBlock1Ptr->location.mapNum;
     else {
         gSpecialVar_Result = ScriptGiveMon(species, level, item, unkParam1, unkParam2, unkParam3);
     }
