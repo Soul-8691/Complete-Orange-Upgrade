@@ -1,5 +1,0 @@
-#org @gText_ExpShareOn
-Turned on the Exp. All.\pParty will now gain a portion\nof the Experience Points.[PAUSE_UNTIL_PRESS]
-
-#org @gText_ExpShareOff
-Turned off the Exp. All.\pParty will no longer gain a portion\nof any Experience Points.[PAUSE_UNTIL_PRESS]

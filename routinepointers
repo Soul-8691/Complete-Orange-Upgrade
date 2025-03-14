@@ -1,4 +1,1 @@
 #include "src/config.h"
-sp10A_CanUseCutOnTree 8160188
-sp10B_CanUseRockSmashOnRock 816018C
-sp10C_CanUseStrengthOnBoulder 8160190
