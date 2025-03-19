@@ -1,5 +1,5 @@
 [General]
-ApplicationVersion = '''0.5.6.1'''
+ApplicationVersion = '''0.5.6'''
 FreeSpaceSearch = '''CC1D40'''
 FreeSpaceBuffer = '''040'''
 NextExportID = '''0'''
@@ -1654,7 +1654,7 @@ DefaultHash = '''F54A83E4'''
 Name = '''graphics.overworld.firstpersonview.sprites'''
 Address = 0x43E9E8
 Format = '''[id.data.maps.names+88 transition.transitiontype worldmapflag:|h tileset<`lzt4|graphics.overworld.firstpersonview.sprites`> tilemap<`lzm4x32x20|graphics.overworld.firstpersonview.sprites`> pal<`ucp4:DE`>]graphics.firstpersonview.count'''
-DefaultHash = '''2A407037'''
+DefaultHash = '''FDA52FF9'''
 
 [[NamedAnchors]]
 Name = '''graphics.battle.background.sprites'''
@@ -7125,8 +7125,8 @@ Destination = '''data.items.stats'''
 
 [[GotoShortcut]]
 Name = '''Maps'''
-Image = '''data.maps.banks/1/maps/0/map/0/layout/0/blockmap/'''
-Destination = '''maps.bank1.VALENCIA PARK.1-0'''
+Image = '''data.maps.banks/3/maps/1/map/0/layout/0/blockmap/'''
+Destination = '''maps.bank3.VALENCIA ISLAND.3-1'''
 
 #################################
 [[TableGroup]]
