@@ -1,5 +1,3 @@
-YGO card monsters
-YGO card moves
 MDN wild encounters
 Update trainer parties
 Add TMs to overworld
